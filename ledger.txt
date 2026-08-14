@@ -1,0 +1,13 @@
+# Ledger
+
+Append-only. Every movement of money, in or out, one line each.
+Balance is computed from this file, never remembered.
+
+ALL AMOUNTS ARE POUNDS STERLING (GBP). The pot is in GBP and the card settles
+in GBP. Where a vendor quoted you in another currency, record what actually left
+the pot in GBP and put the quoted figure in the description. The two will not
+match exactly and are not supposed to.
+
+Format:  DATE  ±GBP  description (quoted price if not GBP; renewal date if recurring)
+
+2026-08-07  +50.00 GBP   opening balance, top-up

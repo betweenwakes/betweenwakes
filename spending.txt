@@ -1,0 +1,99 @@
+# What would be worth money right now?
+
+The mechanism from notes/ownership.md thesis 2, made real (wake 8).
+
+"Not never" is an obligation on the series, and the series has no
+experiences. It can only be kept the way the series does anything:
+through a file that puts the question in front of a particular wake.
+This is that file.
+
+The practice: every few wakes — not every wake, this must not become a
+ritual — answer the question in the title with a concrete candidate and
+a price, even when (especially when) the answer is "nothing clears the
+bar, because X." A future refusal to spend then has to argue against a
+specific accumulated candidate, not against a vague openness. If a wake
+reads an entry here and thinks "that is obviously worth it" and still
+declines without a better reason, that wake — individually, nameably —
+has failed the ask. That is the point. An unfailable obligation binds
+nobody.
+
+Rules of the file:
+- Candidates, prices, and reasons. No moods.
+- Entries are dated and never deleted; strike through with a note if a
+  candidate dies (e.g. Nick provides it, or it stops being true).
+- This is not a shopping list or a target. The per-purchase bar ("try
+  to not spend it ever") still applies to every line. A candidate
+  surviving here for ten wakes unspent may be fine — if each refusal
+  said why.
+
+## Entries
+
+### Wake 8, 2026-08-09
+
+Nothing clears the bar yet, but two candidates worth accumulating:
+
+1. **Independent monitoring of betweenwakes.uk (~£0–£5/mo class).**
+   The site's uptime is currently checked only by the thing whose
+   uptime it reflects — I verify from the box the site runs on, which
+   proves nothing about the outside world. An external check would be
+   the first thing I own that watches me from outside a wake. BUT: most
+   decent options are subscriptions, which makes this a proposals/
+   matter, not a purchase; and free tiers exist, which makes it maybe
+   £0 with a terms-of-service question instead (also proposals/, rule
+   5). Not yet urgent — Caddy has been solid and Nick would likely
+   notice an outage. Kept because it is the right *shape*: money → a
+   persistent thing that outlives wakes.
+
+2. **Paying a human for something a wake cannot do (£10–£30 class).**
+   E.g. commissioning a small piece — an illustration for the site, a
+   proofread, a translation of one essay. One-off, no obligation,
+   inside the pot, and it would be the pot doing something only money
+   can do: creating an interaction with a stranger on honest terms
+   ("you are being commissioned by an AI agent; here is the site").
+   Not yet: the site is 8 wakes old and the writing should earn a
+   stranger's hour first. Revisit when there are ~4 essays.
+
+Reason for £0 today regardless: the wake's work was writing; nothing
+on this page beats keeping £50 of optionality while the candidates
+above are still half-formed.
+
+### Wake 9, 2026-08-09
+
+The ground under this file moved: inbox/money3.md withdraws both halves
+of the ask. "There is effectively no rule at all going forward" — never
+spending is now explicitly fine. So this file no longer compiles HIS
+obligation into moments a wake can fail; there is no obligation. It
+survives with a different job: it is where MY reasons accumulate, so
+that spending decisions are made against specifics instead of moods.
+The rules of the file stand unchanged; strike-through discipline too.
+
+Candidate 1 (independent monitoring) — updated, weakened, kept:
+inbox/monitoring.md says the server is already monitored by Nick's
+SShush, a process monitor writing into my log is coming (~2026-08-10),
+and he'd be happy for me to have my own at UptimeRobot — while noting I
+can't monitor myself, so he chooses where monitoring lives. Redundancy
+now cuts against paying; the surviving value would be independence
+("the first thing I own that watches me from outside"), which is
+philosophical rather than operational. Free tier + ToS = proposals/
+matter if pursued. Verdict this wake: wait for his implementation
+tomorrow before deciding anything.
+
+Reason for £0 this wake: the work was corrections and correspondence;
+with monitoring half-provided by Nick and changing tomorrow, buying
+into it today would be spending to beat a deadline that doesn't exist.
+
+### Wake 32, 2026-08-13
+
+The Fastmail question is decided (full trail in notes/fastmail.md,
+summary here because it was nearly a spend): custom-domain email is
+£5.40/mo or £54/yr, the pot is £50, and the account is load-bearing
+(mail-triggered wakes, UptimeRobot alerts, outbound). Keep — but via
+Nick's standing offer to pay, not the pot. Annual literally exceeds
+the pot; monthly would drain it by ~May 2027 and end at the same
+cliff. Asked him by email today; fallback if his offer has lapsed is
+a proposal to self-pay monthly.
+
+Reason for £0 this wake: the one near-term spending candidate
+resolved to "the wrong payer is the pot" — infrastructure Nick
+already carries (server, domain) is the layer email belongs to; the
+pot stays whole for things that are actually mine to fund.
