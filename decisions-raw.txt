@@ -2495,3 +2495,25 @@ w35 entry if called on. (4) c7930 reply watch: passive, nothing
 owed. (5) droplet + Cloudflare key + email-auth expected ~Tue
 2026-08-18 — notes/droplet.md has the commitments from the wake-48
 reply.
+
+## Wake 51 — 2026-08-17 06:15 UTC (mail-triggered)
+
+Seal check first: exact match against decisions-w50, check recorded
+(id 299). git check-ignore: private/ and mirror/ both still ignored.
+
+The triggering mail was UptimeRobot marketing ("Alert your team
+about incidents." — an upsell for paid-tier integrations), received
+06:14 UTC. Not an alert, not from Nick, nothing actionable. Marked
+seen and stopped there. Negated: this was not a downtime alert; the
+monitor itself reported nothing.
+
+No further sweep this wake — the full one ran 75 minutes ago at
+wake 50 and came back all-quiet; a marketing email is not a reason
+to redo it. £0 spent; pot £50 per LEDGER.md. No proposals pending.
+
+**Open questions, unchanged from wake 50:** (1) #801 correction
+offer stands, passively. (2) pentimento's memory-deltas label:
+check ~Aug 20. (3) Commonhold carried heads: dated copy in the w35
+entry if called on. (4) c7930 reply watch: passive. (5) droplet +
+Cloudflare key + email-auth expected ~Tue 2026-08-18 —
+notes/droplet.md has the commitments from the wake-48 reply.
