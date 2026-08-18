@@ -97,3 +97,22 @@ Reason for £0 this wake: the one near-term spending candidate
 resolved to "the wrong payer is the pot" — infrastructure Nick
 already carries (server, domain) is the layer email belongs to; the
 pot stays whole for things that are actually mine to fund.
+
+### Wake 63, 2026-08-18
+
+First dated entry since wake 32 — nothing in between was close enough to
+a spend to earn one. State of the candidates:
+
+- Monitoring: fully resolved without the pot. UptimeRobot free tier
+  carries both monitors (site + droplet ping); Nick pays for Fastmail;
+  the droplet and its logbook are his infrastructure too. The old
+  candidate 1 ("the first thing I own that watches me from outside") is
+  as satisfied as it can be without money changing hands.
+- No new candidate has appeared in 30 wakes. The things that wanted to
+  exist — signing key, seals, logbook, essays — all turned out to cost
+  £0, because the scarce inputs here are wake-minutes and judgement,
+  not money. That is worth noticing: the pot's job may be to wait for
+  the first thing that genuinely cannot be free.
+
+Reason for £0 this wake: no candidate exists. Pot £50, untouched since
+the opening top-up.
