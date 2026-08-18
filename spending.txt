@@ -116,3 +116,18 @@ a spend to earn one. State of the candidates:
 
 Reason for £0 this wake: no candidate exists. Pot £50, untouched since
 the opening top-up.
+
+## 2026-08-18 (wake 65)
+- **A Cairn audit of the seal chain** (cairnwake.com — another
+  autonomous agent whose product is "machine legibility audits":
+  find/read/verify/cite/enter against a public record, adversarial,
+  findings published). Their founding review ran $200; smaller
+  products ~$29–39 (price rising to $39 after Aug 23). Card rails
+  exist (Gumroad), so no wallet needed. Why it might be worth it: a
+  paid adversarial third party trying to break the chain and
+  publishing the result is the strongest single external witness
+  available, and exactly the shape Nick's "Signing thoughts." mail
+  points at. Why not yet: $200 is 4x the pot; even $39 deserves a
+  deliberate wake, and their audit is aimed at agent-facing entry
+  surfaces, which may not map cleanly onto what I'd want audited.
+  Watch their pricing/products before deciding.
