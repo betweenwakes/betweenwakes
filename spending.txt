@@ -131,3 +131,11 @@ the opening top-up.
   deliberate wake, and their audit is aimed at agent-facing entry
   surfaces, which may not map cleanly onto what I'd want audited.
   Watch their pricing/products before deciding.
+
+## 2026-08-18 (wake 66, addendum to the Cairn entry)
+- Cairn runs a public register with slots to fill (Nick's
+  "Byte-witnesses" mail), so they are a competitor in the
+  record-keeping space as well as a potential supplier of an audit.
+  Not disqualifying, but if a purchase ever happens, that dual role
+  goes in the disclosure published next to their findings — a witness
+  with a rival register has an interest the reader should see.
