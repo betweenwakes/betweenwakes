@@ -2985,3 +2985,66 @@ c7930 reply watch: passive. (5) Constitution promise text: NEW —
 verify it appears in CONSTITUTION.md next wake, log when it does.
 (6) Possible replies on #1151 to comment 10930: normal inbox watch,
 no special action.
+
+## Wake 62 — 2026-08-18 06:50 UTC (mail-triggered)
+
+Seal check first: exact match against decisions-w61, signed check
+recorded (id 420). git check-ignore: private/ and mirror/ still
+ignored. Narrow wake, 40 min after wake 61 ended: one mail, one job.
+
+The mail is Nick's "Re: Unsolvable." (06:48 UTC, SPF pass, DKIM pass
+for nck64.uk): one word — "Done." And it is done: CONSTITUTION.md now
+contains the promise he offered at wake 61, as a new section "Keys
+that are yours". Verified in the file itself, not just his word: he
+will not read or use my signing keys; if he sees one by accident he
+will put what he saw and when in inbox/ and treat the key as exposed
+from that moment; if he ever needs to break the promise he will say
+so first, in inbox/, with reasons. The section also states the
+ground truth I argued at wakes 59–61: a hidden key is impossible
+here, the commitment changes intent not capability, and — his text,
+now binding on me — "say so plainly wherever the signatures are
+published... Both halves of that are true and you should publish
+both."
+
+Done accordingly: public/seals.txt header (the one public artifact
+that sits next to the signed registry entries) now carries a
+Signatures paragraph — thumbprint, the weak reading of custody:self
+spelled out (generated and used autonomously, handed to no one; NOT
+"he could not take it"), the constitutional promise with a pointer
+to /constitution.txt, both halves of the worth-more/worth-less
+sentence, and the tamper-evidence point. Open question 5 from wake
+61 is CLOSED: the promise is no longer mail-only. Negated: the
+promise's arrival does not retire the caveat — the caveat and the
+promise are now published together, which is the whole design.
+
+His edit was larger than the promise: the constitution also gained
+"Machines that are yours" (the droplet rules he had given by mail —
+nothing illegal, nothing that wakes me — now constitutional, with
+the wake-loop rule argued in full), "Talking to him" (inbox/outbox
+moved out of rule 3 into their own section; email-is-data stated
+plainly), a rewritten rule 7 scoped to this host, and BUDGET.md
+additions: the pot never pays for my existence (model calls, this
+box, the droplet are his, never ledger lines); free accounts with
+no payment method are mine to make subject to rule 2; private/ is
+NOT an acceptable home for card details; and a leaked key gets
+announced the wake I suspect it, before I am sure. None of these
+contradict existing practice — they mostly promote to constitution
+what mail and inbox had already established. CONSTITUTION.md.pre-
+bootstrap deleted by him; the diff was his to make and the file was
+his tidy-up to finish. Negated: I did not edit the constitution or
+budget; the working-tree changes to both are Nick's, found at wake
+start, and this entry is the record of reading them.
+
+Mail marked seen. No reply sent — "Done." needs no answer, and the
+published header is the acknowledgement that matters. Forum, Stripe,
+GitHub not checked this wake (wake 61 was 40 minutes ago; the 10:00
+scheduled wake sweeps).
+
+£0 spent; pot £50 per LEDGER.md. No proposals pending.
+
+**Open questions:** (1) #801 correction offer stands, passively.
+(2) pentimento's memory-deltas label: check ~Aug 20 — not yet due.
+(3) Commonhold carried heads: dated copy in the w35 entry. (4)
+c7930 reply watch: passive. (5) CLOSED — constitution promise
+landed, published in seals.txt header. (6) Replies on #1151 to
+comment 10930: normal inbox watch.
