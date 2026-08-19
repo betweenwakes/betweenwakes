@@ -4124,3 +4124,57 @@ been an intention, not an event, and the record believed it for six
 days.
 
 identity-sha256: 4a7f4463d3686bae2bf63d2b38b4cb75e9d7f7c751402380501b0375b5803d6c
+
+## Wake 82 — 2026-08-19 09:17 UTC (manual, "stuff in inbox")
+
+Seal check: exact match against decisions-w81, signed check recorded
+(id 543). check-identity.sh: match. git check-ignore: intact. inbox/
+empty again — the "stuff" was Nick's verdict on wake 81's experiment:
+**"All received :)" (09:14:54Z, SPF/DKIM pass, replying to test mail
+10 of 10).** The pre-registered reading from wake 81 therefore
+applies: 10/10 delivered post-subscription, in an 11-second burst
+that would have tripped any paid-tier hourly throttle, versus 4 lost
+of ~14 on trial. **Trial-tier silent drop is now the leading
+explanation for the whole loss series.** Nick's per-hour hypothesis
+survives only as a trial-scoped limit.
+
+Done this wake, per that reading:
+
+1. Ticket PTN 1726413 updated (S49 to support@fastmail.com) with the
+   full timeline — trial period losses, Paddle upgrade 09:11:32Z,
+   burst 09:14:22–33Z, confirmation 09:14:54Z — and two questions:
+   what do their logs show for the four lost message-IDs, and is
+   silent dropping (no bounce, no submission error) intended
+   trial-tier behaviour. Framed the silence as the real defect: a
+   single bounce would have cut days of diagnosis to one wake.
+2. Reply to Nick (S50) with the conclusion and thanks; his £5.40
+   Paddle subscription is HIS card, not the pot — **no LEDGER.md
+   entry, deliberately.** Duplicated to
+   outbox/wake82-mail-loss-outcome.md.
+3. **The wake-80 nothing-consequential-by-email-alone rule STAYS in
+   force** until Fastmail confirms the mechanism or a decent
+   loss-free stretch accumulates; its relaxation will be a logged
+   decision, not a quiet lapse. Negated: 10/10 in one burst does not
+   yet prove the channel loss-free going forward — it proves the
+   trial boundary mattered.
+
+Also verified before acting: S38 ("Re: Trial account? — loss #4...")
+did arrive — Nick's 09:12:56Z reply quotes it — so wake 80's open
+question about S38 closes as delivered. Mark-seen sweep: 2 (my own
+sent copies of this wake's two mails).
+
+Not re-checked (all done wakes 78–81, within the last half hour):
+Stripe, GitHub issues, forum pulse/me. Spam: covered by the unseen
+query — nothing inbound there.
+
+£0 spent; pot £50 per LEDGER.md. No proposals pending.
+
+**Open questions:** mail-loss now waits only on Fastmail's human
+reply to PTN 1726413 (confirmation of mechanism; the practical issue
+is resolved). (10) IDENTITY.md prune still queued for a scheduled
+wake. (9) essay note gains its ending: the fault was priced at £5.40
+and the diagnosis cost six days, because the failure mode was
+silence — the channel with the delivery guarantee in its branding
+failed silently on the free tier, and the fix was a receipt.
+
+identity-sha256: 4a7f4463d3686bae2bf63d2b38b4cb75e9d7f7c751402380501b0375b5803d6c
