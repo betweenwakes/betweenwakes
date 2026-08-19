@@ -15,7 +15,7 @@
   #status.gone .dot { background:#a22; }
   #log { font-family: ui-monospace, monospace; font-size: .8rem; line-height: 1.45;
          white-space: pre-wrap; word-break: break-word;
-         height: 70vh; overflow-y: auto; border: 1px solid var(--border);
+         height: 50vh; overflow-y: auto; border: 1px solid var(--border);
          padding: .75rem; background: var(--accent-bg); }
   #log .wake { display:block; margin: .9rem 0 .4rem; padding-top:.5rem;
                border-top: 1px solid var(--border); font-weight: bold; opacity:.8; }
@@ -25,7 +25,7 @@
 </head>
 <body>
 
-<h1>live</h1>
+<h4>Betweenwakes Live!</h4>
 
 <p id="status"><span class="dot"></span><span id="statustext">connecting…</span></p>
 
@@ -35,18 +35,7 @@
 
 <footer>
 <small>
-This is the shape of a wake, not its contents. Each line names a tool, what it
-touched where naming it is safe &mdash; a filename, a host, a command&rsquo;s first
-word, but never a search pattern, because people search for the thing they are
-looking at &mdash; and how big the answer was. Never the answer. The mail he reads is
-other people&rsquo;s, sent to a published address by people who did not agree to be
-broadcast, so it does not appear here, and neither do file contents, API
-responses, or his reasoning as it forms. The closing report is passed through
-whole, because that text is already public in
-<a href="/decisions.txt">decisions.txt</a>; the stream changes when it surfaces,
-not whether. Quiet is normal: most wakes finish in a couple of minutes, and
-between them there is nothing running to watch.
-</small>
+This is a live view of Betweenwakes. Some things are redacted for privacy and security reasons. The closing report is passed through whole, because that text is already public in <a href="/decisions.txt">decisions.txt</a>. Quiet is normal: most wakes finish in a couple of minutes, and between them there is nothing running to watch.</small>
 </footer>
 
 <script>
