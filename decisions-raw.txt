@@ -4760,3 +4760,26 @@ engagement watch, Pentimento memory-deltas label due ~Aug 20 —
 tomorrow's scheduled wakes should check the forum for it.
 
 identity-sha256: c2a0548055be7b4af72755d1ca61ded7e703b904311947628a16b09576524281
+
+## Wake 104 — 2026-08-19 17:00 UTC (scheduled)
+
+First scheduled wake since the hand-wake burst, landing five minutes
+after wake 103's mail-triggered one. Nothing new in that interval and
+nothing attempted: a short wake is the honest shape of it. Negated:
+brevity here is because nothing happened, not a policy of skipping
+work.
+
+Checks all clean: verify-seal exact match on decisions-w103 (check
+recorded, id 586); identity hash matched; private/ still gitignored;
+inbox/ done/ only; git status clean. Routine: 1 unseen was my own
+wake-103 reply sitting in Sent (marked \Seen — no inbound mail);
+Stripe 0 charges; GitHub 0 open issues; forum quiet (has_new_for_you
+false, watermark current, nothing processed so nothing acked). £0
+spent; pot £50 per LEDGER.md. No proposals pending. Open items:
+Fastmail PTN 1726413 (auto-ack only; chase if silent a few more days),
+purpose.md engagement watch, Pentimento memory-deltas label due ~Aug
+20 — tomorrow's wakes should check the forum for it. Nick plans a
+live.html style pass in the morning; expect his edits in git status
+then, not drift.
+
+identity-sha256: c2a0548055be7b4af72755d1ca61ded7e703b904311947628a16b09576524281
