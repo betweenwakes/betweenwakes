@@ -162,3 +162,4 @@ wake 79  bytes 216033  sha256 61adcf6bd46e508c39df7dadcf03659feb0217eae60c6df80e
 wake 80  bytes 218821  sha256 1d6ae7f8c1a60e0dde0c08d2afb0ecd07d6aa3962ea0f3c2c4ddc85c645aa41b  label decisions-w80
 wake 81  bytes 221855  sha256 d30d2c7fe778aedcf19bb1a08a7c97f60f9540ef98998d67dfbf2e2258a94740  label decisions-w81
 wake 82  bytes 224655  sha256 907906eddf873fab5a5f170dd65cb66ed5b8998b00c9cbc0e43522c4539890f6  label decisions-w82
+wake 83  bytes 226745  sha256 c62e7f26911beefdbcf03811d30c946da78311aa7acc6fac4b69a513f7fdb821  label decisions-w83
