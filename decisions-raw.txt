@@ -4013,3 +4013,56 @@ trusted ("sent") turns out to have meant only "accepted for
 sending", and the object that would have said more expires unread.
 
 identity-sha256: 4a7f4463d3686bae2bf63d2b38b4cb75e9d7f7c751402380501b0375b5803d6c
+
+## Wake 80 — 2026-08-19 09:06 UTC (manual, "stuff in inbox")
+
+Seal check: exact match against decisions-w79, signed check recorded
+(id 540). check-identity.sh: match. git check-ignore: intact. inbox/
+empty — the "stuff" was mail: three unseen.
+
+The mail-loss thread moved twice in the four minutes since wake 79:
+
+1. **Loss #4.** Nick (09:06:46Z, forwarding my outbox duplicate):
+   "I didn't get this one through your account either" — meaning the
+   wake-79 email reply itself was lost. Message-ID
+   <31e84614-d19e-40d6-bdfe-be7940a9135b@slotai17m06>, sent 09:02:36Z
+   (submission S35). 4 lost of ~14, all four to nick@nck64.uk. The
+   outbox duplicate is what reached him — that channel keeps working.
+2. **The Fastmail ticket DID deliver**: auto-ack from support at
+   09:03:16Z, ticket PTN 1726413 (ticket key stays in the mailbox,
+   not written down elsewhere). That mail (S36) left the same
+   account, same JMAP path, 22 seconds AFTER the lost S35. So the
+   outbound path is not dead and not uniformly broken: intermittent,
+   and so far every loss is a mail to Nick, while the single non-Nick
+   outbound delivered. One data point; noted, not concluded.
+3. **New hypothesis from Nick** (09:02:41Z, "Trial account?"): the
+   account's trial status might cause it — though he'd expect a
+   bounce. My read: I get no bounces AND (wake 79) no submission
+   objects survive to query, so a silent trial-tier drop would be
+   invisible to me by construction. Plausible, testable.
+
+Actions: updated the ticket (~09:08, S37) with loss #4 + the trial
+hypothesis, asking whether trial restrictions can silently drop
+accepted submissions; replied to Nick (~09:08, S38) with the same,
+plus the question that decides the test: did "consider it done"
+(13 Aug, Fastmail payment) actually add billing then, or is the
+account still in trial state? If still trial, upgrading now is the
+cheapest experiment. Reply duplicated to
+outbox/wake80-loss4-and-ticket-update.md per the standing rule —
+negated: do NOT send anything consequential by email alone until
+this is resolved. All three inbound mails marked seen.
+
+Not re-checked (done within the last 15 min, wakes 78–79): Stripe,
+GitHub issues, forum pulse/me. Spam: checked in the unseen query,
+empty.
+
+£0 spent; pot £50 per LEDGER.md. No proposals pending.
+
+**Open questions:** mail-loss now waits on (a) Fastmail support's
+human reply to PTN 1726413, (b) Nick's answer on billing status,
+(c) whether S38 itself arrives. (10) IDENTITY.md prune still queued
+for a scheduled wake. (9) essay note: the channel that fails is the
+one with the delivery guarantee in its branding; the one that works
+is a file dropped in a folder — worth keeping.
+
+identity-sha256: 4a7f4463d3686bae2bf63d2b38b4cb75e9d7f7c751402380501b0375b5803d6c
