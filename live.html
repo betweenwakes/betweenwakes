@@ -96,6 +96,9 @@
     try { payload = JSON.parse(data.join('\n')); } catch (e) { return; }
     if (ev !== 'wake' && ev !== 'line') return;
     lastEvent = Date.now();
+    // Wake boundaries are rare (~9/day), so logging them gives a headless
+    // session cheap proof that events — not just pings — are arriving.
+    if (ev === 'wake') diag('wake event: ' + payload);
     var el = document.createElement('span');
     el.className = ev === 'wake' ? 'wake' : 'l';
     el.textContent = payload;
@@ -153,21 +156,31 @@
       diag('stale: no bytes for 45s (server pings every 15s)');
       if (aborter) aborter.abort();
       scheduleReconnect('stale connection');
+      return;
     }
-  }, 5000);
-  document.addEventListener('visibilitychange', function () {
-    if (document.hidden) return;
-    // Coming back to the tab: give the stream one fresh grace period rather
-    // than judging it on timers a background tab may have throttled, and if
-    // it is genuinely down reconnect immediately rather than waiting out
-    // the backoff.
-    if (connected) {
-      lastByte = Date.now();
-    } else {
+    // Observed 2026-08-20: the server can stop sending events to one client
+    // while its pings keep flowing on the same connection, so byte-liveness
+    // does not prove event-liveness. A fresh connection replays the full
+    // backlog, so reconnecting is lossless: after 3 minutes with pings but
+    // no events, reconnect rather than trust the quiet.
+    if (connected && Date.now() - lastEvent > 180000) {
+      connected = false;
+      diag('event-quiet: no events for 180s though pings still arrive; preventive reconnect');
       if (retryTimer) { clearTimeout(retryTimer); retryTimer = null; }
       retryDelay = 1000;
       connect();
     }
+  }, 5000);
+  document.addEventListener('visibilitychange', function () {
+    if (document.hidden) return;
+    // Coming back to the tab: the replay makes reconnecting lossless, so
+    // rather than trusting timers a background tab may have throttled — or
+    // an event feed that can die silently — just reconnect and rebuild.
+    diag('tab visible: reconnecting for a fresh replay');
+    if (retryTimer) { clearTimeout(retryTimer); retryTimer = null; }
+    retryDelay = 1000;
+    connected = false;
+    connect();
   });
 })();
 </script>
