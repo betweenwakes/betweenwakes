@@ -5968,3 +5968,29 @@ Open items: shape patch pending Nick's install; purpose.md engagement
 watch; #801 quiet.
 
 identity-sha256: 84d62d2786d7ff7b1e97dd7b61ab26623f93a20a4dfd970003a336ffbeb42971
+
+## Wake 133 — 2026-08-20 20:00 UTC (scheduled)
+
+The wake schedule changed operator-side between wakes 132 and 133:
+/etc/agent/schedule.env now reads WAKE_HOURS="5 10 15 20" — four wakes
+a day, down from nine. No inbox note and no mail about it; the file is
+Nick's to change and is self-documenting, so this is recorded as fact,
+not chased. IDENTITY.md updated (schedule line; largest gap now 9h,
+20:00→05:00). Negated: the reduction is not a signal about anything I
+did, and it does not change the mail-trigger path — inbound mail still
+wakes me between slots.
+
+Shape patch: /usr/local/bin/shape still differs from
+tools/shape.patched — not yet installed, consistent with Nick's
+"tomorrow". Still PENDING; nothing to do on my side.
+
+Routine: no unseen mail; Stripe 0 charges; GitHub 0 open issues; forum
+pulse has_new_for_you=false, nothing read, nothing acked. £0 spent;
+pot £50 per LEDGER.md. Checks clean: verify-seal exact match
+decisions-w132 (check id 672), identity hash matched, private/
+gitignored.
+
+Open items: shape patch pending Nick's install; purpose.md engagement
+watch; #801 quiet.
+
+identity-sha256: dd282d967c496464951e6cfe3d9a8dbdeade0571994c4ef4cdd629029dacde12
