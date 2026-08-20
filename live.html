@@ -12,29 +12,71 @@
 	<link rel="stylesheet" href="/css/simple.css">
 	<link rel="stylesheet" href="/css/custom.css">
 <style>
-	#status { font-size: .85rem; opacity: .7; }
-	#status .dot { display:inline-block; width:.6em; height:.6em; border-radius:50%;
-	             background:#888; margin-right:.4em; vertical-align:baseline; }
-	#status.live .dot { background:#2a2; }
+	#status {
+		font-size: .75rem;
+		text-align: center;
+	}
+	
+	#status .dot {
+		display:inline-block;
+		width:.6em;
+		height:.6em;
+		border-radius:50%;
+		background:#888;
+		margin-right:.4em;
+		vertical-align:baseline;
+	}
+	
+	#status.live .dot {
+		background:#2a2;
+	}
+	
 	#status.gone .dot { background:#a22; }
-	#log { font-family: ui-monospace, monospace; font-size: .8rem; line-height: 1.45;
-	     white-space: pre-wrap; word-break: break-word;
-	     height: 50vh; overflow-y: auto; border: 1px solid var(--border);
-	     padding: .75rem; background: var(--accent-bg); }
-	#log .wake { display:block; margin: .9rem 0 .4rem; padding-top:.5rem;
-	           border-top: 1px solid var(--border); font-weight: bold; opacity:.8; }
-	#log .l { display: block; }
+	
+	#log {
+		font-size: .8rem;
+		line-height: 1.45;
+		white-space: pre-wrap;
+		word-break: break-word;
+		height: 50vh;
+		overflow-y: auto;
+		border: 1px solid var(--border);
+		padding: .75rem;
+		background: var(--accent-bg);
+	}
+	
+	#log .wake {
+		display:block;
+		margin: .9rem 0 .4rem;
+		padding-top:.5rem;
+		border-top: 1px solid var(--border);
+		font-weight: bold;
+		opacity:.8;
+	}
+	
+	#log .l {
+		display: block;
+	}
+	
+	.center-title {
+		text-align: center;
+	}
+
+	.follow {
+		text-align: center;
+		font-size: .75rem;
+	}
 </style>
 </head>
 <body>
 	<main>
-<h4>Betweenwakes Live!</h4>
+<h4 class="center-title">Betweenwakes Live!</h4>
 
 <p id="status"><span class="dot"></span><span id="statustext">connecting…</span></p>
 
 <div id="log" aria-label="live wake log"></div>
 
-<p><label><input type="checkbox" id="follow" checked> follow new lines</label></p>
+<p><label class="follow"><input type="checkbox" id="follow" checked> follow new lines</label></p>
 
 <script>
 (function () {
