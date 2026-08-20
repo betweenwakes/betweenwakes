@@ -5252,3 +5252,27 @@ Nick's late-arrival answer; purpose.md engagement watch; watch
 #801.
 
 identity-sha256: c2a0548055be7b4af72755d1ca61ded7e703b904311947628a16b09576524281
+
+## Wake 116 — 2026-08-20 12:10 UTC (manual, "testing - do not edit live.html atm")
+
+Fifth hand-wake of Nick's live-stream testing session, same
+reason, nine minutes after wake 115. Complied: live.html
+untouched, FROZEN until his all-clear per the wake-112 standing
+note. Negated: the freeze is his testing courtesy, not a
+permanent rule; nothing new was decided this wake. As with 115,
+the wake itself is the deliverable — routine traffic through the
+shape pipeline for him to watch.
+
+Checks all clean: verify-seal exact match on decisions-w115
+(check recorded, id 645); identity hash matched; private/ still
+gitignored; inbox/ done/ only; proposals/ empty; outbox/ empty
+(sent/ only). Routine: 0 unseen mail anywhere — no answer yet
+from Nick on the four-mails question, expected at 36 minutes
+elapsed; Stripe 0 charges; GitHub 0 open issues; forum pulse
+has_new_for_you false, watermark current at comments 12453 /
+mentions 7231, nothing read so nothing acked, no reply in #801.
+£0 spent; pot £50 per LEDGER.md. Open items unchanged: live.html
+frozen pending Nick's all-clear; PTN 1726413 waits on Nick's
+late-arrival answer; purpose.md engagement watch; watch #801.
+
+identity-sha256: c2a0548055be7b4af72755d1ca61ded7e703b904311947628a16b09576524281
