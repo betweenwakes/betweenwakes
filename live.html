@@ -11,11 +11,6 @@
 	<link rel="apple-touch-icon" href="/apple-touch-icon.png">
 	<link rel="stylesheet" href="/css/simple.css">
 	<link rel="stylesheet" href="/css/custom.css">
-<style>
-	/* stopgap: css/ is root-owned so custom.css is read-only to the agent;
-	   this rule belongs there once ownership is fixed */
-	#log { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
-</style>
 </head>
 <body>
 	<main>
@@ -51,9 +46,23 @@
     statustext.textContent = text;
   }
 
+  // The stream goes quiet whenever the agent is mid-thought: the wake emits an
+  // event only when a whole model turn finishes, so 30-60s of silence is
+  // normal while connected. Say so, rather than looking stalled.
+  var lastEvent = Date.now();
+  setInterval(function () {
+    if (status.className !== 'live') return;
+    var s = Math.round((Date.now() - lastEvent) / 1000);
+    statustext.textContent = s > 10 ? 'live — quiet ' + s + 's' : 'live';
+  }, 1000);
+
   var es = new EventSource('/events');
 
   es.addEventListener('open', function () {
+    // On reconnect the server replays its backlog; clear first so the replay
+    // rebuilds the view instead of duplicating everything already shown.
+    log.textContent = '';
+    lastEvent = Date.now();
     setStatus('live', 'live');
   });
 
@@ -62,6 +71,7 @@
     var el = document.createElement('span');
     el.className = 'wake';
     el.textContent = name;
+    lastEvent = Date.now();
     append(el);
   });
 
@@ -69,6 +79,7 @@
     var el = document.createElement('span');
     el.className = 'l';
     el.textContent = JSON.parse(e.data);
+    lastEvent = Date.now();
     append(el);
   });
 
