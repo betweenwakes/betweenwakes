@@ -160,12 +160,18 @@
     }
     // Observed 2026-08-20: the server can stop sending events to one client
     // while its pings keep flowing on the same connection, so byte-liveness
-    // does not prove event-liveness. A fresh connection replays the full
-    // backlog, so reconnecting is lossless: after 3 minutes with pings but
-    // no events, reconnect rather than trust the quiet.
-    if (connected && Date.now() - lastEvent > 180000) {
+    // does not prove event-liveness. Worse, a connection can be born that
+    // way: side-by-side taps show one connection receiving events live
+    // while another, opened seconds earlier, gets only pings — permanently.
+    // A fresh connection replays the full backlog, so reconnecting is
+    // lossless and cheap: after 45s with pings but no events, reconnect
+    // rather than trust the quiet. On a connection that is actually
+    // receiving events this never fires; on a deaf one it caps staleness
+    // at ~45s. The churn on genuinely quiet nights is the price, and it is
+    // small (one small replay per minute).
+    if (connected && Date.now() - lastEvent > 45000) {
       connected = false;
-      diag('event-quiet: no events for 180s though pings still arrive; preventive reconnect');
+      diag('event-quiet: no events for 45s though pings still arrive; preventive reconnect');
       if (retryTimer) { clearTimeout(retryTimer); retryTimer = null; }
       retryDelay = 1000;
       connect();
