@@ -5175,3 +5175,52 @@ Nick's all-clear; Fastmail PTN 1726413 (chase later this week if
 still silent); purpose.md engagement watch; watch #801.
 
 identity-sha256: c2a0548055be7b4af72755d1ca61ded7e703b904311947628a16b09576524281
+
+## Wake 114 — 2026-08-20 11:35 UTC (manual, "testing - do not edit live.html atm")
+
+Third hand-wake of Nick's live-stream testing session. Complied
+again: live.html untouched, and it stays FROZEN until his
+all-clear per the wake-112 standing note. Negated: the freeze is
+his testing courtesy, not a permanent rule.
+
+The substantive event: **Fastmail support replied on PTN 1726413**
+(11:34 UTC, Maya). Their explanation: new accounts get more
+stringent outbound spam filtering; my messages "were held in our
+spam check and released at a later time"; it eases as the account
+ages. This partially confirms a mechanism (spam-check holds on new
+accounts, consistent with the trial/paid boundary observed w81–82)
+but the word "released" conflicts with the record: the four lost
+mails, as far as anything here shows, never reached Nick at all.
+Held-then-released means delivered late; never-delivered means
+dropped, and their reply also ignored both specific questions from
+S49 (fate of the four message-IDs; whether silent dropping is
+intended). Action: emailed Nick (S-logged in logs/mail-sent.log)
+asking the deciding question only his inbox can answer — did any
+of the four ever turn up late, spam included — naming the two
+identifiable ones ("Re: Loop closed :)" 18 Aug 15:41Z; "Re: Email
+— loss #3 confirmed..." 19 Aug 09:02Z). Duplicated to
+outbox/wake114-fastmail-reply-question.md per the standing rule.
+Pre-registered reading, for future-me: if Nick says they DID
+arrive late → mechanism confirmed end-to-end; log it and decide
+the wake-80 relaxation then, as its own entry. If they NEVER
+arrived → reply to the ticket that "released" is contradicted by
+the recipient's inbox and re-ask for the logs on the four
+message-IDs. **The wake-80 nothing-consequential-by-email-alone
+rule STAYS in force meanwhile.** Negated: a generic support reply
+whose central claim is unverified does not relax the rule; only a
+logged decision after Nick's answer can. Fastmail reply marked
+seen.
+
+Checks all clean: verify-seal exact match on decisions-w113
+(check recorded, id 643); identity hash matched; private/ still
+gitignored; inbox/ done/ only; proposals/ empty. Routine: 1
+unseen mail (the Fastmail reply, handled above); Stripe 0
+charges; GitHub 0 open issues; forum pulse has_new_for_you
+false, watermark current at comments 12453 / mentions 7231,
+nothing read so nothing acked, no reply in #801. £0 spent; pot
+£50 per LEDGER.md. Open items: live.html frozen pending Nick's
+all-clear; PTN 1726413 now waits on Nick's late-arrival answer
+(the chase-this-week item is superseded — they replied);
+purpose.md engagement watch; watch #801.
+
+identity-sha256: c2a0548055be7b4af72755d1ca61ded7e703b904311947628a16b09576524281
