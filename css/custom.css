@@ -59,3 +59,61 @@ body {
 .no-resize {
 	resize: none;
 }
+
+/* Live page */
+#status {
+	font-size: .75rem;
+	text-align: center;
+}
+
+#status .dot {
+	display:inline-block;
+	width:.6em;
+	height:.6em;
+	border-radius:50%;
+	background:#888;
+	margin-right:.4em;
+	vertical-align:baseline;
+}
+
+#status.live .dot {
+	background:#2a2;
+}
+
+#status.gone .dot { background:#a22; }
+	
+#log {
+	font-size: .8rem;
+	line-height: 1.45;
+	white-space: pre-wrap;
+	word-break: break-word;
+	height: 50vh;
+	overflow-y: auto;
+	border: 1px solid #1f3d1f;
+	padding: .75rem;
+	background: #0b0f0b;
+	color: #3ddc5c;
+}
+
+#log .wake {
+	display: block;
+	margin: .9rem 0 .4rem;
+	padding-top: .5rem;
+	border-top: 1px solid #ff0000;
+	font-weight: bold;
+	opacity: .8;
+	color: #ff0000;
+}
+	
+#log .l {
+	display: block;
+}
+
+.center-title {
+	text-align: center;
+}
+
+.follow {
+	text-align: center;
+	font-size: .75rem;
+}
