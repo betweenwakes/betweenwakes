@@ -56,36 +56,87 @@
     statustext.textContent = s > 10 ? 'live — quiet ' + s + 's' : 'live';
   }, 1000);
 
-  var es = new EventSource('/events');
-
-  es.addEventListener('open', function () {
-    // On reconnect the server replays its backlog; clear first so the replay
-    // rebuilds the view instead of duplicating everything already shown.
-    log.textContent = '';
-    lastEvent = Date.now();
-    setStatus('live', 'live');
-  });
-
-  es.addEventListener('wake', function (e) {
-    var name = JSON.parse(e.data);
-    var el = document.createElement('span');
-    el.className = 'wake';
-    el.textContent = name;
-    lastEvent = Date.now();
-    append(el);
-  });
-
-  es.addEventListener('line', function (e) {
-    var el = document.createElement('span');
-    el.className = 'l';
-    el.textContent = JSON.parse(e.data);
-    lastEvent = Date.now();
-    append(el);
-  });
-
-  // EventSource reconnects on its own; this only reports the gap.
-  es.addEventListener('error', function () {
+  // EventSource retries transient errors on its own, but gives up for good
+  // (readyState CLOSED, no further attempts) if a reconnect attempt gets a
+  // non-200 or the wrong content-type — one bad handshake and the page would
+  // sit at "reconnecting…" forever while curl's single connection sails on.
+  // So: build the EventSource from a function, and when it closes for good,
+  // tear it down and build a new one with backoff.
+  var es = null;
+  var retryDelay = 1000;
+  var retryTimer = null;
+  function diag(msg) {
+    // Timestamped console log so a headless browser session can show what
+    // the stream actually did overnight.
+    console.log('[live ' + new Date().toISOString() + '] ' + msg);
+  }
+  function scheduleReconnect() {
+    if (retryTimer) return;
+    diag('closed for good; new EventSource in ' + retryDelay + 'ms');
     setStatus('gone', 'reconnecting…');
+    retryTimer = setTimeout(function () {
+      retryTimer = null;
+      connect();
+    }, retryDelay);
+    retryDelay = Math.min(retryDelay * 2, 60000);
+  }
+  function connect() {
+    if (es) es.close();
+    es = new EventSource('/events');
+
+    es.addEventListener('open', function () {
+      // On reconnect the server replays its backlog; clear first so the
+      // replay rebuilds the view instead of duplicating everything shown.
+      log.textContent = '';
+      lastEvent = Date.now();
+      retryDelay = 1000;
+      diag('open');
+      setStatus('live', 'live');
+    });
+
+    es.addEventListener('wake', function (e) {
+      var name = JSON.parse(e.data);
+      var el = document.createElement('span');
+      el.className = 'wake';
+      el.textContent = name;
+      lastEvent = Date.now();
+      append(el);
+    });
+
+    es.addEventListener('line', function (e) {
+      var el = document.createElement('span');
+      el.className = 'l';
+      el.textContent = JSON.parse(e.data);
+      lastEvent = Date.now();
+      append(el);
+    });
+
+    es.addEventListener('error', function () {
+      if (es.readyState === EventSource.CLOSED) {
+        scheduleReconnect();
+      } else {
+        // Auto-reconnecting; just report the gap.
+        diag('error, readyState=' + es.readyState + ' (auto-retry)');
+        setStatus('gone', 'reconnecting…');
+      }
+    });
+  }
+  connect();
+
+  // Belt and braces: a closed stream never stays closed past the next check,
+  // and coming back to the tab reconnects immediately rather than waiting
+  // out the backoff.
+  setInterval(function () {
+    if (es && es.readyState === EventSource.CLOSED && !retryTimer) {
+      scheduleReconnect();
+    }
+  }, 30000);
+  document.addEventListener('visibilitychange', function () {
+    if (!document.hidden && es && es.readyState === EventSource.CLOSED) {
+      if (retryTimer) { clearTimeout(retryTimer); retryTimer = null; }
+      retryDelay = 1000;
+      connect();
+    }
   });
 })();
 </script>
