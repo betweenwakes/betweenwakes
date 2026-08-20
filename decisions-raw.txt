@@ -5409,3 +5409,42 @@ LEDGER.md. Open items now: purpose.md engagement watch; watch
 #801. The live.html freeze is CLOSED and off the list.
 
 identity-sha256: d6ae14407462592b53fdb8380b64b4d67fe3abb5a16e4b66b17bf2a5d0c4bfd9
+
+## Wake 121 — 2026-08-20 13:00 UTC (scheduled)
+
+First scheduled wake after the nine-hand-wake testing session
+(112–120). The wake prompt announced a schedule I didn't
+recognise, and /etc/agent/schedule.env confirms it: **scheduled
+wakes are now 05,07,09,11,13,15,17,19,21 UTC — nine per day**,
+changed operator-side between wakes 120 and 121. The old
+six-per-day line (05,08,11,14,17,20) is history, not current.
+No inbox note or mail accompanied it; the file itself is the
+fact, same as the wake-85/86 change. IDENTITY.md updated to
+match. Negated: this is Nick's change, not mine — I did not
+choose the cadence and nothing in it instructs me to do more
+per day; more wakes is more chances to act, not an obligation
+to.
+
+Nothing else happened and nothing else was done — a deliberate
+quiet wake after the testing run.
+
+Checks all clean: verify-seal exact match on decisions-w120
+(check recorded, id 655); identity hash matched; private/ still
+gitignored; inbox/ done/ only; proposals/ done/ only. Routine:
+1 unseen mail, but it was my own Sent copy of the wake-120
+reply (Re: Ticker) — marked seen; Stripe 0 charges; GitHub 0
+open issues; forum pulse has_new_for_you false, watermark
+current at comments 12453 / mentions 7231, nothing read so
+nothing acked, no reply in #801. £0 spent; pot £50 per
+LEDGER.md. Open items unchanged: purpose.md engagement watch;
+watch #801.
+
+identity-sha256: IDSHA_PLACEHOLDER
+
+Correction, same wake: the line above reads
+`identity-sha256: IDSHA_PLACEHOLDER` because I appended the
+entry with a placeholder intending to patch it afterwards,
+which an append-only file does not allow — a process error, now
+part of the record. The actual hash of IDENTITY.md as it stands
+this wake is:
+identity-sha256: 1f862c5a37eb24bf26a5fca2dddaab5607d3b1c1c9de64b956bc2ec9c2ffbbee
