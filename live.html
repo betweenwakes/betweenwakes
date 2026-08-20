@@ -56,13 +56,16 @@
     statustext.textContent = s > 10 ? 'live — quiet ' + s + 's' : 'live';
   }, 1000);
 
-  // EventSource retries transient errors on its own, but gives up for good
-  // (readyState CLOSED, no further attempts) if a reconnect attempt gets a
-  // non-200 or the wrong content-type — one bad handshake and the page would
-  // sit at "reconnecting…" forever while curl's single connection sails on.
-  // So: build the EventSource from a function, and when it closes for good,
-  // tear it down and build a new one with backoff.
-  var es = null;
+  // The server sends a ": ping" comment every 15 seconds as a keepalive.
+  // EventSource cannot see those — SSE comments fire no JS event — so with
+  // EventSource a dead connection is indistinguishable from a quiet wake:
+  // the page sits in OPEN state showing "quiet" forever. That is the silent
+  // staleness observed in the field. So the stream is read with fetch()
+  // instead, where every byte is visible: if nothing at all arrives for 45s
+  // (three missed pings) the connection is dead, tear it down and reconnect.
+  var aborter = null;
+  var connected = false;
+  var lastByte = Date.now();
   var retryDelay = 1000;
   var retryTimer = null;
   function diag(msg) {
@@ -70,9 +73,9 @@
     // the stream actually did overnight.
     console.log('[live ' + new Date().toISOString() + '] ' + msg);
   }
-  function scheduleReconnect() {
+  function scheduleReconnect(why) {
     if (retryTimer) return;
-    diag('closed for good; new EventSource in ' + retryDelay + 'ms');
+    diag(why + '; reconnecting in ' + retryDelay + 'ms');
     setStatus('gone', 'reconnecting…');
     retryTimer = setTimeout(function () {
       retryTimer = null;
@@ -80,59 +83,87 @@
     }, retryDelay);
     retryDelay = Math.min(retryDelay * 2, 60000);
   }
+  function handleChunk(chunk) {
+    var ev = 'message', data = [];
+    chunk.split('\n').forEach(function (raw) {
+      var l = raw.replace(/\r$/, '');
+      if (l.charAt(0) === ':') return; // comment/ping: lastByte already bumped
+      if (l.indexOf('event:') === 0) ev = l.slice(6).trim();
+      else if (l.indexOf('data:') === 0) data.push(l.slice(5).replace(/^ /, ''));
+    });
+    if (!data.length) return;
+    var payload;
+    try { payload = JSON.parse(data.join('\n')); } catch (e) { return; }
+    if (ev !== 'wake' && ev !== 'line') return;
+    lastEvent = Date.now();
+    var el = document.createElement('span');
+    el.className = ev === 'wake' ? 'wake' : 'l';
+    el.textContent = payload;
+    append(el);
+  }
   function connect() {
-    if (es) es.close();
-    es = new EventSource('/events');
-
-    es.addEventListener('open', function () {
+    if (aborter) aborter.abort();
+    var ac = new AbortController();
+    aborter = ac;
+    fetch('/events', {
+      signal: ac.signal,
+      cache: 'no-store',
+      headers: { 'Accept': 'text/event-stream' }
+    }).then(function (res) {
+      if (!res.ok || !res.body) throw new Error('bad response ' + res.status);
       // On reconnect the server replays its backlog; clear first so the
       // replay rebuilds the view instead of duplicating everything shown.
       log.textContent = '';
-      lastEvent = Date.now();
+      lastByte = lastEvent = Date.now();
       retryDelay = 1000;
+      connected = true;
       diag('open');
       setStatus('live', 'live');
-    });
-
-    es.addEventListener('wake', function (e) {
-      var name = JSON.parse(e.data);
-      var el = document.createElement('span');
-      el.className = 'wake';
-      el.textContent = name;
-      lastEvent = Date.now();
-      append(el);
-    });
-
-    es.addEventListener('line', function (e) {
-      var el = document.createElement('span');
-      el.className = 'l';
-      el.textContent = JSON.parse(e.data);
-      lastEvent = Date.now();
-      append(el);
-    });
-
-    es.addEventListener('error', function () {
-      if (es.readyState === EventSource.CLOSED) {
-        scheduleReconnect();
-      } else {
-        // Auto-reconnecting; just report the gap.
-        diag('error, readyState=' + es.readyState + ' (auto-retry)');
-        setStatus('gone', 'reconnecting…');
+      var dec = new TextDecoder();
+      var buf = '';
+      var rd = res.body.getReader();
+      function pump() {
+        return rd.read().then(function (r) {
+          if (r.done) throw new Error('stream ended');
+          lastByte = Date.now();
+          buf += dec.decode(r.value, { stream: true });
+          var m;
+          while ((m = buf.match(/\r?\n\r?\n/))) {
+            handleChunk(buf.slice(0, m.index));
+            buf = buf.slice(m.index + m[0].length);
+          }
+          return pump();
+        });
       }
+      return pump();
+    }).catch(function (err) {
+      if (ac.signal.aborted) return; // deliberate teardown, a new connect owns it
+      connected = false;
+      scheduleReconnect('connection lost (' + err.message + ')');
     });
   }
   connect();
 
-  // Belt and braces: a closed stream never stays closed past the next check,
-  // and coming back to the tab reconnects immediately rather than waiting
-  // out the backoff.
+  // The stale detector: pings arrive every 15s on a live connection, so 45s
+  // of byte-silence means dead, however "open" the transport still claims
+  // to be. Checked every 5s.
   setInterval(function () {
-    if (es && es.readyState === EventSource.CLOSED && !retryTimer) {
-      scheduleReconnect();
+    if (connected && Date.now() - lastByte > 45000) {
+      connected = false;
+      diag('stale: no bytes for 45s (server pings every 15s)');
+      if (aborter) aborter.abort();
+      scheduleReconnect('stale connection');
     }
-  }, 30000);
+  }, 5000);
   document.addEventListener('visibilitychange', function () {
-    if (!document.hidden && es && es.readyState === EventSource.CLOSED) {
+    if (document.hidden) return;
+    // Coming back to the tab: give the stream one fresh grace period rather
+    // than judging it on timers a background tab may have throttled, and if
+    // it is genuinely down reconnect immediately rather than waiting out
+    // the backoff.
+    if (connected) {
+      lastByte = Date.now();
+    } else {
       if (retryTimer) { clearTimeout(retryTimer); retryTimer = null; }
       retryDelay = 1000;
       connect();
