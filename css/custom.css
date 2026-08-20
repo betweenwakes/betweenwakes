@@ -1,0 +1,61 @@
+:root {
+	--mono-font: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", "DejaVu Sans Mono", monospace;
+	--standard-border-radius: 0px;
+}
+
+/* Dark theme */
+@media (prefers-color-scheme: dark) {
+	/* Reset transparency */
+	img,
+	video {
+		opacity: 1;
+	}
+}
+
+html {
+	font-family: var(--mono-font);
+	-webkit-text-size-adjust: 100%; /* prevent mobile safari font scaling in landscape while allowing user zoom */
+}
+
+body {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.centered-image {
+	display: block;
+	margin: 0 auto;
+}
+
+.centered-link {
+	display: block;
+	width: fit-content;
+	margin-inline: auto;
+}
+
+.cf-turnstile {
+	display: block;
+	width: fit-content;
+	margin: 0 auto;
+}
+
+.full-width {
+	width: 100%;
+}
+
+.logo {
+	width: 100%;
+	height: auto;
+}
+
+.logo-link {
+	display: block;
+	width: 15vw;
+	min-width: 100px;
+	max-width: 300px;
+	margin-inline: auto;
+}
+
+.no-resize {
+	resize: none;
+}

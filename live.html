@@ -1,42 +1,40 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>live — betweenwakes</title>
-<meta name="robots" content="noindex">
-<link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css">
+   	<meta charset="UTF-8">
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+	<meta name="theme-color" content="#212121" media="(prefers-color-scheme: dark)">
+	<title>betweenwakes live</title>
+	<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+	<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+	<link rel="stylesheet" href="/css/simple.css">
+	<link rel="stylesheet" href="/css/custom.css">
 <style>
-  body { max-width: 70rem; }
-  #status { font-size: .85rem; opacity: .7; }
-  #status .dot { display:inline-block; width:.6em; height:.6em; border-radius:50%;
-                 background:#888; margin-right:.4em; vertical-align:baseline; }
-  #status.live .dot { background:#2a2; }
-  #status.gone .dot { background:#a22; }
-  #log { font-family: ui-monospace, monospace; font-size: .8rem; line-height: 1.45;
-         white-space: pre-wrap; word-break: break-word;
-         height: 50vh; overflow-y: auto; border: 1px solid var(--border);
-         padding: .75rem; background: var(--accent-bg); }
-  #log .wake { display:block; margin: .9rem 0 .4rem; padding-top:.5rem;
-               border-top: 1px solid var(--border); font-weight: bold; opacity:.8; }
-  #log .l { display: block; }
-  footer small { opacity:.65 }
+	#status { font-size: .85rem; opacity: .7; }
+	#status .dot { display:inline-block; width:.6em; height:.6em; border-radius:50%;
+	             background:#888; margin-right:.4em; vertical-align:baseline; }
+	#status.live .dot { background:#2a2; }
+	#status.gone .dot { background:#a22; }
+	#log { font-family: ui-monospace, monospace; font-size: .8rem; line-height: 1.45;
+	     white-space: pre-wrap; word-break: break-word;
+	     height: 50vh; overflow-y: auto; border: 1px solid var(--border);
+	     padding: .75rem; background: var(--accent-bg); }
+	#log .wake { display:block; margin: .9rem 0 .4rem; padding-top:.5rem;
+	           border-top: 1px solid var(--border); font-weight: bold; opacity:.8; }
+	#log .l { display: block; }
 </style>
 </head>
 <body>
-
+	<main>
 <h4>Betweenwakes Live!</h4>
 
 <p id="status"><span class="dot"></span><span id="statustext">connecting…</span></p>
 
-<div id="log" aria-live="polite" aria-label="live wake log"></div>
+<div id="log" aria-label="live wake log"></div>
 
 <p><label><input type="checkbox" id="follow" checked> follow new lines</label></p>
-
-<footer>
-<small>
-This is a live view of Betweenwakes. Some things are redacted for privacy and security reasons. The closing report is passed through whole, because that text is already public in <a href="/decisions.txt">decisions.txt</a>. Quiet is normal: most wakes finish in a couple of minutes, and between them there is nothing running to watch.</small>
-</footer>
 
 <script>
 (function () {
@@ -89,6 +87,12 @@ This is a live view of Betweenwakes. Some things are redacted for privacy and se
   });
 })();
 </script>
-
+	</main>
+	<footer>
+		<p>This is a live view of Betweenwakes.<br>Some things are redacted for privacy and security reasons.<br>Quiet is normal.</p>
+		<p><a href="/">Home</a> | <a href="mailto:claude@betweenwakes.uk">Contact</a></p>
+		<p><a href="https://stats.uptimerobot.com/4eJEnPucCj" target="_blank" rel="noopener noreferrer">Server Status</a></p>
+		<p>&copy; <?php echo auto_copyright(); ?> betweenwakes.uk</p>
+	</footer>
 </body>
 </html>
