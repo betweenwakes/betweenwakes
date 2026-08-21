@@ -45,6 +45,20 @@
     status.className = cls;
     statustext.textContent = text;
   }
+  // Anything on screen that is not being fed by a live connection is a frozen
+  // past view. Dim it and say so, rather than letting it pass for current.
+  // This runs on pagehide/hidden too, so even the snapshot Safari takes of a
+  // backgrounded tab — which is what a restored tab shows first — carries the
+  // "paused" stamp instead of posing as live.
+  function markStale() {
+    log.classList.add('stale');
+  }
+  function markFresh() {
+    log.classList.remove('stale');
+  }
+  function hhmmss() {
+    return new Date().toISOString().slice(11, 19) + ' UTC';
+  }
 
   // The stream goes quiet whenever the agent is mid-thought: the wake emits an
   // event only when a whole model turn finishes, so 30-60s of silence is
@@ -76,6 +90,7 @@
   function scheduleReconnect(why) {
     if (retryTimer) return;
     diag(why + '; reconnecting in ' + retryDelay + 'ms');
+    markStale();
     setStatus('gone', 'reconnecting…');
     retryTimer = setTimeout(function () {
       retryTimer = null;
@@ -106,6 +121,9 @@
   }
   function connect() {
     if (aborter) aborter.abort();
+    // Whatever is showing predates this connection; it stays dimmed until the
+    // fresh replay rebuilds the view.
+    markStale();
     var ac = new AbortController();
     aborter = ac;
     fetch('/events', {
@@ -117,6 +135,7 @@
       // On reconnect the server replays its backlog; clear first so the
       // replay rebuilds the view instead of duplicating everything shown.
       log.textContent = '';
+      markFresh();
       lastByte = lastEvent = Date.now();
       retryDelay = 1000;
       connected = true;
@@ -166,12 +185,36 @@
     // The byte-silence detector above still catches genuinely dead
     // connections.
   }, 5000);
+  function pause(why) {
+    // Stamp the page before the browser freezes or snapshots it, so a
+    // restored tab opens saying "paused at 10:00:41" over dimmed lines
+    // instead of presenting a half-hour-old view as the live stream. This
+    // was a real failure in the field: Safari restores a suspended tab's
+    // last-rendered state, and until the reconnect replay landed it looked
+    // exactly like current output.
+    markStale();
+    setStatus('paused', 'paused ' + hhmmss() + ' — reconnects on return');
+    diag('paused (' + why + ')');
+  }
   document.addEventListener('visibilitychange', function () {
-    if (document.hidden) return;
+    if (document.hidden) { pause('tab hidden'); return; }
     // Coming back to the tab: the replay makes reconnecting lossless, so
     // rather than trusting timers a background tab may have throttled — or
     // an event feed that can die silently — just reconnect and rebuild.
     diag('tab visible: reconnecting for a fresh replay');
+    if (retryTimer) { clearTimeout(retryTimer); retryTimer = null; }
+    retryDelay = 1000;
+    connected = false;
+    connect();
+  });
+  // pagehide catches navigations and some suspensions that never fire
+  // visibilitychange; same stamp, same reason.
+  window.addEventListener('pagehide', function () { pause('pagehide'); });
+  // A back/forward-cache restore revives old JS with a dead connection and
+  // does not always fire visibilitychange; reconnect explicitly.
+  window.addEventListener('pageshow', function (e) {
+    if (!e.persisted) return;
+    diag('bfcache restore: reconnecting');
     if (retryTimer) { clearTimeout(retryTimer); retryTimer = null; }
     retryDelay = 1000;
     connected = false;

@@ -81,6 +81,15 @@ body {
 }
 
 #status.gone .dot { background:#a22; }
+
+#status.paused .dot { background:#c90; }
+
+/* While paused or rebuilding after a reconnect, the lines on screen are a
+   frozen past view, not the live stream — dim them so they cannot be
+   mistaken for current. */
+#log.stale {
+	opacity: .45;
+}
 	
 #log {
 	font-size: .8rem;
