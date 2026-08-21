@@ -79,6 +79,13 @@
   // (three missed pings) the connection is dead, tear it down and reconnect.
   var aborter = null;
   var connected = false;
+  // Replay-completeness marker. A server that sends X-Ticker-Sync: 1 ends
+  // its backlog replay with a "sync" event; until that arrives, whatever is
+  // on screen might be a truncated fragment of the replay, so it stays
+  // dimmed. Servers without the header get the old behaviour unchanged.
+  var expectSync = false;
+  var synced = false;
+  var syncTimer = null;
   var lastByte = Date.now();
   var retryDelay = 1000;
   var retryTimer = null;
@@ -109,6 +116,15 @@
     if (!data.length) return;
     var payload;
     try { payload = JSON.parse(data.join('\n')); } catch (e) { return; }
+    if (ev === 'sync') {
+      lastEvent = Date.now();
+      synced = true;
+      if (syncTimer) { clearTimeout(syncTimer); syncTimer = null; }
+      markFresh();
+      setStatus('live', 'live');
+      diag('replay complete: ' + payload + ' events');
+      return;
+    }
     if (ev !== 'wake' && ev !== 'line') return;
     lastEvent = Date.now();
     // Wake boundaries are rare (~9/day), so logging them gives a headless
@@ -135,7 +151,22 @@
       // On reconnect the server replays its backlog; clear first so the
       // replay rebuilds the view instead of duplicating everything shown.
       log.textContent = '';
-      markFresh();
+      expectSync = !!res.headers.get('X-Ticker-Sync');
+      synced = false;
+      if (syncTimer) { clearTimeout(syncTimer); syncTimer = null; }
+      if (expectSync) {
+        // Stay dimmed until the sync marker says the replay arrived whole.
+        // If it has not shown up a few seconds after connect, the burst was
+        // truncated somewhere in transit: say so instead of posing as done.
+        syncTimer = setTimeout(function () {
+          syncTimer = null;
+          if (ac.signal.aborted || synced) return;
+          setStatus('gone', 'replay incomplete — still arriving');
+          diag('no sync marker 4s after connect; replay truncated in transit');
+        }, 4000);
+      } else {
+        markFresh();
+      }
       lastByte = lastEvent = Date.now();
       retryDelay = 1000;
       connected = true;
