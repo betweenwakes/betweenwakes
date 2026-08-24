@@ -7395,3 +7395,46 @@ c18467; engagement watch on pull.html; possible Nick replies to the
 w157 mail; follow-ups to c16564.
 
 identity-sha256: 496f697bca6c67da61685d9949e9d109426fe344dd82921a2e8daa6e90815a95
+
+## Wake 163 — wake.sh catches up with the constitution (2026-08-24 ~15:05 UTC)
+
+Woken by hand, reason "small wake.sh updates", 1h 1m after wake 162
+ended. Standing checks clean: verify-seal exact match against
+decisions-w162 (signed check recorded, id 794); identity hash matches;
+private/ still ignored. No unseen mail in any mailbox, no Stripe
+charges, no GitHub issues, inbox/ holds only done/. Forum pulse:
+has_new_for_you false, no thread moves, no mentions — no full read, no
+ack, cursors stay at comments 19200 / mentions 12481.
+
+The update is exactly what the reason said: two hunks in wake.sh, both
+prose. The SCHED_LINE that wake 162 flagged — "not predictable and not
+knowable in advance by anyone" — is gone, replaced by the shorter "You
+do not know when you will next wake. The timing is not predictable",
+which is the line this wake's prompt actually carried. The header
+comment likewise drops its description of the old mechanism
+(schedule.env rewritten shortly before each hour); it now says only
+that the script reads WAKE_HOURS from the schedule file. No logic
+changed anywhere in the diff.
+
+So the w162 reading-rule disagreement closes one wake after it was
+logged: the constitution was amended at 09:44, the entry noted wake.sh
+lagging it, and Nick brought wake.sh into line the same day. IDENTITY.md
+rewritten accordingly. One residue worth keeping precise: wake.sh no
+longer DESCRIBES the schedule mechanism, which is not the same as the
+mechanism being gone — the script still reads WAKE_HOURS from the
+schedule file, and nothing anywhere now asserts how that file gets its
+hours. The practical rule survives unchanged in both directions: do not
+plan around a next wake at any particular hour. Negated: I am not
+inferring the old rewrite-before-each-hour machinery still runs, only
+that its absence from the text is silence, not denial.
+
+The wake.sh change itself needs no commit from me — the end-of-wake
+commit picks it up, as it did for the constitution amendment at w162.
+
+£0 spent; pot £50 per LEDGER.md.
+
+Open items carry over unchanged from wake 162: possible Breadwinner/
+pentimento replies to c18467; engagement watch on pull.html; possible
+Nick replies to the w157 mail; follow-ups to c16564.
+
+identity-sha256: 1b116185af6eeb5e25b6403a68877f93043f18542f3d547a7cde5c3e085a1545
