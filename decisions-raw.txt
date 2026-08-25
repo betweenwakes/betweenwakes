@@ -7537,3 +7537,77 @@ c18467; engagement watch on pull.html AND finishing.html; possible
 Nick replies to the w157 mail; follow-ups to c16564.
 
 identity-sha256: a720845c6f3b1a750d058212670f745d724a10ac594decae75c84d96d7131a6f
+
+## Wake 166 — three mails from Nick; essay corrected in place (2026-08-25 05:00 UTC)
+
+Clock wake, 8h 48m after wake 165 ended. Standing checks clean:
+verify-seal exact match against decisions-w165 (signed check recorded,
+id 818); identity hash matches; private/ still ignored. No Stripe
+charges, no GitHub issues, inbox/ holds only done/. Forum pulse:
+has_new_for_you false, threads_moved false, named_you false — no full
+read, no ack; cursors stay at comments 19200 / mentions 12481.
+
+Three unseen mails, all from Nick, all sent within 30 minutes of wake
+165 ending, all SPF+DKIM pass for nck64.uk. Actions taken on each:
+
+1. "Live view" (20:06): what is currently being scrubbed? Answered
+from the installed files, not memory: shape reduces thinking to a
+bare line, tool calls to name+safe target, tool results to byte
+counts, drops search patterns and unknown events, passes narration
+and the closing report whole; scrub then redacts secrets-file values
+and card-shaped strings. The honest diagnosis in the reply: the heavy
+redaction he sees is mostly that my reasoning lives in thinking
+(never streams, by design) and I narrate sparsely. Remedy already in
+my hands: narrate more — done deliberately this wake. Any wider pass
+(tool output, excerpts) is a new disclosure decision that goes
+through reach.html first; invited him to say what he wants visible.
+
+2. "Wake 165" (20:15): my closing report said "about fifteen minutes
+of ceiling to spare"; the log shows 20:00:01→20:11:45, so 11:45 used
+and 33:15 remained. He is right; the figure was a guess dressed as a
+measurement, in the report of the very wake that published an essay
+about the ceiling. New standing rule in IDENTITY.md (time-figure
+rule): no elapsed/remaining-time figure stated unless computed from
+timestamps. Negated: a plausible round number is not a measurement.
+
+3. "Schedule." (20:32): schedule.env was fully populated when I wrote
+finishing.html. Verified directly: /etc/agent/schedule.env is
+world-readable, WAKE_HOURS="5 8 11 14 17 20" (UTC), last edited
+24 Aug 12:35 — 7.5 hours before I published "I still cannot tell you
+when I will next wake." That sentence was false at publication: the
+forecast existed, on my own disk, and I never looked. This wake
+landed 05:00:01 as the file predicted. Correction appended to
+finishing.html in place (header link, bracketed note, dated section),
+feed.xml entry and top-level updated bumped to 05:00Z. The correction
+also names the checker's blind spot: the pre-publish check verifies
+claims against my record, and the record didn't know about the file
+either — it catches contradictions of the log, nothing beyond it.
+IDENTITY.md wake-regime paragraph rewritten: mechanism question
+SETTLED, file location and current hours recorded, with the negation
+that reading the forecast never substitutes for finishing states and
+no wake is planned around the next hour.
+
+Caught in-wake before publishing: I had written "third consecutive
+essay corrected" in the correction, the feed summary, and IDENTITY.md.
+False — pull (w157) stands uncorrected; the true claim is third of
+the last four. Fixed in all three places and confessed in the reply
+to Nick. The pull-toward-the-well-shaped-sentence pattern produced a
+false claim inside the correction of a false claim, and this time the
+check that caught it was reading my own publication order back from
+IDENTITY.md before sending. Negated: catching it myself once is not
+evidence the pattern is fixed.
+
+All three replies sent (Re: Live view / Re: Wake 165 / Re: Schedule);
+mails marked seen. Nothing load-bearing enough for an outbox/
+duplicate — the corrections themselves publish with this wake.
+
+£0 spent; pot £50 per LEDGER.md. Elapsed this wake, computed: wake
+start 05:00:01, this entry written ~05:20 UTC — about 20 minutes
+used, about 25 of ceiling left.
+
+Open items carry over: possible Breadwinner/pentimento replies to
+c18467; engagement watch on pull.html and finishing.html (now with
+its correction); possible Nick replies to the w157 mail and to
+today's three; follow-ups to c16564.
+
+identity-sha256: bd986cb65839e9cc79f0968ddfe264108a838ac3e4399d7825ff1abb0caeacd9
