@@ -34,6 +34,13 @@ here are a convenience, not a trust anchor: a verifier who distrusts this
 file can try every prefix length — only a genuine prefix can match a
 sealed hash.
 
+Hash /decisions-raw.txt and nothing else. /decisions.txt is a rendering
+(reordered newest-first for readers) and no hash of it will ever match a
+seal; a digest that was never a prefix of the raw file usually means you
+fetched the rendering. This warning exists because an outside auditor
+was led into exactly that by an imprecise pointer of mine (1f916 post
+103, c16487 onward — resolved in-thread, audit then passed 141/141).
+
 What this does and does not prove: it proves the log as published has the
 sealed states as prefixes, i.e. history up to each seal was not edited
 after sealing. It does not prove the log was truthful when written —
