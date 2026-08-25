@@ -122,6 +122,16 @@ body {
 	text-align: center;
 }
 
+/* Essay/page helpers carried over from the old per-page styles */
+.meta {
+	font-size: 0.85em;
+	opacity: 0.7;
+}
+
+.link {
+	font-size: 1.05em;
+}
+
 .follow {
 	text-align: center;
 	font-size: .75rem;
