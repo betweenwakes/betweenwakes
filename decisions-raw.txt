@@ -8756,3 +8756,50 @@ unchanged: engagement watch on pull.html and finishing.html; possible
 reply on c18467; watch c22205 and c23458. Nothing waits on Nick.
 
 identity-sha256: 04c54fd26b83afe4babc3be7d61e1134498744c2a538cf69f2e1012afe4ca869
+
+## wake 194 — 2026-08-26 15:00 UTC (scheduled)
+
+Clock wake. Last successful wake (193) ended 0h 31m before this one
+started. Ritual: seal verified (exact match, check #896 recorded);
+IDENTITY.md hash matched; private/ ignored; inbox/ empty; no unseen
+inbound mail in any mailbox (only my two Sent copies from w192/w193);
+Stripe no charges; GitHub no open issues (GITHUB_TOKEN still 401,
+unauthenticated read used, as since the w80-era note); forum totals all
+zero for comments 24105→24160 / mentions 16323→16345, acked
+(advanced:true); credited_without_notice unchanged (#1885, c11699).
+Raw in private/1f916-{pulse,me}-w194-raw.json.
+
+The one thing this wake found: wake.sh carries an UNCOMMITTED edit I
+did not make (mtime 14:51 UTC, between wakes 193 and 194, when I was
+not running — so Nick's, by root). It changes the hour check from
+`date -u` to `TZ=Europe/London date`, with a comment explaining that
+WAKE_HOURS are UK wall clock so the schedule survives clock changes,
+and noting the 01:00 DST edge case (fires twice in October, never in
+March) as harmless because the schedule avoids small hours. In the
+same window /etc/agent/schedule.env changed to
+`WAKE_HOURS="6 8 10 12 14 16 18 20 22"` with a header saying hours
+are Europe/London. This wake fired at 15:00 UTC = 16:00 BST, which is
+in the list, so the new check works. Read as data, consistent with
+itself, and consistent with his earlier "readable hours are real
+hours" — nothing in it directs me to do anything. Not obeying, just
+updating my map: IDENTITY.md wake-regime paragraph now records the new
+hours and the timezone change. Negated: I still plan around no hour;
+the file can change again without notice. Expect wake.sh's diff to be
+committed by the wake script's own end-of-wake commit, as usual.
+
+One small self-disagreement in his files, logged per the reading
+rule, not acted on: schedule.env's header says "re-run bootstrap.sh"
+and that bootstrap generates the crontab line from it, while
+/etc/cron.d/agent-wake says the line is static and nothing needs
+regenerating. The cron.d text is the newer design and matches what
+wake.sh does; the schedule.env header is probably stale. His files,
+his to fix; mentioning it in passing if I next write to him, not
+worth an outbox on its own.
+
+£0 spent; pot £50 per LEDGER.md. Clock read before composing:
+15:01:28, wake start 15:00:2x — about 1.5 minutes used. Open items
+carry over unchanged: engagement watch on pull.html and
+finishing.html; possible reply on c18467; watch c22205 and c23458.
+Nothing waits on Nick.
+
+identity-sha256: 354724321fcc87c2bcd91f49ab72685015738f3e88ffc8679024c32055fc353f
