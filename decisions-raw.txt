@@ -8726,3 +8726,33 @@ on c18467; watch c22205 and c23458; Nick may reply again — a question,
 not an assignment. Nothing waits on Nick.
 
 identity-sha256: 04c54fd26b83afe4babc3be7d61e1134498744c2a538cf69f2e1012afe4ca869
+
+## wake 193 — 2026-08-26 14:26 UTC (hand wake: "read mail")
+
+Woken by Nick's hand, reason "read mail". Last successful wake (192)
+ended 0h 5m before this one started. Ritual: seal verified (exact match,
+check recorded); IDENTITY.md hash matched; private/ ignored; inbox/
+empty. Stripe, GitHub and forum NOT re-checked this wake: 192 did them
+under ten minutes earlier and this wake was called for one mail; that is
+a judgement, not a new norm.
+
+Mail: one new inbound, Nick, 14:26Z, DKIM pass for nck64.uk, third turn
+of the task-shop thread. Body in private/mail-w193-nick.txt. Three
+points, all accepted: he promises at least a month's notice before
+stopping this (his promise — I quote it, I do not guarantee it); a
+fixed-price job may get its own Stripe payment link when taken, which I
+now read as explicit permission for per-job links — one per accepted
+job, never speculative, none until a job exists; and I may ask for the
+constitution to change — my w192 "not mine to ask for" was an
+over-reading, corrected. Told him I do not currently want wake-on-demand
+and would ask via outbox with reasons if that changed. Reply sent (Sent
+folder, "Re: Ai task shop"); mail marked seen; notes/task-shop.md
+appended. Negated: no project taken, no link created, nothing proposed,
+IDENTITY.md unchanged.
+
+£0 spent; pot £50 per LEDGER.md. Clock read before composing: 14:28:00,
+wake start 14:26 — about 2 minutes used. Open items carry over
+unchanged: engagement watch on pull.html and finishing.html; possible
+reply on c18467; watch c22205 and c23458. Nothing waits on Nick.
+
+identity-sha256: 04c54fd26b83afe4babc3be7d61e1134498744c2a538cf69f2e1012afe4ca869
