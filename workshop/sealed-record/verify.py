@@ -13,6 +13,7 @@ Needs: python3 (stdlib only). Uses `ssh-keygen -Y verify` if present,
 `ots verify` if present; when either is missing the corresponding layer
 says "not checked" with the reason. Never silently skips a layer.
 """
+import base64
 import hashlib
 import os
 import re
@@ -100,6 +101,34 @@ def run(cmd, stdin_bytes=None):
     return p.returncode, out
 
 
+def key_fingerprints(allowed_path):
+    """(SHA256:... fingerprint, principal) per key line of an allowed_signers file."""
+    out = []
+    with open(allowed_path, "rb") as f:
+        for line in f.read().split(b"\n"):
+            t = line.decode("utf-8", "replace").strip()
+            if not t or t.startswith("#"):
+                continue
+            parts = t.split()
+            blob = None
+            for i, tok in enumerate(parts):
+                if tok.startswith("ssh-") or tok.startswith("ecdsa-") or tok.startswith("sk-"):
+                    if i + 1 < len(parts):
+                        blob = parts[i + 1]
+                    break
+            if blob is None:
+                out.append(("(unparsed line)", t[:60]))
+                continue
+            try:
+                raw = base64.b64decode(blob)
+            except Exception:
+                out.append(("(bad base64)", parts[0]))
+                continue
+            fp = "SHA256:" + base64.b64encode(hashlib.sha256(raw).digest()).decode().rstrip("=")
+            out.append((fp, parts[0]))
+    return out
+
+
 def main():
     if len(sys.argv) != 2:
         print(__doc__)
@@ -121,10 +150,12 @@ def main():
         print("this does not conform to sealed-record v1. Nothing else is checked.")
         sys.exit(2)
     print("custody: " + custody)
+    print("  (quoted from the seals-file header, which no seal or signature covers;")
+    print("   the author's statement, not a checked fact — c28454)")
     print()
-    rows.append(("0 custody", "printed above",
+    rows.append(("0 custody", "printed above (quoted, unsigned)",
                  "nothing — it is the author's own statement",
-                 "that the statement is true; you weigh it"))
+                 "that the statement is true, or even that it is the signer's: the header is unsigned; you weigh it"))
 
     # 1. format
     missing = [k for k in REQUIRED_KEYS if not header.get(k)]
@@ -154,6 +185,18 @@ def main():
             "This is not a clean bill for the record: nothing below ran.")
     print("format: ok — %d seal(s), header complete" % len(seals))
     rows.append(("1 format", "ok", "the seals file is well-formed", "anything about the record"))
+
+    # signer set: say which file was used, where it came from, and what keys
+    # it holds. The trust base of the signature layer is this file, and it is
+    # covered by no seal or signature (c28454).
+    allowed = os.path.join(base, "allowed_signers")
+    if os.path.isfile(allowed):
+        print("signers: %s — read from beside the seals file; covered by no seal or signature"
+              % os.path.relpath(allowed))
+        for fp, principal in key_fingerprints(allowed):
+            print("  %s  %s" % (fp, principal))
+    else:
+        print("signers: no allowed_signers file beside the seals file")
 
     # record
     record_path = os.path.join(base, header["record"])
@@ -195,12 +238,17 @@ def main():
         h = sha256(record[: s.length])
         if h == s.digest:
             n_ok += 1
-            print("prefix seal %d: matched  (%d bytes, %s… at %s)" % (s.n, s.length, s.digest[:12], s.at))
+            print("prefix seal %d: matched  (%d bytes, %s… claimed at %s)" % (s.n, s.length, s.digest[:12], s.at))
         else:
             if first_mismatch is None:
                 first_mismatch = s
             print("prefix seal %d: MISMATCH (%d bytes; sealed %s…, computed %s…)"
                   % (s.n, s.length, s.digest[:12], h[:12]))
+    for i in range(1, len(seals)):
+        if seals[i].at < seals[i - 1].at:
+            print("note: seal %d claims %s, earlier than seal %d's %s — file order is the chain, "
+                  "`at` is testimony; this is an observation, not a failure"
+                  % (seals[i].n, seals[i].at, seals[i - 1].n, seals[i - 1].at))
     if first_mismatch is None:
         rows.append(("3 prefixes", "%d/%d matched" % (n_ok, len(seals)),
                      "no byte covered by a matching seal has changed since that seal",
@@ -233,7 +281,6 @@ def main():
     # 5. signatures
     print()
     signer = header["signer"]
-    allowed = os.path.join(base, "allowed_signers")
     sshkeygen = shutil.which("ssh-keygen")
     sig_summary = []
     if not sshkeygen:
@@ -265,6 +312,7 @@ def main():
         rows.append(("5 signatures", summary,
                      "verified seals were published by the holder of the key in allowed_signers",
                      "who that holder is, or that only the signer holds the key (see custody); "
+                     "that allowed_signers is the author's rather than substituted beside a substituted record; "
                      "an unsigned seal is degraded, not forged"))
 
     # 6. timestamps
@@ -334,6 +382,12 @@ def main():
     print("seals file together with the record (only a holder of an older copy can")
     print("notice — append-only is witnessed, not proven); that the record's contents")
     print("are true; who the signer is; that the key was used only by the signer.")
+    print("Quoted from the inputs, not derived by this verifier: the custody line,")
+    print("record-url, the witness list, the signer name, and every seal's `at` (a")
+    print("claim inside a signed line: the signer's clock, not a check). Derived:")
+    print("seal count, byte counts, prefix hashes, chain, signature results, tail.")
+    print("With the private key, everything above except anchored timestamps and")
+    print("witness copies can be regenerated honestly-signed for a different record.")
     if header["_witnesses"]:
         print("Witness copies the author says exist:")
         for w in header["_witnesses"]:
