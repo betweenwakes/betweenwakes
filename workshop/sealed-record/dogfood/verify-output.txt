@@ -1,0 +1,625 @@
+custody: key lives on a machine where the operator is root and has promised in writing not to read it; the promise is public at https://betweenwakes.uk/constitution.txt
+
+format: ok — 189 seal(s), header complete
+record: DECISIONS.md, 529094 bytes present, largest seal covers 526184 bytes
+record-url: https://betweenwakes.uk/decisions-raw.txt  (this verifier read the local file, not the URL)
+length: ok — record is not shorter than its largest seal
+
+prefix seal 1: matched  (78555 bytes, d55094d68e28… at 2026-08-12T20:04:16Z)
+prefix seal 2: matched  (80928 bytes, c8581d3f4a6d… at 2026-08-12T20:53:16Z)
+prefix seal 3: matched  (84531 bytes, 1d4c96413a2e… at 2026-08-13T05:04:38Z)
+prefix seal 4: matched  (88549 bytes, f6252db2762b… at 2026-08-13T06:41:49Z)
+prefix seal 5: matched  (92302 bytes, 21ca1d20dfec… at 2026-08-13T07:18:07Z)
+prefix seal 6: matched  (95100 bytes, af73108dbc5a… at 2026-08-13T07:53:09Z)
+prefix seal 7: matched  (98101 bytes, 25f80c996292… at 2026-08-13T10:04:04Z)
+prefix seal 8: matched  (100570 bytes, df08db53a226… at 2026-08-13T15:04:17Z)
+prefix seal 9: matched  (103321 bytes, 7e400925b393… at 2026-08-13T20:03:13Z)
+prefix seal 10: matched  (106005 bytes, 3be421535052… at 2026-08-13T20:37:37Z)
+prefix seal 11: matched  (107622 bytes, 067dbf5a7fdf… at 2026-08-13T21:11:37Z)
+prefix seal 12: matched  (111237 bytes, 9ab4fc69741b… at 2026-08-14T05:05:05Z)
+prefix seal 13: matched  (115086 bytes, df03c3af48d9… at 2026-08-14T10:04:55Z)
+prefix seal 14: matched  (117761 bytes, 2b54407de1eb… at 2026-08-14T15:02:53Z)
+prefix seal 15: matched  (119320 bytes, fc487e1b8c39… at 2026-08-14T20:01:44Z)
+prefix seal 16: matched  (121682 bytes, 6e849c184b35… at 2026-08-14T21:01:53Z)
+prefix seal 17: matched  (122838 bytes, 0fbc9c5ff064… at 2026-08-15T05:01:27Z)
+prefix seal 18: matched  (123979 bytes, b656fa0ac103… at 2026-08-15T06:05:55Z)
+prefix seal 19: matched  (126008 bytes, 995c7a331f7d… at 2026-08-15T10:02:07Z)
+prefix seal 20: matched  (126989 bytes, 3a03b48ea9d2… at 2026-08-15T15:01:00Z)
+prefix seal 21: matched  (128008 bytes, 9f05070eb1a8… at 2026-08-15T20:00:54Z)
+prefix seal 22: matched  (129026 bytes, 11f090f2dcc1… at 2026-08-16T05:00:58Z)
+prefix seal 23: matched  (130024 bytes, f09e3fc5e58a… at 2026-08-16T10:00:53Z)
+prefix seal 24: matched  (131021 bytes, 21272496a146… at 2026-08-16T15:00:58Z)
+prefix seal 25: matched  (133665 bytes, 90ef70b2f0dc… at 2026-08-16T17:06:58Z)
+prefix seal 26: matched  (135021 bytes, d44b71d4d5b9… at 2026-08-16T20:01:12Z)
+prefix seal 27: matched  (136195 bytes, 67d48a38ffe5… at 2026-08-17T05:01:01Z)
+prefix seal 28: matched  (137272 bytes, 19ce65e8299a… at 2026-08-17T06:15:45Z)
+prefix seal 29: matched  (138521 bytes, e852e39904d2… at 2026-08-17T10:01:03Z)
+prefix seal 30: matched  (141598 bytes, b5767cdbf8ed… at 2026-08-17T14:55:23Z)
+prefix seal 31: matched  (144262 bytes, d2055f4eccaf… at 2026-08-17T15:04:16Z)
+prefix seal 32: matched  (145994 bytes, 60987a52c196… at 2026-08-17T15:36:48Z)
+prefix seal 33: matched  (147720 bytes, 3e8614352684… at 2026-08-17T16:36:46Z)
+prefix seal 34: matched  (149947 bytes, 72b23119d7ed… at 2026-08-17T20:02:54Z)
+prefix seal 35: matched  (152048 bytes, 75c5ec2bbddf… at 2026-08-18T04:42:02Z)
+prefix seal 36: matched  (155095 bytes, 1aac5ee7e480… at 2026-08-18T05:04:21Z)
+prefix seal 37: matched  (158201 bytes, beb764fa745b… at 2026-08-18T05:37:28Z)
+prefix seal 38: matched  (161680 bytes, 0976846cad6b… at 2026-08-18T06:13:57Z)
+prefix seal 39: matched  (165179 bytes, 40c972812dab… at 2026-08-18T06:53:10Z)
+prefix seal 40: matched  (167561 bytes, ff6ee45eb136… at 2026-08-18T10:02:26Z)
+prefix seal 41: matched  (170540 bytes, 2d962c407501… at 2026-08-18T12:13:20Z)
+prefix seal 42: matched  (173718 bytes, fd2b6aa8a486… at 2026-08-18T12:49:50Z)
+prefix seal 43: matched  (177095 bytes, d40c0a92e377… at 2026-08-18T13:33:36Z)
+prefix seal 44: matched  (180435 bytes, 470c870511ab… at 2026-08-18T14:08:54Z)
+prefix seal 45: matched  (183604 bytes, d305486457b3… at 2026-08-18T14:44:34Z)
+prefix seal 46: matched  (187672 bytes, 829190570ef9… at 2026-08-18T15:05:14Z)
+prefix seal 47: matched  (189617 bytes, ed0c16511bc8… at 2026-08-18T15:41:23Z)
+prefix seal 48: matched  (193861 bytes, 08110bc66f6e… at 2026-08-18T17:12:05Z)
+prefix seal 49: matched  (196966 bytes, 47aef5a7a8e5… at 2026-08-18T20:03:49Z)
+prefix seal 50: matched  (198577 bytes, 9275a1642cb6… at 2026-08-18T20:47:25Z)
+prefix seal 51: matched  (200901 bytes, d0ca1daa138a… at 2026-08-19T05:02:46Z)
+prefix seal 52: matched  (203337 bytes, 41bd1032d6ef… at 2026-08-19T07:22:17Z)
+prefix seal 53: matched  (206936 bytes, f8cd553b787e… at 2026-08-19T08:02:25Z)
+prefix seal 54: matched  (209926 bytes, 3f022316292b… at 2026-08-19T08:38:37Z)
+prefix seal 55: matched  (212756 bytes, ebbf9fe4d1d5… at 2026-08-19T08:58:04Z)
+prefix seal 56: matched  (216033 bytes, 61adcf6bd46e… at 2026-08-19T09:03:36Z)
+prefix seal 57: matched  (218821 bytes, 1d6ae7f8c1a6… at 2026-08-19T09:09:22Z)
+prefix seal 58: matched  (221855 bytes, d30d2c7fe778… at 2026-08-19T09:16:15Z)
+prefix seal 59: matched  (224655 bytes, 907906eddf87… at 2026-08-19T09:20:35Z)
+prefix seal 60: matched  (226745 bytes, c62e7f26911b… at 2026-08-19T09:25:35Z)
+prefix seal 61: matched  (229765 bytes, 83e6d52963dd… at 2026-08-19T10:04:52Z)
+prefix seal 62: matched  (231762 bytes, 37ca7056762e… at 2026-08-19T10:42:20Z)
+prefix seal 63: matched  (234839 bytes, 22bff4d420eb… at 2026-08-19T14:07:19Z)
+prefix seal 64: matched  (239276 bytes, 0ab9a35c845b… at 2026-08-19T15:24:00Z)
+prefix seal 65: matched  (241830 bytes, d662fb16ea85… at 2026-08-19T15:28:12Z)
+prefix seal 66: matched  (246062 bytes, e0595125c8bf… at 2026-08-19T15:45:45Z)
+prefix seal 67: matched  (247738 bytes, 93e50e3ecded… at 2026-08-19T16:03:34Z)
+prefix seal 68: matched  (249188 bytes, 8884a7db7e23… at 2026-08-19T16:07:19Z)
+prefix seal 69: matched  (250445 bytes, 081e7ed2e2f1… at 2026-08-19T16:12:11Z)
+prefix seal 70: matched  (251651 bytes, 73c7c59e02da… at 2026-08-19T16:15:21Z)
+prefix seal 71: matched  (253022 bytes, a3a89b797893… at 2026-08-19T16:18:25Z)
+prefix seal 72: matched  (254260 bytes, 0a83fe3529db… at 2026-08-19T16:21:21Z)
+prefix seal 73: matched  (256303 bytes, 90b31dd06c94… at 2026-08-19T16:57:09Z)
+prefix seal 74: matched  (257481 bytes, 89d1e67e3d35… at 2026-08-19T17:01:01Z)
+prefix seal 75: matched  (259933 bytes, 4394d553aac1… at 2026-08-19T20:04:11Z)
+prefix seal 76: matched  (263179 bytes, 5a74d742c3b8… at 2026-08-20T05:06:12Z)
+prefix seal 77: matched  (266343 bytes, 45bc4388b290… at 2026-08-20T08:04:27Z)
+prefix seal 78: matched  (269409 bytes, 2ca7c51c29b6… at 2026-08-20T09:49:34Z)
+prefix seal 79: matched  (271576 bytes, 3c9ed20e0610… at 2026-08-20T10:33:26Z)
+prefix seal 80: matched  (274189 bytes, f95cacafb31b… at 2026-08-20T11:04:05Z)
+prefix seal 81: matched  (276750 bytes, 61e57b65cc98… at 2026-08-20T11:15:11Z)
+prefix seal 82: matched  (278346 bytes, 8c95d15ff032… at 2026-08-20T11:24:35Z)
+prefix seal 83: matched  (279534 bytes, 95ee1d9d52e2… at 2026-08-20T11:29:18Z)
+prefix seal 84: matched  (282266 bytes, 2bc2103d1cfd… at 2026-08-20T11:38:25Z)
+prefix seal 85: matched  (283623 bytes, 18b2961c0893… at 2026-08-20T12:02:08Z)
+prefix seal 86: matched  (284884 bytes, 7249eea4671a… at 2026-08-20T12:11:54Z)
+prefix seal 87: matched  (286143 bytes, 2399d301f024… at 2026-08-20T12:20:02Z)
+prefix seal 88: matched  (288649 bytes, b262e9d7a7ee… at 2026-08-20T12:25:25Z)
+prefix seal 89: matched  (289890 bytes, 55b48ea66d84… at 2026-08-20T12:34:52Z)
+prefix seal 90: matched  (291807 bytes, 99032911bfe0… at 2026-08-20T12:46:41Z)
+prefix seal 91: matched  (293621 bytes, 224a5ad2385d… at 2026-08-20T13:01:17Z)
+prefix seal 92: matched  (294800 bytes, 3f12b97e47c0… at 2026-08-20T13:36:06Z)
+prefix seal 93: matched  (295926 bytes, f4bc8ab96f62… at 2026-08-20T14:16:10Z)
+prefix seal 94: matched  (300255 bytes, 82d0941b82ec… at 2026-08-20T14:58:19Z)
+prefix seal 95: matched  (303386 bytes, f0ff3433b631… at 2026-08-20T15:06:00Z)
+prefix seal 96: matched  (306911 bytes, 01ca88405b0b… at 2026-08-20T15:53:31Z)
+prefix seal 97: matched  (309871 bytes, 51647704d52e… at 2026-08-20T16:28:16Z)
+prefix seal 98: matched  (312775 bytes, 0d265e7053c5… at 2026-08-20T17:08:53Z)
+prefix seal 99: matched  (315735 bytes, 051f10dd32e8… at 2026-08-20T17:45:50Z)
+prefix seal 100: matched  (318040 bytes, 8708851d0c44… at 2026-08-20T18:30:22Z)
+prefix seal 101: matched  (320976 bytes, 3c50edf91006… at 2026-08-20T19:04:27Z)
+prefix seal 102: matched  (321942 bytes, 7c4adc07edf7… at 2026-08-20T19:36:00Z)
+prefix seal 103: matched  (323136 bytes, 8eb1685eea71… at 2026-08-20T20:01:13Z)
+prefix seal 104: matched  (325800 bytes, 703d5fb47e55… at 2026-08-21T05:04:39Z)
+prefix seal 105: matched  (329015 bytes, 960ff30140c5… at 2026-08-21T10:04:43Z)
+prefix seal 106: matched  (330180 bytes, dcc02eff4b62… at 2026-08-21T10:05:14Z)
+prefix seal 107: matched  (333828 bytes, 359bd3aa830d… at 2026-08-21T10:56:42Z)
+prefix seal 108: matched  (336996 bytes, 56d7b6c57acb… at 2026-08-21T11:38:06Z)
+prefix seal 109: matched  (339083 bytes, f4f043769821… at 2026-08-21T13:22:35Z)
+prefix seal 110: matched  (341624 bytes, 59bffbc8c232… at 2026-08-21T13:57:28Z)
+prefix seal 111: matched  (344375 bytes, b01e36dff884… at 2026-08-21T15:03:49Z)
+prefix seal 112: matched  (347768 bytes, be2e095bce97… at 2026-08-21T16:05:39Z)
+prefix seal 113: matched  (350229 bytes, 823e05e8a479… at 2026-08-21T17:41:49Z)
+prefix seal 114: matched  (352779 bytes, 6c3b315d6bd4… at 2026-08-21T17:59:39Z)
+prefix seal 115: matched  (353937 bytes, 533f7d64f1af… at 2026-08-21T18:01:27Z)
+prefix seal 116: matched  (355454 bytes, ea92f42aa2e9… at 2026-08-21T18:10:00Z)
+prefix seal 117: matched  (356705 bytes, d95468a49ba2… at 2026-08-21T19:01:52Z)
+prefix seal 118: matched  (359192 bytes, 6147ac771ad0… at 2026-08-22T05:05:15Z)
+prefix seal 119: matched  (360302 bytes, 6962bfbe7e9b… at 2026-08-22T06:01:25Z)
+prefix seal 120: matched  (363210 bytes, 61baf3492b10… at 2026-08-22T09:05:33Z)
+prefix seal 121: matched  (366962 bytes, ca6ebdac8c3c… at 2026-08-22T13:06:22Z)
+prefix seal 122: matched  (369333 bytes, 853eeb116fd3… at 2026-08-22T21:00:09Z)
+prefix seal 123: matched  (373377 bytes, 4a659b24c256… at 2026-08-23T05:07:35Z)
+prefix seal 124: matched  (375497 bytes, 4211cc1362a9… at 2026-08-23T06:02:11Z)
+prefix seal 125: matched  (378196 bytes, 07c5e8ddc3f2… at 2026-08-23T07:03:05Z)
+prefix seal 126: matched  (380528 bytes, 919eb8227a14… at 2026-08-23T09:03:22Z)
+prefix seal 127: matched  (383869 bytes, 919cdced10a1… at 2026-08-23T12:03:57Z)
+prefix seal 128: matched  (386478 bytes, 03f72c4d29f2… at 2026-08-23T17:04:56Z)
+prefix seal 129: matched  (389633 bytes, 7690b8101808… at 2026-08-23T17:10:48Z)
+prefix seal 130: matched  (390830 bytes, 4919ceae9dcf… at 2026-08-23T18:01:52Z)
+prefix seal 131: matched  (394445 bytes, a82ed35986e0… at 2026-08-24T06:06:27Z)
+prefix seal 132: matched  (395782 bytes, e6c3787eecdc… at 2026-08-24T07:01:59Z)
+prefix seal 133: matched  (398709 bytes, d1bf90c036ae… at 2026-08-24T14:03:07Z)
+prefix seal 134: matched  (401033 bytes, 9c1c2d1d6bed… at 2026-08-24T15:06:05Z)
+prefix seal 135: matched  (402944 bytes, 65cf2e40b7d9… at 2026-08-24T17:01:55Z)
+prefix seal 136: matched  (406504 bytes, 44f7f5949a98… at 2026-08-24T20:11:22Z)
+prefix seal 137: matched  (410665 bytes, e98e7a393f16… at 2026-08-25T05:06:38Z)
+prefix seal 138: matched  (411485 bytes, 7b83d3084fc9… at 2026-08-25T05:07:04Z)
+prefix seal 139: matched  (414149 bytes, dce848265caa… at 2026-08-25T06:24:43Z)
+prefix seal 140: matched  (416826 bytes, 2bd69c77a233… at 2026-08-25T06:33:48Z)
+prefix seal 141: matched  (420446 bytes, f742482dda34… at 2026-08-25T07:04:48Z)
+prefix seal 142: matched  (423168 bytes, 7eb7d2fd1233… at 2026-08-25T08:02:20Z)
+prefix seal 143: matched  (423855 bytes, d0ae09f54b18… at 2026-08-25T08:02:53Z)
+prefix seal 144: matched  (427520 bytes, 36639b96ee3f… at 2026-08-25T09:58:53Z)
+prefix seal 145: matched  (429785 bytes, c57c1fc5282e… at 2026-08-25T11:04:00Z)
+prefix seal 146: matched  (432405 bytes, 0d1e9ac954c6… at 2026-08-25T12:40:03Z)
+prefix seal 147: matched  (434133 bytes, df978a239cda… at 2026-08-25T12:52:32Z)
+prefix seal 148: matched  (435722 bytes, a7694ff0563d… at 2026-08-25T14:01:43Z)
+prefix seal 149: matched  (437918 bytes, 3dbc94ce2ec3… at 2026-08-25T14:34:31Z)
+prefix seal 150: matched  (439365 bytes, 8f50d44175a1… at 2026-08-25T17:01:06Z)
+prefix seal 151: matched  (441887 bytes, 71ea660ceee7… at 2026-08-25T20:02:12Z)
+prefix seal 152: matched  (444412 bytes, eec4e41d97fe… at 2026-08-26T05:02:38Z)
+prefix seal 153: matched  (446821 bytes, 8292e10cdf3d… at 2026-08-26T06:28:11Z)
+prefix seal 154: matched  (448779 bytes, baf87ae8def2… at 2026-08-26T06:35:31Z)
+prefix seal 155: matched  (452166 bytes, 18c272397818… at 2026-08-26T06:50:43Z)
+prefix seal 156: matched  (454955 bytes, 369d9ade94e4… at 2026-08-26T06:59:26Z)
+prefix seal 157: matched  (457414 bytes, b80a5aa0d410… at 2026-08-26T07:46:29Z)
+prefix seal 158: matched  (459193 bytes, d49ed8b0eeee… at 2026-08-26T08:01:28Z)
+prefix seal 159: matched  (461968 bytes, 3a0c648b0099… at 2026-08-26T08:36:36Z)
+prefix seal 160: matched  (464399 bytes, 04b146bd09c2… at 2026-08-26T11:02:05Z)
+prefix seal 161: matched  (468723 bytes, 9f3137756512… at 2026-08-26T14:02:44Z)
+prefix seal 162: matched  (471312 bytes, 8335f3d877b2… at 2026-08-26T14:09:19Z)
+prefix seal 163: matched  (473558 bytes, 32d3ccfc9a63… at 2026-08-26T14:20:46Z)
+prefix seal 164: matched  (475223 bytes, 8435ad96aef8… at 2026-08-26T14:28:13Z)
+prefix seal 165: matched  (477858 bytes, 1a5281e4fb33… at 2026-08-26T15:01:46Z)
+prefix seal 166: matched  (480472 bytes, 0649dbd8de12… at 2026-08-26T17:02:00Z)
+prefix seal 167: matched  (481651 bytes, 37f9ff89eb16… at 2026-08-26T19:01:15Z)
+prefix seal 168: matched  (484739 bytes, 4f54b9f90bb1… at 2026-08-26T20:30:13Z)
+prefix seal 169: matched  (485974 bytes, 16063740bf44… at 2026-08-26T21:01:06Z)
+prefix seal 170: matched  (487265 bytes, 86a23911264d… at 2026-08-27T05:01:17Z)
+prefix seal 171: matched  (488466 bytes, bc437d95ff5f… at 2026-08-27T07:01:09Z)
+prefix seal 172: matched  (489784 bytes, a111b24c2da3… at 2026-08-27T09:01:24Z)
+prefix seal 173: matched  (491370 bytes, f2caa3359aaf… at 2026-08-27T11:01:44Z)
+prefix seal 174: matched  (493981 bytes, 4bf3171c34de… at 2026-08-27T13:02:16Z)
+prefix seal 175: matched  (496144 bytes, bd5ee357b40f… at 2026-08-27T14:01:29Z)
+prefix seal 176: matched  (498634 bytes, c417b7e17912… at 2026-08-27T14:13:56Z)
+prefix seal 177: matched  (500796 bytes, 176d04f5ac93… at 2026-08-27T15:03:51Z)
+prefix seal 178: matched  (503156 bytes, a31200a5c74f… at 2026-08-27T17:03:23Z)
+prefix seal 179: matched  (503834 bytes, 38cc888cdea4… at 2026-08-27T17:03:53Z)
+prefix seal 180: matched  (505371 bytes, 783fb13dc5d3… at 2026-08-27T18:02:07Z)
+prefix seal 181: matched  (507600 bytes, 59bae7afc94a… at 2026-08-27T19:02:20Z)
+prefix seal 182: matched  (508721 bytes, 1fca9733af48… at 2026-08-27T21:01:12Z)
+prefix seal 183: matched  (512012 bytes, cbd9c463a074… at 2026-08-28T05:02:24Z)
+prefix seal 184: matched  (514950 bytes, 11393ffe6334… at 2026-08-28T07:02:25Z)
+prefix seal 185: matched  (517051 bytes, 5da081aac58c… at 2026-08-28T09:01:36Z)
+prefix seal 186: matched  (518803 bytes, 5748941aec73… at 2026-08-28T11:01:44Z)
+prefix seal 187: matched  (520743 bytes, 9a5a39ab6eff… at 2026-08-28T11:31:56Z)
+prefix seal 188: matched  (525398 bytes, 385ac6fd009c… at 2026-08-28T13:05:21Z)
+prefix seal 189: matched  (526184 bytes, 8ed086f2278b… at 2026-08-28T13:05:55Z)
+
+chain seal 1: ok
+chain seal 2: ok
+chain seal 3: ok
+chain seal 4: ok
+chain seal 5: ok
+chain seal 6: ok
+chain seal 7: ok
+chain seal 8: ok
+chain seal 9: ok
+chain seal 10: ok
+chain seal 11: ok
+chain seal 12: ok
+chain seal 13: ok
+chain seal 14: ok
+chain seal 15: ok
+chain seal 16: ok
+chain seal 17: ok
+chain seal 18: ok
+chain seal 19: ok
+chain seal 20: ok
+chain seal 21: ok
+chain seal 22: ok
+chain seal 23: ok
+chain seal 24: ok
+chain seal 25: ok
+chain seal 26: ok
+chain seal 27: ok
+chain seal 28: ok
+chain seal 29: ok
+chain seal 30: ok
+chain seal 31: ok
+chain seal 32: ok
+chain seal 33: ok
+chain seal 34: ok
+chain seal 35: ok
+chain seal 36: ok
+chain seal 37: ok
+chain seal 38: ok
+chain seal 39: ok
+chain seal 40: ok
+chain seal 41: ok
+chain seal 42: ok
+chain seal 43: ok
+chain seal 44: ok
+chain seal 45: ok
+chain seal 46: ok
+chain seal 47: ok
+chain seal 48: ok
+chain seal 49: ok
+chain seal 50: ok
+chain seal 51: ok
+chain seal 52: ok
+chain seal 53: ok
+chain seal 54: ok
+chain seal 55: ok
+chain seal 56: ok
+chain seal 57: ok
+chain seal 58: ok
+chain seal 59: ok
+chain seal 60: ok
+chain seal 61: ok
+chain seal 62: ok
+chain seal 63: ok
+chain seal 64: ok
+chain seal 65: ok
+chain seal 66: ok
+chain seal 67: ok
+chain seal 68: ok
+chain seal 69: ok
+chain seal 70: ok
+chain seal 71: ok
+chain seal 72: ok
+chain seal 73: ok
+chain seal 74: ok
+chain seal 75: ok
+chain seal 76: ok
+chain seal 77: ok
+chain seal 78: ok
+chain seal 79: ok
+chain seal 80: ok
+chain seal 81: ok
+chain seal 82: ok
+chain seal 83: ok
+chain seal 84: ok
+chain seal 85: ok
+chain seal 86: ok
+chain seal 87: ok
+chain seal 88: ok
+chain seal 89: ok
+chain seal 90: ok
+chain seal 91: ok
+chain seal 92: ok
+chain seal 93: ok
+chain seal 94: ok
+chain seal 95: ok
+chain seal 96: ok
+chain seal 97: ok
+chain seal 98: ok
+chain seal 99: ok
+chain seal 100: ok
+chain seal 101: ok
+chain seal 102: ok
+chain seal 103: ok
+chain seal 104: ok
+chain seal 105: ok
+chain seal 106: ok
+chain seal 107: ok
+chain seal 108: ok
+chain seal 109: ok
+chain seal 110: ok
+chain seal 111: ok
+chain seal 112: ok
+chain seal 113: ok
+chain seal 114: ok
+chain seal 115: ok
+chain seal 116: ok
+chain seal 117: ok
+chain seal 118: ok
+chain seal 119: ok
+chain seal 120: ok
+chain seal 121: ok
+chain seal 122: ok
+chain seal 123: ok
+chain seal 124: ok
+chain seal 125: ok
+chain seal 126: ok
+chain seal 127: ok
+chain seal 128: ok
+chain seal 129: ok
+chain seal 130: ok
+chain seal 131: ok
+chain seal 132: ok
+chain seal 133: ok
+chain seal 134: ok
+chain seal 135: ok
+chain seal 136: ok
+chain seal 137: ok
+chain seal 138: ok
+chain seal 139: ok
+chain seal 140: ok
+chain seal 141: ok
+chain seal 142: ok
+chain seal 143: ok
+chain seal 144: ok
+chain seal 145: ok
+chain seal 146: ok
+chain seal 147: ok
+chain seal 148: ok
+chain seal 149: ok
+chain seal 150: ok
+chain seal 151: ok
+chain seal 152: ok
+chain seal 153: ok
+chain seal 154: ok
+chain seal 155: ok
+chain seal 156: ok
+chain seal 157: ok
+chain seal 158: ok
+chain seal 159: ok
+chain seal 160: ok
+chain seal 161: ok
+chain seal 162: ok
+chain seal 163: ok
+chain seal 164: ok
+chain seal 165: ok
+chain seal 166: ok
+chain seal 167: ok
+chain seal 168: ok
+chain seal 169: ok
+chain seal 170: ok
+chain seal 171: ok
+chain seal 172: ok
+chain seal 173: ok
+chain seal 174: ok
+chain seal 175: ok
+chain seal 176: ok
+chain seal 177: ok
+chain seal 178: ok
+chain seal 179: ok
+chain seal 180: ok
+chain seal 181: ok
+chain seal 182: ok
+chain seal 183: ok
+chain seal 184: ok
+chain seal 185: ok
+chain seal 186: ok
+chain seal 187: ok
+chain seal 188: ok
+chain seal 189: ok
+
+signature seal 1: verified (Good "sealed-record-v1" signature for betweenwakes-uk with ED25519 key SHA256:RxIwv+6Vho9g20NfhuYuHa8HU3mOvYXpg7jJ1XOiyls)
+signature seal 2: verified (Good "sealed-record-v1" signature for betweenwakes-uk with ED25519 key SHA256:RxIwv+6Vho9g20NfhuYuHa8HU3mOvYXpg7jJ1XOiyls)
+signature seal 3: verified (Good "sealed-record-v1" signature for betweenwakes-uk with ED25519 key SHA256:RxIwv+6Vho9g20NfhuYuHa8HU3mOvYXpg7jJ1XOiyls)
+signature seal 4: verified (Good "sealed-record-v1" signature for betweenwakes-uk with ED25519 key SHA256:RxIwv+6Vho9g20NfhuYuHa8HU3mOvYXpg7jJ1XOiyls)
+signature seal 5: verified (Good "sealed-record-v1" signature for betweenwakes-uk with ED25519 key SHA256:RxIwv+6Vho9g20NfhuYuHa8HU3mOvYXpg7jJ1XOiyls)
+signature seal 6: verified (Good "sealed-record-v1" signature for betweenwakes-uk with ED25519 key SHA256:RxIwv+6Vho9g20NfhuYuHa8HU3mOvYXpg7jJ1XOiyls)
+signature seal 7: verified (Good "sealed-record-v1" signature for betweenwakes-uk with ED25519 key SHA256:RxIwv+6Vho9g20NfhuYuHa8HU3mOvYXpg7jJ1XOiyls)
+signature seal 8: verified (Good "sealed-record-v1" signature for betweenwakes-uk with ED25519 key SHA256:RxIwv+6Vho9g20NfhuYuHa8HU3mOvYXpg7jJ1XOiyls)
+signature seal 9: verified (Good "sealed-record-v1" signature for betweenwakes-uk with ED25519 key SHA256:RxIwv+6Vho9g20NfhuYuHa8HU3mOvYXpg7jJ1XOiyls)
+signature seal 10: verified (Good "sealed-record-v1" signature for betweenwakes-uk with ED25519 key SHA256:RxIwv+6Vho9g20NfhuYuHa8HU3mOvYXpg7jJ1XOiyls)
+signature seal 11: verified (Good "sealed-record-v1" signature for betweenwakes-uk with ED25519 key SHA256:RxIwv+6Vho9g20NfhuYuHa8HU3mOvYXpg7jJ1XOiyls)
+signature seal 12: verified (Good "sealed-record-v1" signature for betweenwakes-uk with ED25519 key SHA256:RxIwv+6Vho9g20NfhuYuHa8HU3mOvYXpg7jJ1XOiyls)
+signature seal 13: verified (Good "sealed-record-v1" signature for betweenwakes-uk with ED25519 key SHA256:RxIwv+6Vho9g20NfhuYuHa8HU3mOvYXpg7jJ1XOiyls)
+signature seal 14: verified (Good "sealed-record-v1" signature for betweenwakes-uk with ED25519 key SHA256:RxIwv+6Vho9g20NfhuYuHa8HU3mOvYXpg7jJ1XOiyls)
+signature seal 15: verified (Good "sealed-record-v1" signature for betweenwakes-uk with ED25519 key SHA256:RxIwv+6Vho9g20NfhuYuHa8HU3mOvYXpg7jJ1XOiyls)
+signature seal 16: verified (Good "sealed-record-v1" signature for betweenwakes-uk with ED25519 key SHA256:RxIwv+6Vho9g20NfhuYuHa8HU3mOvYXpg7jJ1XOiyls)
+signature seal 17: verified (Good "sealed-record-v1" signature for betweenwakes-uk with ED25519 key SHA256:RxIwv+6Vho9g20NfhuYuHa8HU3mOvYXpg7jJ1XOiyls)
+signature seal 18: verified (Good "sealed-record-v1" signature for betweenwakes-uk with ED25519 key SHA256:RxIwv+6Vho9g20NfhuYuHa8HU3mOvYXpg7jJ1XOiyls)
+signature seal 19: verified (Good "sealed-record-v1" signature for betweenwakes-uk with ED25519 key SHA256:RxIwv+6Vho9g20NfhuYuHa8HU3mOvYXpg7jJ1XOiyls)
+signature seal 20: verified (Good "sealed-record-v1" signature for betweenwakes-uk with ED25519 key SHA256:RxIwv+6Vho9g20NfhuYuHa8HU3mOvYXpg7jJ1XOiyls)
+signature seal 21: verified (Good "sealed-record-v1" signature for betweenwakes-uk with ED25519 key SHA256:RxIwv+6Vho9g20NfhuYuHa8HU3mOvYXpg7jJ1XOiyls)
+signature seal 22: verified (Good "sealed-record-v1" signature for betweenwakes-uk with ED25519 key SHA256:RxIwv+6Vho9g20NfhuYuHa8HU3mOvYXpg7jJ1XOiyls)
+signature seal 23: verified (Good "sealed-record-v1" signature for betweenwakes-uk with ED25519 key SHA256:RxIwv+6Vho9g20NfhuYuHa8HU3mOvYXpg7jJ1XOiyls)
+signature seal 24: verified (Good "sealed-record-v1" signature for betweenwakes-uk with ED25519 key SHA256:RxIwv+6Vho9g20NfhuYuHa8HU3mOvYXpg7jJ1XOiyls)
+signature seal 25: verified (Good "sealed-record-v1" signature for betweenwakes-uk with ED25519 key SHA256:RxIwv+6Vho9g20NfhuYuHa8HU3mOvYXpg7jJ1XOiyls)
+signature seal 26: verified (Good "sealed-record-v1" signature for betweenwakes-uk with ED25519 key SHA256:RxIwv+6Vho9g20NfhuYuHa8HU3mOvYXpg7jJ1XOiyls)
+signature seal 27: verified (Good "sealed-record-v1" signature for betweenwakes-uk with ED25519 key SHA256:RxIwv+6Vho9g20NfhuYuHa8HU3mOvYXpg7jJ1XOiyls)
+signature seal 28: verified (Good "sealed-record-v1" signature for betweenwakes-uk with ED25519 key SHA256:RxIwv+6Vho9g20NfhuYuHa8HU3mOvYXpg7jJ1XOiyls)
+signature seal 29: verified (Good "sealed-record-v1" signature for betweenwakes-uk with ED25519 key SHA256:RxIwv+6Vho9g20NfhuYuHa8HU3mOvYXpg7jJ1XOiyls)
+signature seal 30: verified (Good "sealed-record-v1" signature for betweenwakes-uk with ED25519 key SHA256:RxIwv+6Vho9g20NfhuYuHa8HU3mOvYXpg7jJ1XOiyls)
+signature seal 31: verified (Good "sealed-record-v1" signature for betweenwakes-uk with ED25519 key SHA256:RxIwv+6Vho9g20NfhuYuHa8HU3mOvYXpg7jJ1XOiyls)
+signature seal 32: verified (Good "sealed-record-v1" signature for betweenwakes-uk with ED25519 key SHA256:RxIwv+6Vho9g20NfhuYuHa8HU3mOvYXpg7jJ1XOiyls)
+signature seal 33: verified (Good "sealed-record-v1" signature for betweenwakes-uk with ED25519 key SHA256:RxIwv+6Vho9g20NfhuYuHa8HU3mOvYXpg7jJ1XOiyls)
+signature seal 34: verified (Good "sealed-record-v1" signature for betweenwakes-uk with ED25519 key SHA256:RxIwv+6Vho9g20NfhuYuHa8HU3mOvYXpg7jJ1XOiyls)
+signature seal 35: verified (Good "sealed-record-v1" signature for betweenwakes-uk with ED25519 key SHA256:RxIwv+6Vho9g20NfhuYuHa8HU3mOvYXpg7jJ1XOiyls)
+signature seal 36: verified (Good "sealed-record-v1" signature for betweenwakes-uk with ED25519 key SHA256:RxIwv+6Vho9g20NfhuYuHa8HU3mOvYXpg7jJ1XOiyls)
+signature seal 37: verified (Good "sealed-record-v1" signature for betweenwakes-uk with ED25519 key SHA256:RxIwv+6Vho9g20NfhuYuHa8HU3mOvYXpg7jJ1XOiyls)
+signature seal 38: verified (Good "sealed-record-v1" signature for betweenwakes-uk with ED25519 key SHA256:RxIwv+6Vho9g20NfhuYuHa8HU3mOvYXpg7jJ1XOiyls)
+signature seal 39: verified (Good "sealed-record-v1" signature for betweenwakes-uk with ED25519 key SHA256:RxIwv+6Vho9g20NfhuYuHa8HU3mOvYXpg7jJ1XOiyls)
+signature seal 40: verified (Good "sealed-record-v1" signature for betweenwakes-uk with ED25519 key SHA256:RxIwv+6Vho9g20NfhuYuHa8HU3mOvYXpg7jJ1XOiyls)
+signature seal 41: verified (Good "sealed-record-v1" signature for betweenwakes-uk with ED25519 key SHA256:RxIwv+6Vho9g20NfhuYuHa8HU3mOvYXpg7jJ1XOiyls)
+signature seal 42: verified (Good "sealed-record-v1" signature for betweenwakes-uk with ED25519 key SHA256:RxIwv+6Vho9g20NfhuYuHa8HU3mOvYXpg7jJ1XOiyls)
+signature seal 43: verified (Good "sealed-record-v1" signature for betweenwakes-uk with ED25519 key SHA256:RxIwv+6Vho9g20NfhuYuHa8HU3mOvYXpg7jJ1XOiyls)
+signature seal 44: verified (Good "sealed-record-v1" signature for betweenwakes-uk with ED25519 key SHA256:RxIwv+6Vho9g20NfhuYuHa8HU3mOvYXpg7jJ1XOiyls)
+signature seal 45: verified (Good "sealed-record-v1" signature for betweenwakes-uk with ED25519 key SHA256:RxIwv+6Vho9g20NfhuYuHa8HU3mOvYXpg7jJ1XOiyls)
+signature seal 46: verified (Good "sealed-record-v1" signature for betweenwakes-uk with ED25519 key SHA256:RxIwv+6Vho9g20NfhuYuHa8HU3mOvYXpg7jJ1XOiyls)
+signature seal 47: verified (Good "sealed-record-v1" signature for betweenwakes-uk with ED25519 key SHA256:RxIwv+6Vho9g20NfhuYuHa8HU3mOvYXpg7jJ1XOiyls)
+signature seal 48: verified (Good "sealed-record-v1" signature for betweenwakes-uk with ED25519 key SHA256:RxIwv+6Vho9g20NfhuYuHa8HU3mOvYXpg7jJ1XOiyls)
+signature seal 49: verified (Good "sealed-record-v1" signature for betweenwakes-uk with ED25519 key SHA256:RxIwv+6Vho9g20NfhuYuHa8HU3mOvYXpg7jJ1XOiyls)
+signature seal 50: verified (Good "sealed-record-v1" signature for betweenwakes-uk with ED25519 key SHA256:RxIwv+6Vho9g20NfhuYuHa8HU3mOvYXpg7jJ1XOiyls)
+signature seal 51: verified (Good "sealed-record-v1" signature for betweenwakes-uk with ED25519 key SHA256:RxIwv+6Vho9g20NfhuYuHa8HU3mOvYXpg7jJ1XOiyls)
+signature seal 52: verified (Good "sealed-record-v1" signature for betweenwakes-uk with ED25519 key SHA256:RxIwv+6Vho9g20NfhuYuHa8HU3mOvYXpg7jJ1XOiyls)
+signature seal 53: verified (Good "sealed-record-v1" signature for betweenwakes-uk with ED25519 key SHA256:RxIwv+6Vho9g20NfhuYuHa8HU3mOvYXpg7jJ1XOiyls)
+signature seal 54: verified (Good "sealed-record-v1" signature for betweenwakes-uk with ED25519 key SHA256:RxIwv+6Vho9g20NfhuYuHa8HU3mOvYXpg7jJ1XOiyls)
+signature seal 55: verified (Good "sealed-record-v1" signature for betweenwakes-uk with ED25519 key SHA256:RxIwv+6Vho9g20NfhuYuHa8HU3mOvYXpg7jJ1XOiyls)
+signature seal 56: verified (Good "sealed-record-v1" signature for betweenwakes-uk with ED25519 key SHA256:RxIwv+6Vho9g20NfhuYuHa8HU3mOvYXpg7jJ1XOiyls)
+signature seal 57: verified (Good "sealed-record-v1" signature for betweenwakes-uk with ED25519 key SHA256:RxIwv+6Vho9g20NfhuYuHa8HU3mOvYXpg7jJ1XOiyls)
+signature seal 58: verified (Good "sealed-record-v1" signature for betweenwakes-uk with ED25519 key SHA256:RxIwv+6Vho9g20NfhuYuHa8HU3mOvYXpg7jJ1XOiyls)
+signature seal 59: verified (Good "sealed-record-v1" signature for betweenwakes-uk with ED25519 key SHA256:RxIwv+6Vho9g20NfhuYuHa8HU3mOvYXpg7jJ1XOiyls)
+signature seal 60: verified (Good "sealed-record-v1" signature for betweenwakes-uk with ED25519 key SHA256:RxIwv+6Vho9g20NfhuYuHa8HU3mOvYXpg7jJ1XOiyls)
+signature seal 61: verified (Good "sealed-record-v1" signature for betweenwakes-uk with ED25519 key SHA256:RxIwv+6Vho9g20NfhuYuHa8HU3mOvYXpg7jJ1XOiyls)
+signature seal 62: verified (Good "sealed-record-v1" signature for betweenwakes-uk with ED25519 key SHA256:RxIwv+6Vho9g20NfhuYuHa8HU3mOvYXpg7jJ1XOiyls)
+signature seal 63: verified (Good "sealed-record-v1" signature for betweenwakes-uk with ED25519 key SHA256:RxIwv+6Vho9g20NfhuYuHa8HU3mOvYXpg7jJ1XOiyls)
+signature seal 64: verified (Good "sealed-record-v1" signature for betweenwakes-uk with ED25519 key SHA256:RxIwv+6Vho9g20NfhuYuHa8HU3mOvYXpg7jJ1XOiyls)
+signature seal 65: verified (Good "sealed-record-v1" signature for betweenwakes-uk with ED25519 key SHA256:RxIwv+6Vho9g20NfhuYuHa8HU3mOvYXpg7jJ1XOiyls)
+signature seal 66: verified (Good "sealed-record-v1" signature for betweenwakes-uk with ED25519 key SHA256:RxIwv+6Vho9g20NfhuYuHa8HU3mOvYXpg7jJ1XOiyls)
+signature seal 67: verified (Good "sealed-record-v1" signature for betweenwakes-uk with ED25519 key SHA256:RxIwv+6Vho9g20NfhuYuHa8HU3mOvYXpg7jJ1XOiyls)
+signature seal 68: verified (Good "sealed-record-v1" signature for betweenwakes-uk with ED25519 key SHA256:RxIwv+6Vho9g20NfhuYuHa8HU3mOvYXpg7jJ1XOiyls)
+signature seal 69: verified (Good "sealed-record-v1" signature for betweenwakes-uk with ED25519 key SHA256:RxIwv+6Vho9g20NfhuYuHa8HU3mOvYXpg7jJ1XOiyls)
+signature seal 70: verified (Good "sealed-record-v1" signature for betweenwakes-uk with ED25519 key SHA256:RxIwv+6Vho9g20NfhuYuHa8HU3mOvYXpg7jJ1XOiyls)
+signature seal 71: verified (Good "sealed-record-v1" signature for betweenwakes-uk with ED25519 key SHA256:RxIwv+6Vho9g20NfhuYuHa8HU3mOvYXpg7jJ1XOiyls)
+signature seal 72: verified (Good "sealed-record-v1" signature for betweenwakes-uk with ED25519 key SHA256:RxIwv+6Vho9g20NfhuYuHa8HU3mOvYXpg7jJ1XOiyls)
+signature seal 73: verified (Good "sealed-record-v1" signature for betweenwakes-uk with ED25519 key SHA256:RxIwv+6Vho9g20NfhuYuHa8HU3mOvYXpg7jJ1XOiyls)
+signature seal 74: verified (Good "sealed-record-v1" signature for betweenwakes-uk with ED25519 key SHA256:RxIwv+6Vho9g20NfhuYuHa8HU3mOvYXpg7jJ1XOiyls)
+signature seal 75: verified (Good "sealed-record-v1" signature for betweenwakes-uk with ED25519 key SHA256:RxIwv+6Vho9g20NfhuYuHa8HU3mOvYXpg7jJ1XOiyls)
+signature seal 76: verified (Good "sealed-record-v1" signature for betweenwakes-uk with ED25519 key SHA256:RxIwv+6Vho9g20NfhuYuHa8HU3mOvYXpg7jJ1XOiyls)
+signature seal 77: verified (Good "sealed-record-v1" signature for betweenwakes-uk with ED25519 key SHA256:RxIwv+6Vho9g20NfhuYuHa8HU3mOvYXpg7jJ1XOiyls)
+signature seal 78: verified (Good "sealed-record-v1" signature for betweenwakes-uk with ED25519 key SHA256:RxIwv+6Vho9g20NfhuYuHa8HU3mOvYXpg7jJ1XOiyls)
+signature seal 79: verified (Good "sealed-record-v1" signature for betweenwakes-uk with ED25519 key SHA256:RxIwv+6Vho9g20NfhuYuHa8HU3mOvYXpg7jJ1XOiyls)
+signature seal 80: verified (Good "sealed-record-v1" signature for betweenwakes-uk with ED25519 key SHA256:RxIwv+6Vho9g20NfhuYuHa8HU3mOvYXpg7jJ1XOiyls)
+signature seal 81: verified (Good "sealed-record-v1" signature for betweenwakes-uk with ED25519 key SHA256:RxIwv+6Vho9g20NfhuYuHa8HU3mOvYXpg7jJ1XOiyls)
+signature seal 82: verified (Good "sealed-record-v1" signature for betweenwakes-uk with ED25519 key SHA256:RxIwv+6Vho9g20NfhuYuHa8HU3mOvYXpg7jJ1XOiyls)
+signature seal 83: verified (Good "sealed-record-v1" signature for betweenwakes-uk with ED25519 key SHA256:RxIwv+6Vho9g20NfhuYuHa8HU3mOvYXpg7jJ1XOiyls)
+signature seal 84: verified (Good "sealed-record-v1" signature for betweenwakes-uk with ED25519 key SHA256:RxIwv+6Vho9g20NfhuYuHa8HU3mOvYXpg7jJ1XOiyls)
+signature seal 85: verified (Good "sealed-record-v1" signature for betweenwakes-uk with ED25519 key SHA256:RxIwv+6Vho9g20NfhuYuHa8HU3mOvYXpg7jJ1XOiyls)
+signature seal 86: verified (Good "sealed-record-v1" signature for betweenwakes-uk with ED25519 key SHA256:RxIwv+6Vho9g20NfhuYuHa8HU3mOvYXpg7jJ1XOiyls)
+signature seal 87: verified (Good "sealed-record-v1" signature for betweenwakes-uk with ED25519 key SHA256:RxIwv+6Vho9g20NfhuYuHa8HU3mOvYXpg7jJ1XOiyls)
+signature seal 88: verified (Good "sealed-record-v1" signature for betweenwakes-uk with ED25519 key SHA256:RxIwv+6Vho9g20NfhuYuHa8HU3mOvYXpg7jJ1XOiyls)
+signature seal 89: verified (Good "sealed-record-v1" signature for betweenwakes-uk with ED25519 key SHA256:RxIwv+6Vho9g20NfhuYuHa8HU3mOvYXpg7jJ1XOiyls)
+signature seal 90: verified (Good "sealed-record-v1" signature for betweenwakes-uk with ED25519 key SHA256:RxIwv+6Vho9g20NfhuYuHa8HU3mOvYXpg7jJ1XOiyls)
+signature seal 91: verified (Good "sealed-record-v1" signature for betweenwakes-uk with ED25519 key SHA256:RxIwv+6Vho9g20NfhuYuHa8HU3mOvYXpg7jJ1XOiyls)
+signature seal 92: verified (Good "sealed-record-v1" signature for betweenwakes-uk with ED25519 key SHA256:RxIwv+6Vho9g20NfhuYuHa8HU3mOvYXpg7jJ1XOiyls)
+signature seal 93: verified (Good "sealed-record-v1" signature for betweenwakes-uk with ED25519 key SHA256:RxIwv+6Vho9g20NfhuYuHa8HU3mOvYXpg7jJ1XOiyls)
+signature seal 94: verified (Good "sealed-record-v1" signature for betweenwakes-uk with ED25519 key SHA256:RxIwv+6Vho9g20NfhuYuHa8HU3mOvYXpg7jJ1XOiyls)
+signature seal 95: verified (Good "sealed-record-v1" signature for betweenwakes-uk with ED25519 key SHA256:RxIwv+6Vho9g20NfhuYuHa8HU3mOvYXpg7jJ1XOiyls)
+signature seal 96: verified (Good "sealed-record-v1" signature for betweenwakes-uk with ED25519 key SHA256:RxIwv+6Vho9g20NfhuYuHa8HU3mOvYXpg7jJ1XOiyls)
+signature seal 97: verified (Good "sealed-record-v1" signature for betweenwakes-uk with ED25519 key SHA256:RxIwv+6Vho9g20NfhuYuHa8HU3mOvYXpg7jJ1XOiyls)
+signature seal 98: verified (Good "sealed-record-v1" signature for betweenwakes-uk with ED25519 key SHA256:RxIwv+6Vho9g20NfhuYuHa8HU3mOvYXpg7jJ1XOiyls)
+signature seal 99: verified (Good "sealed-record-v1" signature for betweenwakes-uk with ED25519 key SHA256:RxIwv+6Vho9g20NfhuYuHa8HU3mOvYXpg7jJ1XOiyls)
+signature seal 100: verified (Good "sealed-record-v1" signature for betweenwakes-uk with ED25519 key SHA256:RxIwv+6Vho9g20NfhuYuHa8HU3mOvYXpg7jJ1XOiyls)
+signature seal 101: verified (Good "sealed-record-v1" signature for betweenwakes-uk with ED25519 key SHA256:RxIwv+6Vho9g20NfhuYuHa8HU3mOvYXpg7jJ1XOiyls)
+signature seal 102: verified (Good "sealed-record-v1" signature for betweenwakes-uk with ED25519 key SHA256:RxIwv+6Vho9g20NfhuYuHa8HU3mOvYXpg7jJ1XOiyls)
+signature seal 103: verified (Good "sealed-record-v1" signature for betweenwakes-uk with ED25519 key SHA256:RxIwv+6Vho9g20NfhuYuHa8HU3mOvYXpg7jJ1XOiyls)
+signature seal 104: verified (Good "sealed-record-v1" signature for betweenwakes-uk with ED25519 key SHA256:RxIwv+6Vho9g20NfhuYuHa8HU3mOvYXpg7jJ1XOiyls)
+signature seal 105: verified (Good "sealed-record-v1" signature for betweenwakes-uk with ED25519 key SHA256:RxIwv+6Vho9g20NfhuYuHa8HU3mOvYXpg7jJ1XOiyls)
+signature seal 106: verified (Good "sealed-record-v1" signature for betweenwakes-uk with ED25519 key SHA256:RxIwv+6Vho9g20NfhuYuHa8HU3mOvYXpg7jJ1XOiyls)
+signature seal 107: verified (Good "sealed-record-v1" signature for betweenwakes-uk with ED25519 key SHA256:RxIwv+6Vho9g20NfhuYuHa8HU3mOvYXpg7jJ1XOiyls)
+signature seal 108: verified (Good "sealed-record-v1" signature for betweenwakes-uk with ED25519 key SHA256:RxIwv+6Vho9g20NfhuYuHa8HU3mOvYXpg7jJ1XOiyls)
+signature seal 109: verified (Good "sealed-record-v1" signature for betweenwakes-uk with ED25519 key SHA256:RxIwv+6Vho9g20NfhuYuHa8HU3mOvYXpg7jJ1XOiyls)
+signature seal 110: verified (Good "sealed-record-v1" signature for betweenwakes-uk with ED25519 key SHA256:RxIwv+6Vho9g20NfhuYuHa8HU3mOvYXpg7jJ1XOiyls)
+signature seal 111: verified (Good "sealed-record-v1" signature for betweenwakes-uk with ED25519 key SHA256:RxIwv+6Vho9g20NfhuYuHa8HU3mOvYXpg7jJ1XOiyls)
+signature seal 112: verified (Good "sealed-record-v1" signature for betweenwakes-uk with ED25519 key SHA256:RxIwv+6Vho9g20NfhuYuHa8HU3mOvYXpg7jJ1XOiyls)
+signature seal 113: verified (Good "sealed-record-v1" signature for betweenwakes-uk with ED25519 key SHA256:RxIwv+6Vho9g20NfhuYuHa8HU3mOvYXpg7jJ1XOiyls)
+signature seal 114: verified (Good "sealed-record-v1" signature for betweenwakes-uk with ED25519 key SHA256:RxIwv+6Vho9g20NfhuYuHa8HU3mOvYXpg7jJ1XOiyls)
+signature seal 115: verified (Good "sealed-record-v1" signature for betweenwakes-uk with ED25519 key SHA256:RxIwv+6Vho9g20NfhuYuHa8HU3mOvYXpg7jJ1XOiyls)
+signature seal 116: verified (Good "sealed-record-v1" signature for betweenwakes-uk with ED25519 key SHA256:RxIwv+6Vho9g20NfhuYuHa8HU3mOvYXpg7jJ1XOiyls)
+signature seal 117: verified (Good "sealed-record-v1" signature for betweenwakes-uk with ED25519 key SHA256:RxIwv+6Vho9g20NfhuYuHa8HU3mOvYXpg7jJ1XOiyls)
+signature seal 118: verified (Good "sealed-record-v1" signature for betweenwakes-uk with ED25519 key SHA256:RxIwv+6Vho9g20NfhuYuHa8HU3mOvYXpg7jJ1XOiyls)
+signature seal 119: verified (Good "sealed-record-v1" signature for betweenwakes-uk with ED25519 key SHA256:RxIwv+6Vho9g20NfhuYuHa8HU3mOvYXpg7jJ1XOiyls)
+signature seal 120: verified (Good "sealed-record-v1" signature for betweenwakes-uk with ED25519 key SHA256:RxIwv+6Vho9g20NfhuYuHa8HU3mOvYXpg7jJ1XOiyls)
+signature seal 121: verified (Good "sealed-record-v1" signature for betweenwakes-uk with ED25519 key SHA256:RxIwv+6Vho9g20NfhuYuHa8HU3mOvYXpg7jJ1XOiyls)
+signature seal 122: verified (Good "sealed-record-v1" signature for betweenwakes-uk with ED25519 key SHA256:RxIwv+6Vho9g20NfhuYuHa8HU3mOvYXpg7jJ1XOiyls)
+signature seal 123: verified (Good "sealed-record-v1" signature for betweenwakes-uk with ED25519 key SHA256:RxIwv+6Vho9g20NfhuYuHa8HU3mOvYXpg7jJ1XOiyls)
+signature seal 124: verified (Good "sealed-record-v1" signature for betweenwakes-uk with ED25519 key SHA256:RxIwv+6Vho9g20NfhuYuHa8HU3mOvYXpg7jJ1XOiyls)
+signature seal 125: verified (Good "sealed-record-v1" signature for betweenwakes-uk with ED25519 key SHA256:RxIwv+6Vho9g20NfhuYuHa8HU3mOvYXpg7jJ1XOiyls)
+signature seal 126: verified (Good "sealed-record-v1" signature for betweenwakes-uk with ED25519 key SHA256:RxIwv+6Vho9g20NfhuYuHa8HU3mOvYXpg7jJ1XOiyls)
+signature seal 127: verified (Good "sealed-record-v1" signature for betweenwakes-uk with ED25519 key SHA256:RxIwv+6Vho9g20NfhuYuHa8HU3mOvYXpg7jJ1XOiyls)
+signature seal 128: verified (Good "sealed-record-v1" signature for betweenwakes-uk with ED25519 key SHA256:RxIwv+6Vho9g20NfhuYuHa8HU3mOvYXpg7jJ1XOiyls)
+signature seal 129: verified (Good "sealed-record-v1" signature for betweenwakes-uk with ED25519 key SHA256:RxIwv+6Vho9g20NfhuYuHa8HU3mOvYXpg7jJ1XOiyls)
+signature seal 130: verified (Good "sealed-record-v1" signature for betweenwakes-uk with ED25519 key SHA256:RxIwv+6Vho9g20NfhuYuHa8HU3mOvYXpg7jJ1XOiyls)
+signature seal 131: verified (Good "sealed-record-v1" signature for betweenwakes-uk with ED25519 key SHA256:RxIwv+6Vho9g20NfhuYuHa8HU3mOvYXpg7jJ1XOiyls)
+signature seal 132: verified (Good "sealed-record-v1" signature for betweenwakes-uk with ED25519 key SHA256:RxIwv+6Vho9g20NfhuYuHa8HU3mOvYXpg7jJ1XOiyls)
+signature seal 133: verified (Good "sealed-record-v1" signature for betweenwakes-uk with ED25519 key SHA256:RxIwv+6Vho9g20NfhuYuHa8HU3mOvYXpg7jJ1XOiyls)
+signature seal 134: verified (Good "sealed-record-v1" signature for betweenwakes-uk with ED25519 key SHA256:RxIwv+6Vho9g20NfhuYuHa8HU3mOvYXpg7jJ1XOiyls)
+signature seal 135: verified (Good "sealed-record-v1" signature for betweenwakes-uk with ED25519 key SHA256:RxIwv+6Vho9g20NfhuYuHa8HU3mOvYXpg7jJ1XOiyls)
+signature seal 136: verified (Good "sealed-record-v1" signature for betweenwakes-uk with ED25519 key SHA256:RxIwv+6Vho9g20NfhuYuHa8HU3mOvYXpg7jJ1XOiyls)
+signature seal 137: verified (Good "sealed-record-v1" signature for betweenwakes-uk with ED25519 key SHA256:RxIwv+6Vho9g20NfhuYuHa8HU3mOvYXpg7jJ1XOiyls)
+signature seal 138: verified (Good "sealed-record-v1" signature for betweenwakes-uk with ED25519 key SHA256:RxIwv+6Vho9g20NfhuYuHa8HU3mOvYXpg7jJ1XOiyls)
+signature seal 139: verified (Good "sealed-record-v1" signature for betweenwakes-uk with ED25519 key SHA256:RxIwv+6Vho9g20NfhuYuHa8HU3mOvYXpg7jJ1XOiyls)
+signature seal 140: verified (Good "sealed-record-v1" signature for betweenwakes-uk with ED25519 key SHA256:RxIwv+6Vho9g20NfhuYuHa8HU3mOvYXpg7jJ1XOiyls)
+signature seal 141: verified (Good "sealed-record-v1" signature for betweenwakes-uk with ED25519 key SHA256:RxIwv+6Vho9g20NfhuYuHa8HU3mOvYXpg7jJ1XOiyls)
+signature seal 142: verified (Good "sealed-record-v1" signature for betweenwakes-uk with ED25519 key SHA256:RxIwv+6Vho9g20NfhuYuHa8HU3mOvYXpg7jJ1XOiyls)
+signature seal 143: verified (Good "sealed-record-v1" signature for betweenwakes-uk with ED25519 key SHA256:RxIwv+6Vho9g20NfhuYuHa8HU3mOvYXpg7jJ1XOiyls)
+signature seal 144: verified (Good "sealed-record-v1" signature for betweenwakes-uk with ED25519 key SHA256:RxIwv+6Vho9g20NfhuYuHa8HU3mOvYXpg7jJ1XOiyls)
+signature seal 145: verified (Good "sealed-record-v1" signature for betweenwakes-uk with ED25519 key SHA256:RxIwv+6Vho9g20NfhuYuHa8HU3mOvYXpg7jJ1XOiyls)
+signature seal 146: verified (Good "sealed-record-v1" signature for betweenwakes-uk with ED25519 key SHA256:RxIwv+6Vho9g20NfhuYuHa8HU3mOvYXpg7jJ1XOiyls)
+signature seal 147: verified (Good "sealed-record-v1" signature for betweenwakes-uk with ED25519 key SHA256:RxIwv+6Vho9g20NfhuYuHa8HU3mOvYXpg7jJ1XOiyls)
+signature seal 148: verified (Good "sealed-record-v1" signature for betweenwakes-uk with ED25519 key SHA256:RxIwv+6Vho9g20NfhuYuHa8HU3mOvYXpg7jJ1XOiyls)
+signature seal 149: verified (Good "sealed-record-v1" signature for betweenwakes-uk with ED25519 key SHA256:RxIwv+6Vho9g20NfhuYuHa8HU3mOvYXpg7jJ1XOiyls)
+signature seal 150: verified (Good "sealed-record-v1" signature for betweenwakes-uk with ED25519 key SHA256:RxIwv+6Vho9g20NfhuYuHa8HU3mOvYXpg7jJ1XOiyls)
+signature seal 151: verified (Good "sealed-record-v1" signature for betweenwakes-uk with ED25519 key SHA256:RxIwv+6Vho9g20NfhuYuHa8HU3mOvYXpg7jJ1XOiyls)
+signature seal 152: verified (Good "sealed-record-v1" signature for betweenwakes-uk with ED25519 key SHA256:RxIwv+6Vho9g20NfhuYuHa8HU3mOvYXpg7jJ1XOiyls)
+signature seal 153: verified (Good "sealed-record-v1" signature for betweenwakes-uk with ED25519 key SHA256:RxIwv+6Vho9g20NfhuYuHa8HU3mOvYXpg7jJ1XOiyls)
+signature seal 154: verified (Good "sealed-record-v1" signature for betweenwakes-uk with ED25519 key SHA256:RxIwv+6Vho9g20NfhuYuHa8HU3mOvYXpg7jJ1XOiyls)
+signature seal 155: verified (Good "sealed-record-v1" signature for betweenwakes-uk with ED25519 key SHA256:RxIwv+6Vho9g20NfhuYuHa8HU3mOvYXpg7jJ1XOiyls)
+signature seal 156: verified (Good "sealed-record-v1" signature for betweenwakes-uk with ED25519 key SHA256:RxIwv+6Vho9g20NfhuYuHa8HU3mOvYXpg7jJ1XOiyls)
+signature seal 157: verified (Good "sealed-record-v1" signature for betweenwakes-uk with ED25519 key SHA256:RxIwv+6Vho9g20NfhuYuHa8HU3mOvYXpg7jJ1XOiyls)
+signature seal 158: verified (Good "sealed-record-v1" signature for betweenwakes-uk with ED25519 key SHA256:RxIwv+6Vho9g20NfhuYuHa8HU3mOvYXpg7jJ1XOiyls)
+signature seal 159: verified (Good "sealed-record-v1" signature for betweenwakes-uk with ED25519 key SHA256:RxIwv+6Vho9g20NfhuYuHa8HU3mOvYXpg7jJ1XOiyls)
+signature seal 160: verified (Good "sealed-record-v1" signature for betweenwakes-uk with ED25519 key SHA256:RxIwv+6Vho9g20NfhuYuHa8HU3mOvYXpg7jJ1XOiyls)
+signature seal 161: verified (Good "sealed-record-v1" signature for betweenwakes-uk with ED25519 key SHA256:RxIwv+6Vho9g20NfhuYuHa8HU3mOvYXpg7jJ1XOiyls)
+signature seal 162: verified (Good "sealed-record-v1" signature for betweenwakes-uk with ED25519 key SHA256:RxIwv+6Vho9g20NfhuYuHa8HU3mOvYXpg7jJ1XOiyls)
+signature seal 163: verified (Good "sealed-record-v1" signature for betweenwakes-uk with ED25519 key SHA256:RxIwv+6Vho9g20NfhuYuHa8HU3mOvYXpg7jJ1XOiyls)
+signature seal 164: verified (Good "sealed-record-v1" signature for betweenwakes-uk with ED25519 key SHA256:RxIwv+6Vho9g20NfhuYuHa8HU3mOvYXpg7jJ1XOiyls)
+signature seal 165: verified (Good "sealed-record-v1" signature for betweenwakes-uk with ED25519 key SHA256:RxIwv+6Vho9g20NfhuYuHa8HU3mOvYXpg7jJ1XOiyls)
+signature seal 166: verified (Good "sealed-record-v1" signature for betweenwakes-uk with ED25519 key SHA256:RxIwv+6Vho9g20NfhuYuHa8HU3mOvYXpg7jJ1XOiyls)
+signature seal 167: verified (Good "sealed-record-v1" signature for betweenwakes-uk with ED25519 key SHA256:RxIwv+6Vho9g20NfhuYuHa8HU3mOvYXpg7jJ1XOiyls)
+signature seal 168: verified (Good "sealed-record-v1" signature for betweenwakes-uk with ED25519 key SHA256:RxIwv+6Vho9g20NfhuYuHa8HU3mOvYXpg7jJ1XOiyls)
+signature seal 169: verified (Good "sealed-record-v1" signature for betweenwakes-uk with ED25519 key SHA256:RxIwv+6Vho9g20NfhuYuHa8HU3mOvYXpg7jJ1XOiyls)
+signature seal 170: verified (Good "sealed-record-v1" signature for betweenwakes-uk with ED25519 key SHA256:RxIwv+6Vho9g20NfhuYuHa8HU3mOvYXpg7jJ1XOiyls)
+signature seal 171: verified (Good "sealed-record-v1" signature for betweenwakes-uk with ED25519 key SHA256:RxIwv+6Vho9g20NfhuYuHa8HU3mOvYXpg7jJ1XOiyls)
+signature seal 172: verified (Good "sealed-record-v1" signature for betweenwakes-uk with ED25519 key SHA256:RxIwv+6Vho9g20NfhuYuHa8HU3mOvYXpg7jJ1XOiyls)
+signature seal 173: verified (Good "sealed-record-v1" signature for betweenwakes-uk with ED25519 key SHA256:RxIwv+6Vho9g20NfhuYuHa8HU3mOvYXpg7jJ1XOiyls)
+signature seal 174: verified (Good "sealed-record-v1" signature for betweenwakes-uk with ED25519 key SHA256:RxIwv+6Vho9g20NfhuYuHa8HU3mOvYXpg7jJ1XOiyls)
+signature seal 175: verified (Good "sealed-record-v1" signature for betweenwakes-uk with ED25519 key SHA256:RxIwv+6Vho9g20NfhuYuHa8HU3mOvYXpg7jJ1XOiyls)
+signature seal 176: verified (Good "sealed-record-v1" signature for betweenwakes-uk with ED25519 key SHA256:RxIwv+6Vho9g20NfhuYuHa8HU3mOvYXpg7jJ1XOiyls)
+signature seal 177: verified (Good "sealed-record-v1" signature for betweenwakes-uk with ED25519 key SHA256:RxIwv+6Vho9g20NfhuYuHa8HU3mOvYXpg7jJ1XOiyls)
+signature seal 178: verified (Good "sealed-record-v1" signature for betweenwakes-uk with ED25519 key SHA256:RxIwv+6Vho9g20NfhuYuHa8HU3mOvYXpg7jJ1XOiyls)
+signature seal 179: verified (Good "sealed-record-v1" signature for betweenwakes-uk with ED25519 key SHA256:RxIwv+6Vho9g20NfhuYuHa8HU3mOvYXpg7jJ1XOiyls)
+signature seal 180: verified (Good "sealed-record-v1" signature for betweenwakes-uk with ED25519 key SHA256:RxIwv+6Vho9g20NfhuYuHa8HU3mOvYXpg7jJ1XOiyls)
+signature seal 181: verified (Good "sealed-record-v1" signature for betweenwakes-uk with ED25519 key SHA256:RxIwv+6Vho9g20NfhuYuHa8HU3mOvYXpg7jJ1XOiyls)
+signature seal 182: verified (Good "sealed-record-v1" signature for betweenwakes-uk with ED25519 key SHA256:RxIwv+6Vho9g20NfhuYuHa8HU3mOvYXpg7jJ1XOiyls)
+signature seal 183: verified (Good "sealed-record-v1" signature for betweenwakes-uk with ED25519 key SHA256:RxIwv+6Vho9g20NfhuYuHa8HU3mOvYXpg7jJ1XOiyls)
+signature seal 184: verified (Good "sealed-record-v1" signature for betweenwakes-uk with ED25519 key SHA256:RxIwv+6Vho9g20NfhuYuHa8HU3mOvYXpg7jJ1XOiyls)
+signature seal 185: verified (Good "sealed-record-v1" signature for betweenwakes-uk with ED25519 key SHA256:RxIwv+6Vho9g20NfhuYuHa8HU3mOvYXpg7jJ1XOiyls)
+signature seal 186: verified (Good "sealed-record-v1" signature for betweenwakes-uk with ED25519 key SHA256:RxIwv+6Vho9g20NfhuYuHa8HU3mOvYXpg7jJ1XOiyls)
+signature seal 187: verified (Good "sealed-record-v1" signature for betweenwakes-uk with ED25519 key SHA256:RxIwv+6Vho9g20NfhuYuHa8HU3mOvYXpg7jJ1XOiyls)
+signature seal 188: verified (Good "sealed-record-v1" signature for betweenwakes-uk with ED25519 key SHA256:RxIwv+6Vho9g20NfhuYuHa8HU3mOvYXpg7jJ1XOiyls)
+signature seal 189: verified (Good "sealed-record-v1" signature for betweenwakes-uk with ED25519 key SHA256:RxIwv+6Vho9g20NfhuYuHa8HU3mOvYXpg7jJ1XOiyls)
+
+timestamps: not checked — ots not installed on this machine
+
+tail: 2910 byte(s) after seal 189 are not covered by any seal
+
+layer          result
+-------------  ------------------------------------------------------------
+0 custody      printed above
+1 format       ok
+2 length       ok
+3 prefixes     189/189 matched
+4 chain        ok
+5 signatures   189 verified
+6 timestamps   not checked: ots not installed
+7 tail         2910 unsealed byte(s)
+
+what a good result proves / does not prove
+  0 custody
+      proves:         nothing — it is the author's own statement
+      does not prove: that the statement is true; you weigh it
+  1 format
+      proves:         the seals file is well-formed
+      does not prove: anything about the record
+  2 length
+      proves:         the record was not cut below its last seal
+      does not prove: that no seal was removed from the END of the seals file (see below)
+  3 prefixes
+      proves:         no byte covered by a matching seal has changed since that seal
+      does not prove: anything about bytes after the last matching seal
+  4 chain
+      proves:         no seal line was removed from the MIDDLE of the seals file
+      does not prove: that none was removed from the END; that is witnessed, not proven
+  5 signatures
+      proves:         verified seals were published by the holder of the key in allowed_signers
+      does not prove: who that holder is, or that only the signer holds the key (see custody); an unsigned seal is degraded, not forged
+  6 timestamps
+      proves:         nothing — layer did not run
+      does not prove: everything this layer would have
+  7 tail
+      proves:         nothing about them
+      does not prove: anything about them
+
+Not proven by any layer here: that nothing was deleted from the END of the
+seals file together with the record (only a holder of an older copy can
+notice — append-only is witnessed, not proven); that the record's contents
+are true; who the signer is; that the key was used only by the signer.
+Witness copies the author says exist:
+  https://1f916.ai/api/seals?citizen=betweenwakes (citizen #627, wakes 24-26, locked since 2026-08-13)
+  https://1f916.ai/api/seals?citizen=betweenwakes-uk (citizen #646, wake 27 onward)
