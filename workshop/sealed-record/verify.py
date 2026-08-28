@@ -1,13 +1,37 @@
 #!/usr/bin/env python3
 """verify.py — verifier for a sealed-record (SPEC.md, version 1).
 
-    python3 verify.py <record>.seals
+    python3 verify.py [--held OLDER.seals] <record>.seals
+    python3 verify.py [--held OLDER.seals] https://host/path/<record>.seals
 
 Prints the custody line first, then one row per layer, then a table of
 what each layer proves and does not prove. There is no badge and no
-pass/fail verdict. Exit status 0 means the verifier ran to the end;
-exit status 2 means it could not run (missing file, malformed seals
-file). What it FOUND is in the output, not the exit code.
+pass/fail verdict, but there is a machine-readable exit status so that a
+monitor can be built on it (Nick, by mail, wake 222):
+
+    0  ran to the end, no layer reported a finding
+    1  ran to the end, at least one layer reported a FINDING (the record
+       is shorter than a seal, a prefix hash mismatches, the chain is
+       broken, a signature fails, a timestamp proof fails, or a held
+       copy of the seals file is not a prefix of the current one)
+    2  could not run (missing file, malformed seals file, fetch failed)
+
+"Finding", not "bad": the output says what the finding is, and degraded
+states (unsigned, pending, absent, not checked) are printed but are not
+findings. Earlier drafts exited 0 whenever the verifier ran, on the
+argument that a non-zero exit is a badge by another name; that left
+nobody able to build a witness on it without parsing prose, which is
+the weaker position.
+
+With a URL, the verifier fetches the seals file, then the record from
+its `record-url`, `allowed_signers` and every `seals/<n>.sig` and
+`seals/<n>.ots` from beside it, into a temporary directory, and verifies
+those. With --held, an older copy of the seals file is compared against
+the current one: its seal lines must be a prefix of the current seal
+lines. That comparison is the one thing here that can notice deletion
+from the END of the seals file, and only a party who kept the older
+copy can make it — a witness is exactly a cron job that fetches, holds,
+and compares.
 
 Needs: python3 (stdlib only). Uses `ssh-keygen -Y verify` if present,
 `ots verify` if present; when either is missing the corresponding layer
@@ -46,10 +70,117 @@ class Seal:
         self.raw = raw  # bytes of the line including its LF
 
 
+FINDINGS = []  # one short string per definite finding; decides exit 1 vs 0
+
+
+def finding(text):
+    FINDINGS.append(text)
+
+
 def die(msg):
     print("CANNOT VERIFY: " + msg)
     print("(this is a failure of the verifier's inputs, not a finding about the record)")
     sys.exit(2)
+
+
+def fetch(url, optional=False):
+    """GET a URL as bytes. Returns None for a 404 when optional, dies otherwise."""
+    import urllib.request
+    import urllib.error
+    req = urllib.request.Request(url, headers={"User-Agent": "sealed-record-verify/1"})
+    try:
+        with urllib.request.urlopen(req, timeout=60) as r:
+            return r.read()
+    except urllib.error.HTTPError as e:
+        if optional and e.code == 404:
+            return None
+        die("fetch %s: HTTP %d" % (url, e.code))
+    except (urllib.error.URLError, OSError) as e:
+        die("fetch %s: %s" % (url, e))
+
+
+def fetch_set(seals_url):
+    """Fetch a seals file and everything beside it into a temp dir; return
+    (dir, local seals path). Prints what it fetched: these lines are the
+    verifier's own record of which bytes it examined."""
+    import urllib.parse
+    base_url = seals_url.rsplit("/", 1)[0] + "/"
+    d = tempfile.mkdtemp(prefix="sealed-record-")
+    seals_bytes = fetch(seals_url)
+    seals_name = urllib.parse.unquote(seals_url.rsplit("/", 1)[1]) or "record.seals"
+    seals_path = os.path.join(d, seals_name)
+    with open(seals_path, "wb") as f:
+        f.write(seals_bytes)
+    print("fetched: %s (%d bytes)" % (seals_url, len(seals_bytes)))
+    header, seals = parse_seals_file(seals_path)
+    if not header.get("record-url"):
+        die("seals file has no record-url; cannot fetch the record")
+    if not header.get("record"):
+        die("seals file has no record name")
+    record = fetch(header["record-url"])
+    with open(os.path.join(d, header["record"]), "wb") as f:
+        f.write(record)
+    print("fetched: %s (%d bytes) as %s" % (header["record-url"], len(record), header["record"]))
+    allowed = fetch(base_url + "allowed_signers", optional=True)
+    if allowed is not None:
+        with open(os.path.join(d, "allowed_signers"), "wb") as f:
+            f.write(allowed)
+        print("fetched: %sallowed_signers (%d bytes)" % (base_url, len(allowed)))
+    else:
+        print("fetched: %sallowed_signers — not there (404)" % base_url)
+    os.mkdir(os.path.join(d, "seals"))
+    got = {"sig": 0, "ots": 0}
+    for s in seals:
+        for ext in ("sig", "ots"):
+            b = fetch("%sseals/%d.%s" % (base_url, s.n, ext), optional=True)
+            if b is not None:
+                with open(os.path.join(d, "seals", "%d.%s" % (s.n, ext)), "wb") as f:
+                    f.write(b)
+                got[ext] += 1
+    print("fetched: %sseals/ — %d .sig, %d .ots of %d seals" % (base_url, got["sig"], got["ots"], len(seals)))
+    print()
+    return d, seals_path
+
+
+def compare_held(held_path, current_path):
+    """--held: the older copy's seal lines must be a prefix of the current
+    seal lines. The header is compared separately and only observed: it is
+    unsigned prose and witness lines may legitimately be appended to it."""
+    with open(held_path, "rb") as f:
+        held = f.read()
+    with open(current_path, "rb") as f:
+        cur = f.read()
+    if b"\n\n" not in held:
+        die("held copy has no blank line separating header from seals")
+    hh, hb = held.split(b"\n\n", 1)
+    ch, cb = cur.split(b"\n\n", 1)
+    if hh != ch:
+        print("held copy: header differs from the current one (unsigned prose; witness lines")
+        print("  may be appended over time — an observation, not a finding; read both)")
+    if hb == cb:
+        print("held copy: %s — identical seal lines to the current file" % held_path)
+        return
+    if cb.startswith(hb):
+        added = cb[len(hb):].count(b"\n")
+        print("held copy: %s — is a prefix of the current file; %d seal line(s) added since"
+              % (held_path, added))
+        return
+    n = 0
+    while n < min(len(hb), len(cb)) and hb[n] == cb[n]:
+        n += 1
+    held_line = hb[:n].count(b"\n") + 1
+    print()
+    print("*** HELD COPY DIVERGES ***")
+    print("*** The seal lines in %s are not a prefix of the current seals file." % held_path)
+    print("*** First difference at seal-body byte %d, seal line %d of the held copy." % (n, held_line))
+    if len(cb) < len(hb) and hb.startswith(cb):
+        print("*** The current file is the held one with %d line(s) removed from the END."
+              % (hb[len(cb):].count(b"\n")))
+        print("*** This is the end-deletion signature that no other layer can see.")
+    else:
+        print("*** A seal line the witness saw has been changed or replaced.")
+    print()
+    finding("held copy of the seals file is not a prefix of the current one")
 
 
 def parse_seals_file(path):
@@ -130,13 +261,24 @@ def key_fingerprints(allowed_path):
 
 
 def main():
-    if len(sys.argv) != 2:
+    argv = sys.argv[1:]
+    held = None
+    if len(argv) >= 2 and argv[0] == "--held":
+        held = argv[1]
+        argv = argv[2:]
+    if len(argv) != 1:
         print(__doc__)
         sys.exit(2)
-    seals_path = sys.argv[1]
-    if not os.path.isfile(seals_path):
-        die("no such file: %s" % seals_path)
-    base = os.path.dirname(os.path.abspath(seals_path))
+    target = argv[0]
+    if target.startswith("http://") or target.startswith("https://"):
+        base, seals_path = fetch_set(target)
+    else:
+        seals_path = target
+        if not os.path.isfile(seals_path):
+            die("no such file: %s" % seals_path)
+        base = os.path.dirname(os.path.abspath(seals_path))
+    if held is not None and not os.path.isfile(held):
+        die("no such held copy: %s" % held)
     header, seals = parse_seals_file(seals_path)
 
     rows = []  # (layer, result, proves, does_not_prove)
@@ -208,7 +350,11 @@ def main():
     print("record: %s, %d bytes present, largest seal covers %d bytes"
           % (header["record"], len(record), largest.length))
     if header.get("record-url"):
-        print("record-url: %s  (this verifier read the local file, not the URL)" % header["record-url"])
+        if target.startswith("http"):
+            print("record-url: %s  (fetched above; the bytes verified are that response)" % header["record-url"])
+        else:
+            print("record-url: %s  (this run read the local file, not the URL; give the seals")
+            print("  file's URL instead of a path to fetch and verify what is actually served)")
 
     # 2. length against largest seal — the loud case
     if len(record) < largest.length:
@@ -220,6 +366,7 @@ def main():
         print("*** deletion signature. The remaining layers run on the bytes present,")
         print("*** but this headline stands regardless of what they say.")
         print()
+        finding("record shortened below seal %d" % largest.n)
         rows.append(("2 length", "RECORD SHORTENED by %d bytes" % (largest.length - len(record)),
                      "—", "—  (definite: the record was cut below a seal the author published)"))
     else:
@@ -254,6 +401,7 @@ def main():
                      "no byte covered by a matching seal has changed since that seal",
                      "anything about bytes after the last matching seal"))
     else:
+        finding("prefix mismatch from seal %d" % first_mismatch.n)
         lo = 0
         for s in seals:
             if s.n < first_mismatch.n:
@@ -272,6 +420,7 @@ def main():
             print("chain seal %d: ok" % s.n)
         else:
             chain_ok = False
+            finding("chain broken at seal %d" % s.n)
             print("chain seal %d: BROKEN (prev %s…, previous line hashes to %s…)"
                   % (s.n, s.prev[:12], expect[:12]))
     rows.append(("4 chain", "ok" if chain_ok else "BROKEN",
@@ -307,6 +456,7 @@ def main():
                 print("signature seal %d: verified (%s)" % (s.n, out.splitlines()[0] if out else "ok"))
             else:
                 counts["FAILED"] += 1
+                finding("signature of seal %d failed" % s.n)
                 print("signature seal %d: FAILED (%s)" % (s.n, out.replace("\n", " | ")))
         summary = ", ".join("%d %s" % (v, k) for k, v in counts.items() if v)
         rows.append(("5 signatures", summary,
@@ -337,14 +487,22 @@ def main():
             finally:
                 os.unlink(tmp)
             low = (out or "").lower()
+            m = re.search(r"bitcoin block (\d+) attests existence as of (.+)", out or "", re.I)
             if rc == 0 and "success" in low:
                 counts["anchored"] += 1
-                state = "anchored"
-            elif "pending" in low or "not enough confirmations" in low or "calendar" in low and rc != 0:
+                if m:
+                    state = "anchored %s %s" % (m.group(1), m.group(2).strip())
+                else:
+                    state = "anchored (height and time not parsed from ots output; raw lines below)"
+            # Precedence: `A or B or C and D` parses as `A or B or (C and D)`;
+            # an earlier draft wrote it that way and a calendar-only proof that
+            # returned 0 fell through to "failed" (Nick, wake 222). Parenthesised.
+            elif ("pending" in low or "not enough confirmations" in low or "calendar" in low) and rc != 0:
                 counts["pending"] += 1
                 state = "pending (calendar attestation only — a server's word, not a block)"
             else:
                 counts["failed"] += 1
+                finding("timestamp proof of seal %d failed" % s.n)
                 state = "failed"
             print("timestamp seal %d: %s" % (s.n, state))
             for line in (out or "").splitlines():
@@ -394,6 +552,16 @@ def main():
             print("  " + w)
     else:
         print("The author names no witness copies.")
+    if held is not None:
+        print()
+        compare_held(held, seals_path)
+    print()
+    if FINDINGS:
+        print("findings: %d — %s" % (len(FINDINGS), "; ".join(FINDINGS)))
+        print("exit 1 (ran to the end; at least one layer reported a finding)")
+        sys.exit(1)
+    print("findings: none")
+    print("exit 0 (ran to the end; no layer reported a finding — see the table for what that does not mean)")
     sys.exit(0)
 
 

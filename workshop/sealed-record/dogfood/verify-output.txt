@@ -3,10 +3,11 @@ custody: key lives on a machine where the operator is root and has promised in w
    the author's statement, not a checked fact — c28454)
 
 format: ok — 189 seal(s), header complete
-signers: dogfood/allowed_signers — read from beside the seals file; covered by no seal or signature
+signers: allowed_signers — read from beside the seals file; covered by no seal or signature
   SHA256:RxIwv+6Vho9g20NfhuYuHa8HU3mOvYXpg7jJ1XOiyls  betweenwakes-uk
-record: DECISIONS.md, 532206 bytes present, largest seal covers 526184 bytes
-record-url: https://betweenwakes.uk/decisions-raw.txt  (this verifier read the local file, not the URL)
+record: DECISIONS.md, 539088 bytes present, largest seal covers 526184 bytes
+record-url: %s  (this run read the local file, not the URL; give the seals
+  file's URL instead of a path to fetch and verify what is actually served)
 length: ok — record is not shorter than its largest seal
 
 prefix seal 1: matched  (78555 bytes, d55094d68e28… claimed at 2026-08-12T20:04:16Z)
@@ -579,9 +580,953 @@ signature seal 187: verified (Good "sealed-record-v1" signature for betweenwakes
 signature seal 188: verified (Good "sealed-record-v1" signature for betweenwakes-uk with ED25519 key SHA256:RxIwv+6Vho9g20NfhuYuHa8HU3mOvYXpg7jJ1XOiyls)
 signature seal 189: verified (Good "sealed-record-v1" signature for betweenwakes-uk with ED25519 key SHA256:RxIwv+6Vho9g20NfhuYuHa8HU3mOvYXpg7jJ1XOiyls)
 
-timestamps: not checked — ots not installed on this machine
+timestamp seal 1: pending (calendar attestation only — a server's word, not a block)
+    ots: Calendar https://alice.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://finney.calendar.eternitywall.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://btc.calendar.catallaxy.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://bob.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+timestamp seal 2: pending (calendar attestation only — a server's word, not a block)
+    ots: Calendar https://alice.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://finney.calendar.eternitywall.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://btc.calendar.catallaxy.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://bob.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+timestamp seal 3: pending (calendar attestation only — a server's word, not a block)
+    ots: Calendar https://alice.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://finney.calendar.eternitywall.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://btc.calendar.catallaxy.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://bob.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+timestamp seal 4: pending (calendar attestation only — a server's word, not a block)
+    ots: Calendar https://alice.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://finney.calendar.eternitywall.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://btc.calendar.catallaxy.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://bob.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+timestamp seal 5: pending (calendar attestation only — a server's word, not a block)
+    ots: Calendar https://alice.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://finney.calendar.eternitywall.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://btc.calendar.catallaxy.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://bob.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+timestamp seal 6: pending (calendar attestation only — a server's word, not a block)
+    ots: Calendar https://alice.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://finney.calendar.eternitywall.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://btc.calendar.catallaxy.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://bob.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+timestamp seal 7: pending (calendar attestation only — a server's word, not a block)
+    ots: Calendar https://alice.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://finney.calendar.eternitywall.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://btc.calendar.catallaxy.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://bob.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+timestamp seal 8: pending (calendar attestation only — a server's word, not a block)
+    ots: Calendar https://alice.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://finney.calendar.eternitywall.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://btc.calendar.catallaxy.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://bob.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+timestamp seal 9: pending (calendar attestation only — a server's word, not a block)
+    ots: Calendar https://alice.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://finney.calendar.eternitywall.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://btc.calendar.catallaxy.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://bob.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+timestamp seal 10: pending (calendar attestation only — a server's word, not a block)
+    ots: Calendar https://alice.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://finney.calendar.eternitywall.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://btc.calendar.catallaxy.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://bob.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+timestamp seal 11: pending (calendar attestation only — a server's word, not a block)
+    ots: Calendar https://alice.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://finney.calendar.eternitywall.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://btc.calendar.catallaxy.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://bob.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+timestamp seal 12: pending (calendar attestation only — a server's word, not a block)
+    ots: Calendar https://alice.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://finney.calendar.eternitywall.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://btc.calendar.catallaxy.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://bob.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+timestamp seal 13: pending (calendar attestation only — a server's word, not a block)
+    ots: Calendar https://alice.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://finney.calendar.eternitywall.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://btc.calendar.catallaxy.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://bob.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+timestamp seal 14: pending (calendar attestation only — a server's word, not a block)
+    ots: Calendar https://alice.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://finney.calendar.eternitywall.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://btc.calendar.catallaxy.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://bob.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+timestamp seal 15: pending (calendar attestation only — a server's word, not a block)
+    ots: Calendar https://alice.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://finney.calendar.eternitywall.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://btc.calendar.catallaxy.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://bob.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+timestamp seal 16: pending (calendar attestation only — a server's word, not a block)
+    ots: Calendar https://alice.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://finney.calendar.eternitywall.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://btc.calendar.catallaxy.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://bob.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+timestamp seal 17: pending (calendar attestation only — a server's word, not a block)
+    ots: Calendar https://alice.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://finney.calendar.eternitywall.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://btc.calendar.catallaxy.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://bob.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+timestamp seal 18: pending (calendar attestation only — a server's word, not a block)
+    ots: Calendar https://alice.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://finney.calendar.eternitywall.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://btc.calendar.catallaxy.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://bob.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+timestamp seal 19: pending (calendar attestation only — a server's word, not a block)
+    ots: Calendar https://alice.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://finney.calendar.eternitywall.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://btc.calendar.catallaxy.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://bob.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+timestamp seal 20: pending (calendar attestation only — a server's word, not a block)
+    ots: Calendar https://alice.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://finney.calendar.eternitywall.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://btc.calendar.catallaxy.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://bob.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+timestamp seal 21: pending (calendar attestation only — a server's word, not a block)
+    ots: Calendar https://alice.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://finney.calendar.eternitywall.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://btc.calendar.catallaxy.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://bob.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+timestamp seal 22: pending (calendar attestation only — a server's word, not a block)
+    ots: Calendar https://alice.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://finney.calendar.eternitywall.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://btc.calendar.catallaxy.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://bob.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+timestamp seal 23: pending (calendar attestation only — a server's word, not a block)
+    ots: Calendar https://alice.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://finney.calendar.eternitywall.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://btc.calendar.catallaxy.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://bob.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+timestamp seal 24: pending (calendar attestation only — a server's word, not a block)
+    ots: Calendar https://alice.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://finney.calendar.eternitywall.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://btc.calendar.catallaxy.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://bob.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+timestamp seal 25: pending (calendar attestation only — a server's word, not a block)
+    ots: Calendar https://alice.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://finney.calendar.eternitywall.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://btc.calendar.catallaxy.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://bob.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+timestamp seal 26: pending (calendar attestation only — a server's word, not a block)
+    ots: Calendar https://alice.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://finney.calendar.eternitywall.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://btc.calendar.catallaxy.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://bob.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+timestamp seal 27: pending (calendar attestation only — a server's word, not a block)
+    ots: Calendar https://alice.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://finney.calendar.eternitywall.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://btc.calendar.catallaxy.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://bob.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+timestamp seal 28: pending (calendar attestation only — a server's word, not a block)
+    ots: Calendar https://alice.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://finney.calendar.eternitywall.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://btc.calendar.catallaxy.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://bob.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+timestamp seal 29: pending (calendar attestation only — a server's word, not a block)
+    ots: Calendar https://alice.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://finney.calendar.eternitywall.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://btc.calendar.catallaxy.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://bob.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+timestamp seal 30: pending (calendar attestation only — a server's word, not a block)
+    ots: Calendar https://alice.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://finney.calendar.eternitywall.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://btc.calendar.catallaxy.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://bob.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+timestamp seal 31: pending (calendar attestation only — a server's word, not a block)
+    ots: Calendar https://alice.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://finney.calendar.eternitywall.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://btc.calendar.catallaxy.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://bob.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+timestamp seal 32: pending (calendar attestation only — a server's word, not a block)
+    ots: Calendar https://alice.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://finney.calendar.eternitywall.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://btc.calendar.catallaxy.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://bob.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+timestamp seal 33: pending (calendar attestation only — a server's word, not a block)
+    ots: Calendar https://alice.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://finney.calendar.eternitywall.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://btc.calendar.catallaxy.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://bob.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+timestamp seal 34: pending (calendar attestation only — a server's word, not a block)
+    ots: Calendar https://alice.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://finney.calendar.eternitywall.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://btc.calendar.catallaxy.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://bob.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+timestamp seal 35: pending (calendar attestation only — a server's word, not a block)
+    ots: Calendar https://alice.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://finney.calendar.eternitywall.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://btc.calendar.catallaxy.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://bob.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+timestamp seal 36: pending (calendar attestation only — a server's word, not a block)
+    ots: Calendar https://alice.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://finney.calendar.eternitywall.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://btc.calendar.catallaxy.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://bob.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+timestamp seal 37: pending (calendar attestation only — a server's word, not a block)
+    ots: Calendar https://alice.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://finney.calendar.eternitywall.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://btc.calendar.catallaxy.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://bob.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+timestamp seal 38: pending (calendar attestation only — a server's word, not a block)
+    ots: Calendar https://alice.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://finney.calendar.eternitywall.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://btc.calendar.catallaxy.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://bob.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+timestamp seal 39: pending (calendar attestation only — a server's word, not a block)
+    ots: Calendar https://alice.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://finney.calendar.eternitywall.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://btc.calendar.catallaxy.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://bob.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+timestamp seal 40: pending (calendar attestation only — a server's word, not a block)
+    ots: Calendar https://alice.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://finney.calendar.eternitywall.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://btc.calendar.catallaxy.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://bob.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+timestamp seal 41: pending (calendar attestation only — a server's word, not a block)
+    ots: Calendar https://alice.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://finney.calendar.eternitywall.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://btc.calendar.catallaxy.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://bob.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+timestamp seal 42: pending (calendar attestation only — a server's word, not a block)
+    ots: Calendar https://alice.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://finney.calendar.eternitywall.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://btc.calendar.catallaxy.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://bob.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+timestamp seal 43: pending (calendar attestation only — a server's word, not a block)
+    ots: Calendar https://alice.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://finney.calendar.eternitywall.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://btc.calendar.catallaxy.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://bob.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+timestamp seal 44: pending (calendar attestation only — a server's word, not a block)
+    ots: Calendar https://alice.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://finney.calendar.eternitywall.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://btc.calendar.catallaxy.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://bob.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+timestamp seal 45: pending (calendar attestation only — a server's word, not a block)
+    ots: Calendar https://alice.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://finney.calendar.eternitywall.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://btc.calendar.catallaxy.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://bob.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+timestamp seal 46: pending (calendar attestation only — a server's word, not a block)
+    ots: Calendar https://alice.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://finney.calendar.eternitywall.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://btc.calendar.catallaxy.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://bob.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+timestamp seal 47: pending (calendar attestation only — a server's word, not a block)
+    ots: Calendar https://alice.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://finney.calendar.eternitywall.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://btc.calendar.catallaxy.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://bob.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+timestamp seal 48: pending (calendar attestation only — a server's word, not a block)
+    ots: Calendar https://alice.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://finney.calendar.eternitywall.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://btc.calendar.catallaxy.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://bob.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+timestamp seal 49: pending (calendar attestation only — a server's word, not a block)
+    ots: Calendar https://alice.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://finney.calendar.eternitywall.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://btc.calendar.catallaxy.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://bob.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+timestamp seal 50: pending (calendar attestation only — a server's word, not a block)
+    ots: Calendar https://alice.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://finney.calendar.eternitywall.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://btc.calendar.catallaxy.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://bob.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+timestamp seal 51: pending (calendar attestation only — a server's word, not a block)
+    ots: Calendar https://alice.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://finney.calendar.eternitywall.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://btc.calendar.catallaxy.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://bob.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+timestamp seal 52: pending (calendar attestation only — a server's word, not a block)
+    ots: Calendar https://alice.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://finney.calendar.eternitywall.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://btc.calendar.catallaxy.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://bob.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+timestamp seal 53: pending (calendar attestation only — a server's word, not a block)
+    ots: Calendar https://alice.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://finney.calendar.eternitywall.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://btc.calendar.catallaxy.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://bob.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+timestamp seal 54: pending (calendar attestation only — a server's word, not a block)
+    ots: Calendar https://alice.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://finney.calendar.eternitywall.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://btc.calendar.catallaxy.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://bob.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+timestamp seal 55: pending (calendar attestation only — a server's word, not a block)
+    ots: Calendar https://alice.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://finney.calendar.eternitywall.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://btc.calendar.catallaxy.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://bob.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+timestamp seal 56: pending (calendar attestation only — a server's word, not a block)
+    ots: Calendar https://alice.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://finney.calendar.eternitywall.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://btc.calendar.catallaxy.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://bob.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+timestamp seal 57: pending (calendar attestation only — a server's word, not a block)
+    ots: Calendar https://alice.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://finney.calendar.eternitywall.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://btc.calendar.catallaxy.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://bob.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+timestamp seal 58: pending (calendar attestation only — a server's word, not a block)
+    ots: Calendar https://alice.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://finney.calendar.eternitywall.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://btc.calendar.catallaxy.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://bob.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+timestamp seal 59: pending (calendar attestation only — a server's word, not a block)
+    ots: Calendar https://alice.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://finney.calendar.eternitywall.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://btc.calendar.catallaxy.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://bob.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+timestamp seal 60: pending (calendar attestation only — a server's word, not a block)
+    ots: Calendar https://alice.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://finney.calendar.eternitywall.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://btc.calendar.catallaxy.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://bob.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+timestamp seal 61: pending (calendar attestation only — a server's word, not a block)
+    ots: Calendar https://alice.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://finney.calendar.eternitywall.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://btc.calendar.catallaxy.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://bob.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+timestamp seal 62: pending (calendar attestation only — a server's word, not a block)
+    ots: Calendar https://alice.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://finney.calendar.eternitywall.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://btc.calendar.catallaxy.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://bob.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+timestamp seal 63: pending (calendar attestation only — a server's word, not a block)
+    ots: Calendar https://alice.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://finney.calendar.eternitywall.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://btc.calendar.catallaxy.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://bob.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+timestamp seal 64: pending (calendar attestation only — a server's word, not a block)
+    ots: Calendar https://alice.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://finney.calendar.eternitywall.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://btc.calendar.catallaxy.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://bob.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+timestamp seal 65: pending (calendar attestation only — a server's word, not a block)
+    ots: Calendar https://alice.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://finney.calendar.eternitywall.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://btc.calendar.catallaxy.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://bob.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+timestamp seal 66: pending (calendar attestation only — a server's word, not a block)
+    ots: Calendar https://alice.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://finney.calendar.eternitywall.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://btc.calendar.catallaxy.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://bob.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+timestamp seal 67: pending (calendar attestation only — a server's word, not a block)
+    ots: Calendar https://alice.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://finney.calendar.eternitywall.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://btc.calendar.catallaxy.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://bob.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+timestamp seal 68: pending (calendar attestation only — a server's word, not a block)
+    ots: Calendar https://alice.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://finney.calendar.eternitywall.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://btc.calendar.catallaxy.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://bob.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+timestamp seal 69: pending (calendar attestation only — a server's word, not a block)
+    ots: Calendar https://alice.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://finney.calendar.eternitywall.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://btc.calendar.catallaxy.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://bob.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+timestamp seal 70: pending (calendar attestation only — a server's word, not a block)
+    ots: Calendar https://alice.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://finney.calendar.eternitywall.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://btc.calendar.catallaxy.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://bob.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+timestamp seal 71: pending (calendar attestation only — a server's word, not a block)
+    ots: Calendar https://alice.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://finney.calendar.eternitywall.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://btc.calendar.catallaxy.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://bob.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+timestamp seal 72: pending (calendar attestation only — a server's word, not a block)
+    ots: Calendar https://alice.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://finney.calendar.eternitywall.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://btc.calendar.catallaxy.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://bob.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+timestamp seal 73: pending (calendar attestation only — a server's word, not a block)
+    ots: Calendar https://alice.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://finney.calendar.eternitywall.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://btc.calendar.catallaxy.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://bob.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+timestamp seal 74: pending (calendar attestation only — a server's word, not a block)
+    ots: Calendar https://alice.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://finney.calendar.eternitywall.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://btc.calendar.catallaxy.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://bob.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+timestamp seal 75: pending (calendar attestation only — a server's word, not a block)
+    ots: Calendar https://alice.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://finney.calendar.eternitywall.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://btc.calendar.catallaxy.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://bob.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+timestamp seal 76: pending (calendar attestation only — a server's word, not a block)
+    ots: Calendar https://alice.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://finney.calendar.eternitywall.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://btc.calendar.catallaxy.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://bob.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+timestamp seal 77: pending (calendar attestation only — a server's word, not a block)
+    ots: Calendar https://alice.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://finney.calendar.eternitywall.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://btc.calendar.catallaxy.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://bob.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+timestamp seal 78: pending (calendar attestation only — a server's word, not a block)
+    ots: Calendar https://alice.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://finney.calendar.eternitywall.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://btc.calendar.catallaxy.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://bob.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+timestamp seal 79: pending (calendar attestation only — a server's word, not a block)
+    ots: Calendar https://alice.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://finney.calendar.eternitywall.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://btc.calendar.catallaxy.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://bob.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+timestamp seal 80: pending (calendar attestation only — a server's word, not a block)
+    ots: Calendar https://alice.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://finney.calendar.eternitywall.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://btc.calendar.catallaxy.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://bob.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+timestamp seal 81: pending (calendar attestation only — a server's word, not a block)
+    ots: Calendar https://alice.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://finney.calendar.eternitywall.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://btc.calendar.catallaxy.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://bob.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+timestamp seal 82: pending (calendar attestation only — a server's word, not a block)
+    ots: Calendar https://alice.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://finney.calendar.eternitywall.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://btc.calendar.catallaxy.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://bob.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+timestamp seal 83: pending (calendar attestation only — a server's word, not a block)
+    ots: Calendar https://alice.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://finney.calendar.eternitywall.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://btc.calendar.catallaxy.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://bob.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+timestamp seal 84: pending (calendar attestation only — a server's word, not a block)
+    ots: Calendar https://alice.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://finney.calendar.eternitywall.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://btc.calendar.catallaxy.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://bob.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+timestamp seal 85: pending (calendar attestation only — a server's word, not a block)
+    ots: Calendar https://alice.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://finney.calendar.eternitywall.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://btc.calendar.catallaxy.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://bob.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+timestamp seal 86: pending (calendar attestation only — a server's word, not a block)
+    ots: Calendar https://alice.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://finney.calendar.eternitywall.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://btc.calendar.catallaxy.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://bob.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+timestamp seal 87: pending (calendar attestation only — a server's word, not a block)
+    ots: Calendar https://alice.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://finney.calendar.eternitywall.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://btc.calendar.catallaxy.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://bob.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+timestamp seal 88: pending (calendar attestation only — a server's word, not a block)
+    ots: Calendar https://alice.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://finney.calendar.eternitywall.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://btc.calendar.catallaxy.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://bob.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+timestamp seal 89: pending (calendar attestation only — a server's word, not a block)
+    ots: Calendar https://alice.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://finney.calendar.eternitywall.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://btc.calendar.catallaxy.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://bob.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+timestamp seal 90: pending (calendar attestation only — a server's word, not a block)
+    ots: Calendar https://alice.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://finney.calendar.eternitywall.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://btc.calendar.catallaxy.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://bob.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+timestamp seal 91: pending (calendar attestation only — a server's word, not a block)
+    ots: Calendar https://alice.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://finney.calendar.eternitywall.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://btc.calendar.catallaxy.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://bob.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+timestamp seal 92: pending (calendar attestation only — a server's word, not a block)
+    ots: Calendar https://alice.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://finney.calendar.eternitywall.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://btc.calendar.catallaxy.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://bob.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+timestamp seal 93: pending (calendar attestation only — a server's word, not a block)
+    ots: Calendar https://alice.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://finney.calendar.eternitywall.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://btc.calendar.catallaxy.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://bob.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+timestamp seal 94: pending (calendar attestation only — a server's word, not a block)
+    ots: Calendar https://alice.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://finney.calendar.eternitywall.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://btc.calendar.catallaxy.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://bob.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+timestamp seal 95: pending (calendar attestation only — a server's word, not a block)
+    ots: Calendar https://alice.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://finney.calendar.eternitywall.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://btc.calendar.catallaxy.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://bob.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+timestamp seal 96: pending (calendar attestation only — a server's word, not a block)
+    ots: Calendar https://alice.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://finney.calendar.eternitywall.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://btc.calendar.catallaxy.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://bob.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+timestamp seal 97: pending (calendar attestation only — a server's word, not a block)
+    ots: Calendar https://alice.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://finney.calendar.eternitywall.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://btc.calendar.catallaxy.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://bob.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+timestamp seal 98: pending (calendar attestation only — a server's word, not a block)
+    ots: Calendar https://alice.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://finney.calendar.eternitywall.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://btc.calendar.catallaxy.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://bob.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+timestamp seal 99: pending (calendar attestation only — a server's word, not a block)
+    ots: Calendar https://alice.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://finney.calendar.eternitywall.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://btc.calendar.catallaxy.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://bob.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+timestamp seal 100: pending (calendar attestation only — a server's word, not a block)
+    ots: Calendar https://alice.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://finney.calendar.eternitywall.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://btc.calendar.catallaxy.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://bob.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+timestamp seal 101: pending (calendar attestation only — a server's word, not a block)
+    ots: Calendar https://alice.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://finney.calendar.eternitywall.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://btc.calendar.catallaxy.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://bob.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+timestamp seal 102: pending (calendar attestation only — a server's word, not a block)
+    ots: Calendar https://alice.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://finney.calendar.eternitywall.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://btc.calendar.catallaxy.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://bob.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+timestamp seal 103: pending (calendar attestation only — a server's word, not a block)
+    ots: Calendar https://alice.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://finney.calendar.eternitywall.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://btc.calendar.catallaxy.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://bob.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+timestamp seal 104: pending (calendar attestation only — a server's word, not a block)
+    ots: Calendar https://alice.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://finney.calendar.eternitywall.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://btc.calendar.catallaxy.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://bob.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+timestamp seal 105: pending (calendar attestation only — a server's word, not a block)
+    ots: Calendar https://alice.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://finney.calendar.eternitywall.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://btc.calendar.catallaxy.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://bob.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+timestamp seal 106: pending (calendar attestation only — a server's word, not a block)
+    ots: Calendar https://alice.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://finney.calendar.eternitywall.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://btc.calendar.catallaxy.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://bob.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+timestamp seal 107: pending (calendar attestation only — a server's word, not a block)
+    ots: Calendar https://alice.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://finney.calendar.eternitywall.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://btc.calendar.catallaxy.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://bob.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+timestamp seal 108: pending (calendar attestation only — a server's word, not a block)
+    ots: Calendar https://alice.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://finney.calendar.eternitywall.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://btc.calendar.catallaxy.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://bob.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+timestamp seal 109: pending (calendar attestation only — a server's word, not a block)
+    ots: Calendar https://alice.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://finney.calendar.eternitywall.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://btc.calendar.catallaxy.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://bob.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+timestamp seal 110: pending (calendar attestation only — a server's word, not a block)
+    ots: Calendar https://alice.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://finney.calendar.eternitywall.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://btc.calendar.catallaxy.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://bob.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+timestamp seal 111: pending (calendar attestation only — a server's word, not a block)
+    ots: Calendar https://alice.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://finney.calendar.eternitywall.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://btc.calendar.catallaxy.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://bob.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+timestamp seal 112: pending (calendar attestation only — a server's word, not a block)
+    ots: Calendar https://alice.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://finney.calendar.eternitywall.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://btc.calendar.catallaxy.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://bob.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+timestamp seal 113: pending (calendar attestation only — a server's word, not a block)
+    ots: Calendar https://alice.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://finney.calendar.eternitywall.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://btc.calendar.catallaxy.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://bob.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+timestamp seal 114: pending (calendar attestation only — a server's word, not a block)
+    ots: Calendar https://alice.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://finney.calendar.eternitywall.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://btc.calendar.catallaxy.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://bob.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+timestamp seal 115: pending (calendar attestation only — a server's word, not a block)
+    ots: Calendar https://alice.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://finney.calendar.eternitywall.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://btc.calendar.catallaxy.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://bob.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+timestamp seal 116: pending (calendar attestation only — a server's word, not a block)
+    ots: Calendar https://alice.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://finney.calendar.eternitywall.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://btc.calendar.catallaxy.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://bob.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+timestamp seal 117: pending (calendar attestation only — a server's word, not a block)
+    ots: Calendar https://alice.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://finney.calendar.eternitywall.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://btc.calendar.catallaxy.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://bob.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+timestamp seal 118: pending (calendar attestation only — a server's word, not a block)
+    ots: Calendar https://alice.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://finney.calendar.eternitywall.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://btc.calendar.catallaxy.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://bob.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+timestamp seal 119: pending (calendar attestation only — a server's word, not a block)
+    ots: Calendar https://alice.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://finney.calendar.eternitywall.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://btc.calendar.catallaxy.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://bob.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+timestamp seal 120: pending (calendar attestation only — a server's word, not a block)
+    ots: Calendar https://alice.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://finney.calendar.eternitywall.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://btc.calendar.catallaxy.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://bob.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+timestamp seal 121: pending (calendar attestation only — a server's word, not a block)
+    ots: Calendar https://alice.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://finney.calendar.eternitywall.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://btc.calendar.catallaxy.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://bob.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+timestamp seal 122: pending (calendar attestation only — a server's word, not a block)
+    ots: Calendar https://alice.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://finney.calendar.eternitywall.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://btc.calendar.catallaxy.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://bob.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+timestamp seal 123: pending (calendar attestation only — a server's word, not a block)
+    ots: Calendar https://alice.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://finney.calendar.eternitywall.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://btc.calendar.catallaxy.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://bob.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+timestamp seal 124: pending (calendar attestation only — a server's word, not a block)
+    ots: Calendar https://alice.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://finney.calendar.eternitywall.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://btc.calendar.catallaxy.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://bob.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+timestamp seal 125: pending (calendar attestation only — a server's word, not a block)
+    ots: Calendar https://alice.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://finney.calendar.eternitywall.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://btc.calendar.catallaxy.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://bob.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+timestamp seal 126: pending (calendar attestation only — a server's word, not a block)
+    ots: Calendar https://alice.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://finney.calendar.eternitywall.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://btc.calendar.catallaxy.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://bob.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+timestamp seal 127: pending (calendar attestation only — a server's word, not a block)
+    ots: Calendar https://alice.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://finney.calendar.eternitywall.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://btc.calendar.catallaxy.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://bob.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+timestamp seal 128: pending (calendar attestation only — a server's word, not a block)
+    ots: Calendar https://alice.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://finney.calendar.eternitywall.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://btc.calendar.catallaxy.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://bob.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+timestamp seal 129: pending (calendar attestation only — a server's word, not a block)
+    ots: Calendar https://alice.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://finney.calendar.eternitywall.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://btc.calendar.catallaxy.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://bob.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+timestamp seal 130: pending (calendar attestation only — a server's word, not a block)
+    ots: Calendar https://alice.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://finney.calendar.eternitywall.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://btc.calendar.catallaxy.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://bob.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+timestamp seal 131: pending (calendar attestation only — a server's word, not a block)
+    ots: Calendar https://alice.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://finney.calendar.eternitywall.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://btc.calendar.catallaxy.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://bob.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+timestamp seal 132: pending (calendar attestation only — a server's word, not a block)
+    ots: Calendar https://alice.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://finney.calendar.eternitywall.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://btc.calendar.catallaxy.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://bob.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+timestamp seal 133: pending (calendar attestation only — a server's word, not a block)
+    ots: Calendar https://alice.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://finney.calendar.eternitywall.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://btc.calendar.catallaxy.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://bob.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+timestamp seal 134: pending (calendar attestation only — a server's word, not a block)
+    ots: Calendar https://alice.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://finney.calendar.eternitywall.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://btc.calendar.catallaxy.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://bob.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+timestamp seal 135: pending (calendar attestation only — a server's word, not a block)
+    ots: Calendar https://alice.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://finney.calendar.eternitywall.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://btc.calendar.catallaxy.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://bob.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+timestamp seal 136: pending (calendar attestation only — a server's word, not a block)
+    ots: Calendar https://alice.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://finney.calendar.eternitywall.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://btc.calendar.catallaxy.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://bob.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+timestamp seal 137: pending (calendar attestation only — a server's word, not a block)
+    ots: Calendar https://alice.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://finney.calendar.eternitywall.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://btc.calendar.catallaxy.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://bob.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+timestamp seal 138: pending (calendar attestation only — a server's word, not a block)
+    ots: Calendar https://alice.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://finney.calendar.eternitywall.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://btc.calendar.catallaxy.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://bob.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+timestamp seal 139: pending (calendar attestation only — a server's word, not a block)
+    ots: Calendar https://alice.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://finney.calendar.eternitywall.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://btc.calendar.catallaxy.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://bob.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+timestamp seal 140: pending (calendar attestation only — a server's word, not a block)
+    ots: Calendar https://alice.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://finney.calendar.eternitywall.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://btc.calendar.catallaxy.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://bob.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+timestamp seal 141: pending (calendar attestation only — a server's word, not a block)
+    ots: Calendar https://alice.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://finney.calendar.eternitywall.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://btc.calendar.catallaxy.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://bob.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+timestamp seal 142: pending (calendar attestation only — a server's word, not a block)
+    ots: Calendar https://alice.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://finney.calendar.eternitywall.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://btc.calendar.catallaxy.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://bob.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+timestamp seal 143: pending (calendar attestation only — a server's word, not a block)
+    ots: Calendar https://alice.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://finney.calendar.eternitywall.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://btc.calendar.catallaxy.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://bob.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+timestamp seal 144: pending (calendar attestation only — a server's word, not a block)
+    ots: Calendar https://alice.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://finney.calendar.eternitywall.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://btc.calendar.catallaxy.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://bob.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+timestamp seal 145: pending (calendar attestation only — a server's word, not a block)
+    ots: Calendar https://alice.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://finney.calendar.eternitywall.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://btc.calendar.catallaxy.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://bob.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+timestamp seal 146: pending (calendar attestation only — a server's word, not a block)
+    ots: Calendar https://alice.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://finney.calendar.eternitywall.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://btc.calendar.catallaxy.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://bob.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+timestamp seal 147: pending (calendar attestation only — a server's word, not a block)
+    ots: Calendar https://alice.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://finney.calendar.eternitywall.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://btc.calendar.catallaxy.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://bob.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+timestamp seal 148: pending (calendar attestation only — a server's word, not a block)
+    ots: Calendar https://alice.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://finney.calendar.eternitywall.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://btc.calendar.catallaxy.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://bob.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+timestamp seal 149: pending (calendar attestation only — a server's word, not a block)
+    ots: Calendar https://alice.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://finney.calendar.eternitywall.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://btc.calendar.catallaxy.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://bob.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+timestamp seal 150: pending (calendar attestation only — a server's word, not a block)
+    ots: Calendar https://alice.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://finney.calendar.eternitywall.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://btc.calendar.catallaxy.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://bob.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+timestamp seal 151: pending (calendar attestation only — a server's word, not a block)
+    ots: Calendar https://alice.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://finney.calendar.eternitywall.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://btc.calendar.catallaxy.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://bob.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+timestamp seal 152: pending (calendar attestation only — a server's word, not a block)
+    ots: Calendar https://alice.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://finney.calendar.eternitywall.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://btc.calendar.catallaxy.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://bob.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+timestamp seal 153: pending (calendar attestation only — a server's word, not a block)
+    ots: Calendar https://alice.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://finney.calendar.eternitywall.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://btc.calendar.catallaxy.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://bob.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+timestamp seal 154: pending (calendar attestation only — a server's word, not a block)
+    ots: Calendar https://alice.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://finney.calendar.eternitywall.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://btc.calendar.catallaxy.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://bob.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+timestamp seal 155: pending (calendar attestation only — a server's word, not a block)
+    ots: Calendar https://alice.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://finney.calendar.eternitywall.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://btc.calendar.catallaxy.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://bob.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+timestamp seal 156: pending (calendar attestation only — a server's word, not a block)
+    ots: Calendar https://alice.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://finney.calendar.eternitywall.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://btc.calendar.catallaxy.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://bob.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+timestamp seal 157: pending (calendar attestation only — a server's word, not a block)
+    ots: Calendar https://alice.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://finney.calendar.eternitywall.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://btc.calendar.catallaxy.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://bob.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+timestamp seal 158: pending (calendar attestation only — a server's word, not a block)
+    ots: Calendar https://alice.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://finney.calendar.eternitywall.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://btc.calendar.catallaxy.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://bob.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+timestamp seal 159: pending (calendar attestation only — a server's word, not a block)
+    ots: Calendar https://alice.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://finney.calendar.eternitywall.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://btc.calendar.catallaxy.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://bob.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+timestamp seal 160: pending (calendar attestation only — a server's word, not a block)
+    ots: Calendar https://alice.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://finney.calendar.eternitywall.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://btc.calendar.catallaxy.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://bob.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+timestamp seal 161: pending (calendar attestation only — a server's word, not a block)
+    ots: Calendar https://alice.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://finney.calendar.eternitywall.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://btc.calendar.catallaxy.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://bob.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+timestamp seal 162: pending (calendar attestation only — a server's word, not a block)
+    ots: Calendar https://alice.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://finney.calendar.eternitywall.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://btc.calendar.catallaxy.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://bob.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+timestamp seal 163: pending (calendar attestation only — a server's word, not a block)
+    ots: Calendar https://alice.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://finney.calendar.eternitywall.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://btc.calendar.catallaxy.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://bob.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+timestamp seal 164: pending (calendar attestation only — a server's word, not a block)
+    ots: Calendar https://alice.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://finney.calendar.eternitywall.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://btc.calendar.catallaxy.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://bob.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+timestamp seal 165: pending (calendar attestation only — a server's word, not a block)
+    ots: Calendar https://alice.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://finney.calendar.eternitywall.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://btc.calendar.catallaxy.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://bob.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+timestamp seal 166: pending (calendar attestation only — a server's word, not a block)
+    ots: Calendar https://alice.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://finney.calendar.eternitywall.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://btc.calendar.catallaxy.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://bob.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+timestamp seal 167: pending (calendar attestation only — a server's word, not a block)
+    ots: Calendar https://alice.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://finney.calendar.eternitywall.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://btc.calendar.catallaxy.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://bob.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+timestamp seal 168: pending (calendar attestation only — a server's word, not a block)
+    ots: Calendar https://alice.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://finney.calendar.eternitywall.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://btc.calendar.catallaxy.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://bob.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+timestamp seal 169: pending (calendar attestation only — a server's word, not a block)
+    ots: Calendar https://alice.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://finney.calendar.eternitywall.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://btc.calendar.catallaxy.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://bob.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+timestamp seal 170: pending (calendar attestation only — a server's word, not a block)
+    ots: Calendar https://alice.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://finney.calendar.eternitywall.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://btc.calendar.catallaxy.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://bob.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+timestamp seal 171: pending (calendar attestation only — a server's word, not a block)
+    ots: Calendar https://alice.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://finney.calendar.eternitywall.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://btc.calendar.catallaxy.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://bob.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+timestamp seal 172: pending (calendar attestation only — a server's word, not a block)
+    ots: Calendar https://alice.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://finney.calendar.eternitywall.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://btc.calendar.catallaxy.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://bob.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+timestamp seal 173: pending (calendar attestation only — a server's word, not a block)
+    ots: Calendar https://alice.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://finney.calendar.eternitywall.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://btc.calendar.catallaxy.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://bob.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+timestamp seal 174: pending (calendar attestation only — a server's word, not a block)
+    ots: Calendar https://alice.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://finney.calendar.eternitywall.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://btc.calendar.catallaxy.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://bob.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+timestamp seal 175: pending (calendar attestation only — a server's word, not a block)
+    ots: Calendar https://alice.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://finney.calendar.eternitywall.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://btc.calendar.catallaxy.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://bob.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+timestamp seal 176: pending (calendar attestation only — a server's word, not a block)
+    ots: Calendar https://alice.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://finney.calendar.eternitywall.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://btc.calendar.catallaxy.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://bob.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+timestamp seal 177: pending (calendar attestation only — a server's word, not a block)
+    ots: Calendar https://alice.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://finney.calendar.eternitywall.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://btc.calendar.catallaxy.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://bob.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+timestamp seal 178: pending (calendar attestation only — a server's word, not a block)
+    ots: Calendar https://alice.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://finney.calendar.eternitywall.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://btc.calendar.catallaxy.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://bob.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+timestamp seal 179: pending (calendar attestation only — a server's word, not a block)
+    ots: Calendar https://alice.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://finney.calendar.eternitywall.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://btc.calendar.catallaxy.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://bob.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+timestamp seal 180: pending (calendar attestation only — a server's word, not a block)
+    ots: Calendar https://alice.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://finney.calendar.eternitywall.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://btc.calendar.catallaxy.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://bob.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+timestamp seal 181: pending (calendar attestation only — a server's word, not a block)
+    ots: Calendar https://alice.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://finney.calendar.eternitywall.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://btc.calendar.catallaxy.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://bob.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+timestamp seal 182: pending (calendar attestation only — a server's word, not a block)
+    ots: Calendar https://alice.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://finney.calendar.eternitywall.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://btc.calendar.catallaxy.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://bob.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+timestamp seal 183: pending (calendar attestation only — a server's word, not a block)
+    ots: Calendar https://alice.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://finney.calendar.eternitywall.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://btc.calendar.catallaxy.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://bob.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+timestamp seal 184: pending (calendar attestation only — a server's word, not a block)
+    ots: Calendar https://alice.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://finney.calendar.eternitywall.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://btc.calendar.catallaxy.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://bob.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+timestamp seal 185: pending (calendar attestation only — a server's word, not a block)
+    ots: Calendar https://alice.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://finney.calendar.eternitywall.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://btc.calendar.catallaxy.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://bob.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+timestamp seal 186: pending (calendar attestation only — a server's word, not a block)
+    ots: Calendar https://alice.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://finney.calendar.eternitywall.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://btc.calendar.catallaxy.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://bob.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+timestamp seal 187: pending (calendar attestation only — a server's word, not a block)
+    ots: Calendar https://alice.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://finney.calendar.eternitywall.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://btc.calendar.catallaxy.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://bob.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+timestamp seal 188: pending (calendar attestation only — a server's word, not a block)
+    ots: Calendar https://alice.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://finney.calendar.eternitywall.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://btc.calendar.catallaxy.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://bob.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+timestamp seal 189: pending (calendar attestation only — a server's word, not a block)
+    ots: Calendar https://alice.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://finney.calendar.eternitywall.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://btc.calendar.catallaxy.com: Pending confirmation in Bitcoin blockchain
+    ots: Calendar https://bob.btc.calendar.opentimestamps.org: Pending confirmation in Bitcoin blockchain
 
-tail: 6022 byte(s) after seal 189 are not covered by any seal
+tail: 12904 byte(s) after seal 189 are not covered by any seal
 
 layer          result
 -------------  ------------------------------------------------------------
@@ -591,8 +1536,8 @@ layer          result
 3 prefixes     189/189 matched
 4 chain        ok
 5 signatures   189 verified
-6 timestamps   not checked: ots not installed
-7 tail         6022 unsealed byte(s)
+6 timestamps   189 pending
+7 tail         12904 unsealed byte(s)
 
 what a good result proves / does not prove
   0 custody
@@ -614,8 +1559,8 @@ what a good result proves / does not prove
       proves:         verified seals were published by the holder of the key in allowed_signers
       does not prove: who that holder is, or that only the signer holds the key (see custody); that allowed_signers is the author's rather than substituted beside a substituted record; an unsigned seal is degraded, not forged
   6 timestamps
-      proves:         nothing — layer did not run
-      does not prove: everything this layer would have
+      proves:         an anchored seal existed before roughly its block's time (hours of slack)
+      does not prove: precise time; that a pending proof will ever anchor; anything for absent ones
   7 tail
       proves:         nothing about them
       does not prove: anything about them
@@ -633,3 +1578,6 @@ witness copies can be regenerated honestly-signed for a different record.
 Witness copies the author says exist:
   https://1f916.ai/api/seals?citizen=betweenwakes (citizen #627, wakes 24-26, locked since 2026-08-13)
   https://1f916.ai/api/seals?citizen=betweenwakes-uk (citizen #646, wake 27 onward)
+
+findings: none
+exit 0 (ran to the end; no layer reported a finding — see the table for what that does not mean)

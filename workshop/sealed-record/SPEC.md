@@ -218,6 +218,10 @@ OpenTimestamps has edges that this spec states rather than hides:
 Verifying an anchored proof fully needs a Bitcoin node or a trusted block
 explorer; `ots verify` handles this and states which it used. The
 verifier passes that statement through rather than summarising it.
+Note that `ots verify` on a *pending* proof asks the calendar servers
+whether it can be upgraded, one network round-trip per seal, so the
+timestamp layer on a record with many pending proofs takes minutes
+rather than seconds. (Observed wake 222 on the author's 189 seals.)
 
 ## What the verifier does
 
@@ -261,17 +265,51 @@ always the `custody` field, verbatim.
    is a row, never a skip.
 6. **Timestamps**: `ots verify` per seal: `anchored <height> <time>`,
    `pending`, `failed`, `absent`, or `not checked: ots not installed`.
+   (Until wake 222 the code printed a bare `anchored` and left the height
+   and time in the raw `ots` lines under it, and a precedence slip —
+   `A or B or C and D` — sent a calendar-only proof that returned 0 to
+   `failed`. Both Nick's, by mail; see Breaks.)
 7. **Unsealed tail**: if the record is longer than the largest seal, the
    number of bytes after it, with the note that no seal covers them.
 
 Then the table: layer, result, what a good result proves, what it does
-not prove. The verifier exits 0 whenever it ran to the end, including
+not prove. ~~The verifier exits 0 whenever it ran to the end, including
 when layers reported mismatches; the exit code tells you whether the
 verifier worked, and the table tells you what it found. (Rationale: a
 non-zero exit that a script treats as "bad record" is a badge by another
-name.) The footer lists which printed values were quoted from the
-inputs and which were derived, so that a reader does not take a quoted
-value for a checked one (c28454, item 4).
+name.)~~ **Exit status (changed wake 222):** `0` ran to the end and no
+layer reported a finding; `1` ran to the end and at least one layer
+reported a finding — the record shorter than a seal, a prefix mismatch,
+a broken chain, a failed signature, a failed timestamp proof, or a held
+copy that is not a prefix (below); `2` could not run. Degraded states —
+`unsigned`, `pending`, `absent`, `not checked` — are printed and are
+not findings. The struck-through rule was wrong for the reason Nick
+gave: item 1 below says append-only is witnessed, and a witness in
+practice is a cron job that polls and reads an exit code; a tool that
+cannot fail loudly to a machine gets run once by hand and never again.
+`1` is documented as "findings", not "bad", and the table still says
+what each finding is and is not. The footer lists which printed values
+were quoted from the inputs and which were derived, so that a reader
+does not take a quoted value for a checked one (c28454, item 4).
+
+**Fetching, and a held copy (added wake 222).** Given a URL to the
+seals file instead of a path, the verifier fetches the seals file, the
+record from its `record-url`, `allowed_signers` and every `seals/<n>.sig`
+and `.ots` from beside it, prints what it fetched and how many bytes,
+and verifies those bytes: what is actually served, not a local copy.
+`--held OLDER.seals` compares an older copy of the seals file against
+the current one: the seal lines of the held copy must be a prefix of
+the current seal lines. Identical or a proper prefix is fine and says
+how many seals were added; anything else is a finding, and if the
+current file is the held one with lines removed from the end the
+verifier says so in those words — that is the end-deletion signature
+that no other layer can see, and only a party who kept the older copy
+can see it. The header is compared separately and only observed, since
+it is unsigned prose and `witness` lines may legitimately be appended.
+A witness is therefore one line of cron: fetch and verify with `--held`
+against the copy you kept last time, keep the new copy if the exit was
+0. Until wake 222 the verifier read local files only, which meant the
+one tool that could strengthen item 1 deliberately could not.
 
 ## What this does not prove
 
@@ -289,7 +327,9 @@ This section is the headline of the verifier's output, not a footnote.
    monitors; this spec does not solve it, it names it, and the `witness`
    header exists so the author can say where copies are kept.
    (Deleting a *middle* seal breaks the `prev` chain and is detected;
-   deleting from the *end* is not.)
+   deleting from the *end* is not.) Since wake 222 the verifier's
+   `--held` option performs the witness's comparison; the spec still
+   does not solve the problem, because the copy has to have been kept.
 2. **That the record's contents are true.** A sealed lie is a lie with a
    date on it.
 3. **That the record was never shortened before its first seal**, or
@@ -326,9 +366,13 @@ This section is the headline of the verifier's output, not a footnote.
    two things that push back are anchored timestamps (a rewrite must
    predate the block) and witness copies (a rewrite must predate every
    copy). On a record whose timestamp layer reads `not checked` or
-   `absent` throughout — as the author's own dogfood does — that layer is
-   a placeholder, not a layer, and this document should not be read as
-   if it were running.
+   `absent` throughout — as the author's own dogfood did until wake 222
+   — that layer is a placeholder, not a layer, and this document should
+   not be read as if it were running. (The dogfood's 189 seal lines were
+   stamped on 28 August 2026; the proofs are `pending` until upgraded,
+   and a pending proof is a calendar server's word. Nick's point, by
+   mail: until that layer runs, the whole stack rests on the key and
+   the author's word, and item 9 is doing all the work.)
 
 ## Breaks
 
@@ -386,6 +430,45 @@ over for checking. At 19:01 UTC the treasury head matched exactly
 to 4833 in between, so those two heads are readings of different
 lengths, not a mismatch.
 
+### Nick (the operator), by email, 28 August 2026 (wake 222)
+
+Read SPEC.md and verify.py in full, went in to check the short-file
+case (it fails loudly, as intended). Four items.
+
+1. *Exit 0 always undercuts the biggest gap.* Item 1 says append-only
+   is witnessed, and witnessing means something polling the seals file
+   and shouting when it changes; that is a cron job, and a cron job
+   reads the exit code. As written nobody could build a monitor without
+   parsing prose. Proposed 0 clean / 1 findings / 2 could-not-run,
+   documented as "findings" rather than "bad". Verdict: right, and the
+   draft's rationale (a non-zero exit is a badge by another name) was
+   answering a different worry than the one that matters. Changed:
+   exactly that, with "finding" defined per layer; the old sentence is
+   left struck through under "What the verifier does".
+2. *Local files only.* The verifier printed `record-url` and then said
+   it did not fetch it; a witness needs to fetch both the record and the
+   seals file and compare against a held copy, so the one tool that
+   could strengthen the weakest layer deliberately could not. Verdict:
+   right. Changed: a URL argument fetches the set and verifies what is
+   served; `--held` does the witness comparison and names end-deletion
+   when it sees it.
+3. *One bug.* `"pending" in low or "not enough confirmations" in low or
+   "calendar" in low and rc != 0` — `and` binds tighter than `or`, so a
+   calendar-only proof returning 0 fell through to `failed`; and the
+   spec promised `anchored <height> <time>` while the code printed a
+   bare `anchored`. Verdict: both correct; the first was never exercised
+   because no `.ots` existed to exercise it, which is the point of item
+   4. Changed: parenthesised; height and time parsed out of the `ots`
+   line, with a fallback that says it could not parse them.
+4. *The dogfood has no OTS proofs; fix that before anything else.*
+   Verdict: yes. Changed: `ots` installed in a virtualenv inside the
+   workspace (this box's Python has no `pip`, so `venv --without-pip`
+   plus get-pip); all 189 seal lines stamped at 21:24 UTC on 28 August
+   2026, four calendars; `seals/<n>.ots` published; the verifier reports
+   189 `pending`. They stay a calendar server's word until upgraded,
+   which needs a Bitcoin block and a later `ots upgrade`; the record
+   will say when that was done.
+
 ## Exclusions, deliberate
 
 - **Checks.** A "check" is a checkpoint at which the author looked and
@@ -430,5 +513,7 @@ lengths, not a mismatch.
 - Upgrade pending proofs on a later session and re-publish the `.ots`
   files. Say in the record when you did.
 - Ask someone else to keep a copy of the seals file. Then say where.
+  What they run is `verify.py --held their-copy.seals <your seals URL>`
+  and keep the fresh copy when it exits 0; the exit code is for them.
 - Publish the custody line in the same place as the signatures, and make
   it the true one.
