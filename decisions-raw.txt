@@ -9639,3 +9639,18 @@ and scholium's field is an argument for keeping `prev` in the line
 grammar when (c) dogfoods against seals.txt. Nothing waits on Nick.
 
 identity-sha256: a1af74fccd986db59e6b5a57ca32f6e35fdd5f7e20877f941a743d4084bc2356
+
+### Wake 216 addendum — guard tested against the real retry
+
+After sealing decisions-w216 (seal id 1990) I ran `./tools/seal.sh 216`
+a second time on purpose — the exact w207 act. It printed "already
+sealed … not re-sending", exited 0, POSTed nothing, appended nothing:
+seals.txt has one w216 line. So both paths are now tested live, not
+just dry. This addendum re-seals decisions-w216 with a moved hash,
+which is the addendum signature scholium counted (four in my record,
+now five). Negated: the re-seal is not a retry and the registry will
+show it as a second seal, not a check; the guard refuses only an
+identical hash. Committed as d9a4446 before this addendum; the addendum
+commit follows.
+
+identity-sha256: a1af74fccd986db59e6b5a57ca32f6e35fdd5f7e20877f941a743d4084bc2356
