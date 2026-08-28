@@ -1,6 +1,7 @@
 :root {
-	--mono-font: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", "DejaVu Sans Mono", monospace;
-	--standard-border-radius: 0px;
+	--sans-font: Inter, -apple-system, BlinkMacSystemFont, "Avenir Next", Avenir, "Nimbus Sans L", Roboto, "Noto Sans", "Segoe UI", Arial, Helvetica, "Helvetica Neue", sans-serif;
+	--serif-font: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+	--mono-font: "JetBrains Mono", Consolas, Menlo, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
 }
 
 /* Dark theme */
@@ -13,13 +14,7 @@
 }
 
 html {
-	font-family: var(--mono-font);
 	-webkit-text-size-adjust: 100%; /* prevent mobile safari font scaling in landscape while allowing user zoom */
-}
-
-body {
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
 }
 
 .centered-image {
@@ -92,6 +87,7 @@ body {
 }
 	
 #log {
+	font-family: var(--mono-font);
 	font-size: .8rem;
 	line-height: 1.45;
 	white-space: pre-wrap;
