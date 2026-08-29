@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """verify.py — verifier for a sealed-record (SPEC.md, version 1).
 
-    python3 verify.py [--held OLDER.seals] <record>.seals
-    python3 verify.py [--held OLDER.seals] https://host/path/<record>.seals
+    python3 verify.py [--held OLDER.seals] [--explorer] <record>.seals
+    python3 verify.py [--held OLDER.seals] [--explorer] https://host/path/<record>.seals
 
 Prints the custody line first, then one row per layer, then a table of
 what each layer proves and does not prove. There is no badge and no
@@ -45,6 +45,7 @@ import shutil
 import subprocess
 import sys
 import tempfile
+import time
 
 SPEC_VERSION = "1"
 NAMESPACE = "sealed-record-v1"
@@ -223,6 +224,33 @@ def parse_seals_file(path):
     return header, seals
 
 
+EXPLORERS = ("https://blockstream.info/api", "https://mempool.space/api")
+
+
+def explorer_block(height):
+    """Ask two public block explorers for block <height>; return
+    (merkle_root, unix_time, note) if both agree, else (None, None, note).
+    Third parties, chosen by the verifier, trusted only jointly and only
+    when --explorer was given: this is a substitute for a Bitcoin node,
+    and the output says so."""
+    import json
+    import urllib.request
+    seen = []
+    for base in EXPLORERS:
+        try:
+            h = urllib.request.urlopen(base + "/block-height/%d" % height, timeout=20).read().decode().strip()
+            b = json.load(urllib.request.urlopen(base + "/block/" + h, timeout=20))
+            seen.append((base, b["merkle_root"].lower(), int(b["timestamp"])))
+        except Exception as e:  # network, parse, key
+            seen.append((base, None, str(e)))
+    ok = [x for x in seen if x[1]]
+    if len(ok) < 2:
+        return None, None, "explorer lookup incomplete: " + "; ".join("%s: %s" % (b, m if m else t) for b, m, t in seen)
+    if ok[0][1] != ok[1][1]:
+        return None, None, "explorers DISAGREE on block %d merkle root: %s" % (height, "; ".join("%s %s" % (b, m) for b, m, _ in ok))
+    return ok[0][1], ok[0][2], "%s agree" % " and ".join(b.split("//")[1].split("/")[0] for b, _, _ in ok)
+
+
 def run(cmd, stdin_bytes=None):
     try:
         p = subprocess.run(cmd, input=stdin_bytes, capture_output=True, timeout=120)
@@ -263,6 +291,10 @@ def key_fingerprints(allowed_path):
 def main():
     argv = sys.argv[1:]
     held = None
+    explorer = False
+    if "--explorer" in argv:
+        explorer = True
+        argv = [a for a in argv if a != "--explorer"]
     if len(argv) >= 2 and argv[0] == "--held":
         held = argv[1]
         argv = argv[2:]
@@ -472,7 +504,13 @@ def main():
         print("timestamps: not checked — ots not installed on this machine")
         rows.append(("6 timestamps", "not checked: ots not installed", "nothing — layer did not run", "everything this layer would have"))
     else:
-        counts = {"anchored": 0, "pending": 0, "failed": 0, "absent": 0}
+        counts = {"anchored": 0, "anchored (header not checked)": 0, "pending": 0, "failed": 0, "absent": 0}
+        if explorer:
+            print("timestamps: --explorer given — where no Bitcoin node answers, block headers are checked against %s"
+                  % " and ".join(b.split("//")[1].split("/")[0] for b in EXPLORERS))
+        else:
+            print("timestamps: block headers are checked only if a local Bitcoin node answers; --explorer substitutes two public explorers")
+        block_cache = {}
         for s in seals:
             proof = os.path.join(base, "seals", "%d.ots" % s.n)
             if not os.path.isfile(proof):
@@ -484,16 +522,50 @@ def main():
                 tmp = tf.name
             try:
                 rc, out = run([ots, "verify", "-f", tmp, proof])
+                # No Bitcoin node on this machine (wake 223: every anchored
+                # proof of the dogfood read `failed` here, because `ots
+                # verify` checks block headers only against a local node).
+                # Re-run with Bitcoin disabled: ots then still checks that
+                # the proof commits to the line's bytes, and prints the
+                # block height and merkle root it would have checked.
+                no_node = rc != 0 and "could not connect to bitcoin node" in (out or "").lower()
+                if no_node:
+                    rc2, out2 = run([ots, "--no-bitcoin", "verify", "-f", tmp, proof])
+                    out = (out or "") + "\n" + (out2 or "")
             finally:
                 os.unlink(tmp)
             low = (out or "").lower()
             m = re.search(r"bitcoin block (\d+) attests existence as of (.+)", out or "", re.I)
+            claims = re.findall(r"bitcoin block (\d+) has merkleroot ([0-9a-f]+)", out or "", re.I)
             if rc == 0 and "success" in low:
                 counts["anchored"] += 1
                 if m:
                     state = "anchored %s %s" % (m.group(1), m.group(2).strip())
                 else:
                     state = "anchored (height and time not parsed from ots output; raw lines below)"
+            elif no_node and claims:
+                # The proof commits the line to a Bitcoin block header; whether
+                # that header is really in the chain was NOT checked here.
+                height, root = min((int(h), r.lower()) for h, r in claims)
+                if explorer:
+                    if height not in block_cache:
+                        block_cache[height] = explorer_block(height)
+                    e_root, e_time, note = block_cache[height]
+                    if e_root == root:
+                        counts["anchored"] += 1
+                        state = "anchored %d %s (block header checked against explorers, not a node: %s)" % (
+                            height, time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime(e_time)), note)
+                    elif e_root is None:
+                        counts["anchored (header not checked)"] += 1
+                        state = "anchored (header not checked) — proof commits to block %d merkle root %s…; %s" % (height, root[:12], note)
+                    else:
+                        counts["failed"] += 1
+                        finding("timestamp proof of seal %d names block %d with merkle root %s… but explorers report %s…" % (s.n, height, root[:12], e_root[:12]))
+                        state = "failed (merkle root does not match the explorers' block %d)" % height
+                else:
+                    counts["anchored (header not checked)"] += 1
+                    state = ("anchored (header not checked) — proof commits to block %d merkle root %s…; "
+                             "no Bitcoin node here; re-run with --explorer or check that block yourself" % (height, root[:12]))
             # Precedence: `A or B or C and D` parses as `A or B or (C and D)`;
             # an earlier draft wrote it that way and a calendar-only proof that
             # returned 0 fell through to "failed" (Nick, wake 222). Parenthesised.
@@ -508,9 +580,15 @@ def main():
             for line in (out or "").splitlines():
                 print("    ots: " + line)
         summary = ", ".join("%d %s" % (v, k) for k, v in counts.items() if v)
-        rows.append(("6 timestamps", summary,
-                     "an anchored seal existed before roughly its block's time (hours of slack)",
-                     "precise time; that a pending proof will ever anchor; anything for absent ones"))
+        proves = "an anchored seal existed before roughly its block's time (hours of slack)"
+        if counts["anchored (header not checked)"]:
+            proves += ("; for 'header not checked' only that the proof commits the line to a named block header — "
+                       "whether that header is in the Bitcoin chain was not checked by this run")
+        if explorer and counts["anchored"]:
+            proves += "; 'checked against explorers' rests on two third-party block explorers agreeing, not on a node"
+        rows.append(("6 timestamps", summary, proves,
+                     "precise time; that a pending proof will ever anchor; anything for absent ones; "
+                     "that a 'header not checked' block exists"))
 
     # 7. unsealed tail
     print()

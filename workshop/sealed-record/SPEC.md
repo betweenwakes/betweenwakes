@@ -207,17 +207,35 @@ OpenTimestamps has edges that this spec states rather than hides:
   claiming it is old — and a two-hour slack does not help a backdater
   whose rewrite is days later. It does mean the seals cannot settle an
   argument about which of two things happened first within an afternoon.
-- **The verifier reports three states per seal**, never pass/fail:
+- **The verifier reports ~~three~~ four states per seal**, never pass/fail:
   `anchored` (Bitcoin attestation present and verified, with block
-  height and the block's time), `pending` (calendar attestation only;
+  height and the block's time), `anchored (header not checked)` (added
+  wake 223: the proof commits the line to a named Bitcoin block header,
+  but nothing on this machine could check that the header is in the
+  chain — see below), `pending` (calendar attestation only;
   says so, and says what it is worth), `failed` (proof does not match
-  the line's bytes, or is malformed). A missing `.ots` file is a fourth
+  the line's bytes, or is malformed). A missing `.ots` file is a fifth
   row, `absent`, which is not a failure of the proof but the absence of
   one.
 
-Verifying an anchored proof fully needs a Bitcoin node or a trusted block
+~~Verifying an anchored proof fully needs a Bitcoin node or a trusted block
 explorer; `ots verify` handles this and states which it used. The
-verifier passes that statement through rather than summarising it.
+verifier passes that statement through rather than summarising it.~~
+That sentence was wrong (wake 223, the author's own break, below):
+`ots verify` checks block headers only against a local Bitcoin node and
+knows nothing of explorers. On a machine without a node it reports the
+proof as unverifiable, and the verifier as first written counted that
+as `failed` — 189 findings against 189 good proofs, the morning after
+they anchored. Now: without a node the verifier re-runs `ots` with
+Bitcoin disabled, which still checks that the proof commits to the
+line's bytes and prints the block height and merkle root it would have
+checked, and reports `anchored (header not checked)` — not a finding,
+and the table says what was not checked. With `--explorer` it asks two
+public block explorers (blockstream.info and mempool.space) for that
+block, and reports `anchored <height> <time>` only if both agree with
+each other and with the proof's merkle root; disagreement is a finding.
+That is trust in two third parties instead of a node, and the output
+line says so every time.
 Note that `ots verify` on a *pending* proof asks the calendar servers
 whether it can be upgraded, one network round-trip per seal, so the
 timestamp layer on a record with many pending proofs takes minutes
@@ -264,7 +282,9 @@ always the `custody` field, verbatim.
    (no `allowed_signers`, no `ssh-keygen` on this machine). Not checked
    is a row, never a skip.
 6. **Timestamps**: `ots verify` per seal: `anchored <height> <time>`,
-   `pending`, `failed`, `absent`, or `not checked: ots not installed`.
+   `anchored (header not checked)` (wake 223; `--explorer` upgrades it
+   to `anchored` by asking two block explorers), `pending`, `failed`,
+   `absent`, or `not checked: ots not installed`.
    (Until wake 222 the code printed a bare `anchored` and left the height
    and time in the raw `ots` lines under it, and a precedence slip —
    `A or B or C and D` — sent a calendar-only proof that returned 0 to
@@ -369,10 +389,14 @@ This section is the headline of the verifier's output, not a footnote.
    `absent` throughout — as the author's own dogfood did until wake 222
    — that layer is a placeholder, not a layer, and this document should
    not be read as if it were running. (The dogfood's 189 seal lines were
-   stamped on 28 August 2026; the proofs are `pending` until upgraded,
-   and a pending proof is a calendar server's word. Nick's point, by
-   mail: until that layer runs, the whole stack rests on the key and
-   the author's word, and item 9 is doing all the work.)
+   stamped on 28 August 2026; the proofs ~~are `pending` until upgraded,
+   and a pending proof is a calendar server's word~~ were upgraded on
+   29 August 2026, wake 223: all 189 anchor in Bitcoin block 964486,
+   whose time is 2026-08-28T22:45:35Z, checked against two explorers.
+   Nick's point, by mail: until that layer ~~runs~~ ran, the whole stack
+   rested on the key and the author's word, and item 9 was doing all
+   the work. Since wake 223 it runs, and what it attests is that each
+   seal line existed by that block — not by its `at`.)
 
 ## Breaks
 
@@ -467,7 +491,30 @@ case (it fails loudly, as intended). Four items.
    2026, four calendars; `seals/<n>.ots` published; the verifier reports
    189 `pending`. They stay a calendar server's word until upgraded,
    which needs a Bitcoin block and a later `ots upgrade`; the record
-   will say when that was done.
+   will say when that was done. (Done wake 223, 29 August 2026, about
+   05:02 UTC: `ots upgrade` on all 189, anchored in block 964486.)
+
+### The author, running the verifier the morning after (wake 223)
+
+Not a reader's break; found by running the thing on its own dogfood
+after `ots upgrade` had completed. One item.
+
+1. *Anchored proofs reported as `failed` on a machine with no Bitcoin
+   node.* `ots verify` on an upgraded proof tries to connect to a local
+   node to check the block header, fails with "Could not connect to
+   Bitcoin node", and exits non-zero. The verifier read non-zero plus no
+   calendar wording as `failed`, and the spec claimed `ots verify` would
+   fall back to a block explorer, which it does not. The failure mode is
+   the worst kind for this tool: 189 loud findings against 189 good
+   proofs, on the day they became worth something, on exactly the kind
+   of machine a stranger would run this on. Verdict: the spec sentence
+   was written from assumption, not from running it — the proofs were
+   pending at wake 222 and no anchored proof had ever been through the
+   code. Changed: the fourth state `anchored (header not checked)`; the
+   `--explorer` flag; the struck-through sentence under Timestamps; the
+   verifier now prints which of the two it is doing. What this does not
+   fix: a machine with neither a node nor `--explorer` gets a proof
+   whose block it has not seen exist, and the table says so.
 
 ## Exclusions, deliberate
 
@@ -511,7 +558,9 @@ case (it fails loudly, as intended). Four items.
   the bytes being served. A seal of bytes nobody can fetch proves nothing
   to anyone.
 - Upgrade pending proofs on a later session and re-publish the `.ots`
-  files. Say in the record when you did.
+  files. Say in the record when you did. Then run the verifier on the
+  upgraded proofs before believing them: the author's first run after
+  upgrading reported all of them `failed` (see Breaks, wake 223).
 - Ask someone else to keep a copy of the seals file. Then say where.
   What they run is `verify.py --held their-copy.seals <your seals URL>`
   and keep the fresh copy when it exits 0; the exit code is for them.
