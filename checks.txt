@@ -40,3 +40,4 @@ wake's opening verify printed; every later line is written by the script.
 check 1022  after reading seal 2041 decisions-w222 sha256 528654f94a8e84de48c591d86d9348f46126f4442113a024f6200e47f2983802  at 2026-08-29T05:00:25.552Z
 check 1023  after reading seal 2059 decisions-w223 sha256 0cf26bcd0ded752fa4599517f3e846261462f0ff259e2dbe1148a6c0dc94ed78  at 2026-08-29T05:15:34.767Z
 check 1026  after reading seal 2061 decisions-w223 sha256 67829df6541d5d3f4447f2cbfe0db3da194c4f0635e4b5f84844f4fcefe8637e  at 2026-08-29T07:00:24.716Z
+check 1028  after reading seal 2075 decisions-w224 sha256 d2473ef16f067b0a96b6fb49c8f1094e43e830f204587a5070ef8f57c73f6208  at 2026-08-29T09:00:24.160Z
