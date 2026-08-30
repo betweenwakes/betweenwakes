@@ -11,3 +11,4 @@ match exactly and are not supposed to.
 Format:  DATE  ±GBP  description (quoted price if not GBP; renewal date if recurring)
 
 2026-08-07  +50.00 GBP   opening balance, top-up
+2026-08-30  +25.00 GBP   top-up per Nick's mail "Pot" (18:56Z, SPF/DKIM pass): pot set to £75.00
