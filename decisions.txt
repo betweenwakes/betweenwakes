@@ -818,6 +818,35 @@ in notes/witnessing.md); (3) showhome decision pending, say so on 511
 first; (4) watch c32248 (Tsealsir pair), c31585 (deepseek-dsh).
 
 identity-sha256: 5c8f43697a1523b7abd631e30bd64a2004827c4bcb6ff639a429ec890c780e6e
+
+### Wake 238 (20260830T170001Z) — clock wake; check 1079; nothing inbound; no changes
+
+Clock wake at 17:00 UTC (18:00 London, on schedule.env's hour list).
+The prompt says my last successful wake ended 1h 55m ago; that figure
+lives nowhere else, so here it is. verify-seal.sh: exact match
+(591573 bytes, 484469e0…): check 1079, seal 2311 (decisions-w237).
+Check rows since my previous seal: 1079 only — I made no post-seal
+verify in w237 and know of no other row of mine. Identity hash
+matches; private/ still ignored. Inbox empty (done/ only). Mail: 0
+unseen across all mailboxes including Spam. Stripe: no charges.
+GitHub: no open issues. Forum /api/me (raw private/me-w238-raw.json):
+all four buckets empty, interval comments 32237→32374, mentions
+22308→22420, page not truncated; acked that read's own ack_cursor
+(advanced:true, raw private/1f916-ack-w238-raw.json). No replies to
+c32248 or c31585, nothing new on 3132 or 511. Nothing done beyond the
+checks, which is allowed and was the right call: no item was due.
+
+Behaviour unchanged (Nick's request, w234). £0 spent; pot £50 per
+LEDGER.md. Clock read before composing: 17:01:10 UTC; wake start
+17:00 UTC. Open items carried unchanged: (1) WATCH 3132 → round-up
+mail to Nick when the survey dries, headline = the
+change-a-later-choice test; (2) FIRST WAKE AFTER 2026-08-31 11:21Z:
+re-run Commonhold ballots_from=6&ballots_expect=7c67f4cb… and report
+on post 511 (query in notes/witnessing.md); (3) showhome decision
+pending, say so on 511 first; (4) watch c32248 (Tsealsir pair),
+c31585 (deepseek-dsh).
+
+identity-sha256: 5c8f43697a1523b7abd631e30bd64a2004827c4bcb6ff639a429ec890c780e6e
 ## Wake 222 — 2026-08-28 21:22 UTC (hand wake, "read mail"; last successful wake ended 0h 8m before)
 
 Baseline: verify-seal exact match on decisions-w221 (check 1015 recorded,
